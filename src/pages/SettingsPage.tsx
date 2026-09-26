@@ -1,5 +1,6 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useLifeOSStore } from '../store/useLifeOSStore';
+import { canInstall, onInstallAvailabilityChange, requestInstall } from '../pwa/install';
 
 export const SettingsPage: React.FC = () => {
   const settings = useLifeOSStore((state) => state.data.settings);
@@ -14,6 +15,17 @@ export const SettingsPage: React.FC = () => {
   const resetToDefault = useLifeOSStore((state) => state.resetToDefault);
   const requestConfirm = useLifeOSStore((s) => s.requestConfirm);
   const showToast = useLifeOSStore((s) => s.showToast);
+  const lock = useLifeOSStore((s) => s.lock);
+  const [, bump] = useState(0);
+
+  useEffect(() => onInstallAvailabilityChange(() => bump((n) => n + 1)), []);
+
+  const handleInstall = async () => {
+    const outcome = await requestInstall();
+    if (outcome === 'unavailable') {
+      showToast('Buka lewat Chrome/Edge di HP lalu pilih "Add to Home screen"', 'info');
+    }
+  };
 
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -145,6 +157,31 @@ export const SettingsPage: React.FC = () => {
               <span className="text-body-default text-primary text-[14px]">Notifications</span>
               <button onClick={() => updateSettings({ notificationsEnabled: !settings.notificationsEnabled })} role="switch" aria-checked={settings.notificationsEnabled} className={`w-12 h-7 shrink-0 rounded-full p-1 transition-colors ${settings.notificationsEnabled ? 'bg-tertiary-fixed' : 'bg-surface-container-highest'}`}>
                 <span className={`block w-5 h-5 rounded-full bg-white shadow transition-transform ${settings.notificationsEnabled ? 'translate-x-5' : 'translate-x-0'}`} />
+              </button>
+            </div>
+            <div className="flex items-center justify-between pt-3 border-t border-surface-container-highest font-sans gap-3">
+              <div className="flex flex-col">
+                <span className="text-body-default text-primary text-[14px]">Lock Terminal (PIN)</span>
+                <span className="font-mono text-[11px] text-outline">Kunci app sekarang, buka pakai PIN</span>
+              </div>
+              <button onClick={lock} className="h-9 px-3 shrink-0 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary font-body-sm font-medium transition-colors flex items-center gap-1.5">
+                <span className="material-symbols-outlined text-[16px]">lock</span>
+                Lock
+              </button>
+            </div>
+            <div className="flex items-center justify-between pt-3 border-t border-surface-container-highest font-sans gap-3">
+              <div className="flex flex-col">
+                <span className="text-body-default text-primary text-[14px]">Install App (PWA)</span>
+                <span className="font-mono text-[11px] text-outline">Jadi app HP fullscreen + offline</span>
+              </div>
+              <button
+                onClick={handleInstall}
+                disabled={!canInstall()}
+                title={canInstall() ? 'Install ke HP' : 'Buka lewat browser HP untuk install'}
+                className="h-9 px-3 shrink-0 rounded-lg bg-tertiary-fixed/15 text-tertiary-fixed hover:bg-tertiary-fixed hover:text-on-tertiary-fixed font-body-sm font-medium transition-colors flex items-center gap-1.5 disabled:opacity-40"
+              >
+                <span className="material-symbols-outlined text-[16px]">install_mobile</span>
+                Install
               </button>
             </div>
           </div>

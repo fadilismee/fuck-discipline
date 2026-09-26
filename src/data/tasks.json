@@ -1,279 +1,143 @@
 [
   {
-    "id": "t-1",
-    "title": "Finish Productiv UI",
-    "project": "Productiv",
+    "id": "t-clip-domain",
+    "title": "[Clipper] Cari 3 podcast panjang buat bahan clip minggu ini",
+    "project": "Short-Form Empire (Clipper)",
+    "priority": "high",
+    "est": "1h est",
+    "due": "Today 23:59",
+    "date": "2026-09-26",
+    "status": "today",
+    "completed": false,
+    "timeSpent": "0m",
+    "tags": ["#Clipper", "#Content"],
+    "notes": "Cari niche blue ocean, belum banyak di-clip. Simpan link di notes project.",
+    "subtasks": [
+      { "id": "st-clip-1", "title": "List 5 kandidat podcast", "done": false },
+      { "id": "st-clip-2", "title": "Pilih 3 terbaik + tandai timestamp hook", "done": false }
+    ]
+  },
+  {
+    "id": "t-tsk-ppt",
+    "title": "[Tasking Manager] Kerjakan slide PPT klien A pakai AI",
+    "project": "Tasking Manager (Biro Jasa)",
+    "priority": "high",
+    "est": "2h est",
+    "due": "Tomorrow 12:00",
+    "date": "2026-09-26",
+    "status": "today",
+    "completed": false,
+    "timeSpent": "0m",
+    "tags": ["#Client", "#Cash"],
+    "notes": "Deadline besok. Uang langsung masuk Hustle Account. Minta testimoni setelah kirim.",
+    "subtasks": [
+      { "id": "st-tsk-1", "title": "Draft outline pakai AI", "done": false },
+      { "id": "st-tsk-2", "title": "Rapikan desain + kirim + minta testimoni", "done": false }
+    ]
+  },
+  {
+    "id": "t-web-domain",
+    "title": "[Web Dev] Beli domain .com untuk web portfolio",
+    "project": "Web Dev & Tech Services",
+    "priority": "high",
+    "est": "30m",
+    "due": "Today 23:59",
+    "date": "2026-09-26",
+    "status": "today",
+    "completed": false,
+    "timeSpent": "0m",
+    "tags": ["#Portfolio", "#Asset"],
+    "notes": "Cek ketersediaan nama, beli 1 tahun, arahkan DNS ke Vercel/Netlify.",
+    "subtasks": []
+  },
+  {
+    "id": "t-hl-n8n",
+    "title": "[AI/Homelab] Setup lingkungan n8n / ComfyUI lokal",
+    "project": "AI Workflow & Homelab",
     "priority": "high",
     "est": "2h est",
     "due": "Today 23:59",
     "date": "2026-09-26",
     "status": "today",
     "completed": false,
-    "timeSpent": "1h 24m",
-    "tags": [
-      "#Design",
-      "#FE"
-    ],
-    "notes": "Implement high-contrast zen interface and remove side navbar in favor of slick top bar.",
-    "subtasks": [
-      {
-        "id": "st-1",
-        "title": "Design slick top navigation bar",
-        "done": true
-      },
-      {
-        "id": "st-2",
-        "title": "Wire reactive JSON store with localStorage persistence",
-        "done": true
-      },
-      {
-        "id": "st-3",
-        "title": "Interactive task drawer and kanban toggle",
-        "done": false
-      }
-    ]
+    "timeSpent": "0m",
+    "tags": ["#Homelab", "#AI"],
+    "notes": "Docker compose n8n. Tes 1 workflow ringkasan teks klien.",
+    "subtasks": []
   },
   {
-    "id": "t-2",
-    "title": "Study SQL & Indexing",
-    "project": "Learning",
+    "id": "t-clip-edit",
+    "title": "[Clipper] Edit 5 clip vertikal + render caption otomatis",
+    "project": "Short-Form Empire (Clipper)",
     "priority": "med",
-    "est": "1h est",
-    "due": "Today 21:00",
-    "date": "2026-09-26",
-    "status": "today",
-    "completed": false,
-    "timeSpent": "0m",
-    "tags": [
-      "#Database",
-      "#Backend"
-    ],
-    "notes": "B-Tree indexing, query execution plans, and composite indexing best practices.",
-    "subtasks": [
-      {
-        "id": "st-4",
-        "title": "Read chapters on B-Tree vs LSM trees",
-        "done": true
-      },
-      {
-        "id": "st-5",
-        "title": "Benchmark EXPLAIN ANALYZE on Postgres",
-        "done": false
-      }
-    ]
-  },
-  {
-    "id": "t-3",
-    "title": "Upload portfolio assets",
-    "project": "Portfolio",
-    "priority": "low",
-    "est": "30m",
-    "due": "25 Sep 14:20",
-    "date": "2026-09-25",
-    "completedAt": "2026-09-25",
-    "status": "completed",
-    "completed": true,
-    "timeSpent": "25m",
-    "tags": [
-      "#Portfolio"
-    ],
-    "notes": "Uploaded latest UI mockups and demo previews to CDN.",
-    "subtasks": []
-  },
-  {
-    "id": "t-4",
-    "title": "Exercise & Mobility routine",
-    "project": "Health",
-    "priority": "med",
-    "est": "45m",
-    "due": "Today 16:00",
-    "date": "2026-09-26",
-    "status": "today",
-    "completed": false,
-    "timeSpent": "0m",
-    "tags": [
-      "#Fitness",
-      "#Health"
-    ],
-    "notes": "Upper body push workout + 15 min thoracic mobility stretching.",
-    "subtasks": []
-  },
-  {
-    "id": "t-5",
-    "title": "Review personal ledger",
-    "project": "Finance",
-    "priority": "low",
-    "est": "15m",
-    "due": "Today 20:00",
-    "date": "2026-09-26",
-    "status": "today",
-    "completed": false,
-    "timeSpent": "0m",
-    "tags": [
-      "#Finance"
-    ],
-    "notes": "Weekly reconcile of personal expenses and cash flow analysis.",
-    "subtasks": []
-  },
-  {
-    "id": "t-6",
-    "title": "Refactor API Gateway routes",
-    "project": "Productiv",
-    "priority": "high",
-    "est": "3h est",
-    "due": "Tomorrow 12:00",
+    "est": "2h est",
+    "due": "Tomorrow 18:00",
     "date": "2026-09-27",
     "status": "upcoming",
     "completed": false,
     "timeSpent": "0m",
-    "tags": [
-      "#Backend",
-      "#Gateway"
-    ],
-    "notes": "Implement token bucket rate limiting and zero-latency caching layer.",
+    "tags": ["#Clipper", "#Batch"],
+    "notes": "Pakai template caption yang sudah dibuat. Batch render malam.",
     "subtasks": []
   },
   {
-    "id": "t-7",
-    "title": "Prepare quarterly tax report",
-    "project": "Finance",
-    "priority": "high",
-    "est": "2h est",
-    "due": "25 Sep (overdue)",
-    "date": "2026-09-25",
-    "status": "overdue",
-    "completed": false,
-    "timeSpent": "30m",
-    "tags": [
-      "#Finance",
-      "#Tax"
-    ],
-    "notes": "Compile invoices, digital receipts, and business expense deductions.",
-    "subtasks": []
-  },
-  {
-    "id": "t-8",
-    "title": "Deep reading System Design",
-    "project": "Learning",
-    "priority": "low",
+    "id": "t-yt-seo",
+    "title": "[YouTube] Riset keyword SEO untuk video edukasi AI",
+    "project": "YouTube Monetization Engine",
+    "priority": "med",
     "est": "1h est",
-    "due": "Mon 22:00",
-    "date": "2026-09-28",
+    "due": "Tomorrow 18:00",
+    "date": "2026-09-27",
     "status": "upcoming",
     "completed": false,
     "timeSpent": "0m",
-    "tags": [
-      "#Books"
-    ],
-    "notes": "Read Designing Data-Intensive Applications chapters 7 & 8.",
+    "tags": ["#YouTube", "#SEO"],
+    "notes": "Fokus keyword RPM tinggi: Finance, Tech, AI.",
     "subtasks": []
   },
   {
-    "id": "t-9",
-    "title": "Morning run 5K",
-    "project": "Health",
+    "id": "t-tsk-broadcast",
+    "title": "[Tasking Manager] Sebar broadcast promo jasa di grup komunitas",
+    "project": "Tasking Manager (Biro Jasa)",
     "priority": "med",
-    "est": "40m",
-    "due": "24 Sep",
-    "date": "2026-09-24",
-    "completedAt": "2026-09-24",
-    "status": "completed",
-    "completed": true,
-    "timeSpent": "38m",
-    "tags": [
-      "#Fitness"
-    ],
-    "notes": "Easy zone-2 loop around the complex.",
+    "est": "30m",
+    "due": "Tomorrow 18:00",
+    "date": "2026-09-27",
+    "status": "upcoming",
+    "completed": false,
+    "timeSpent": "0m",
+    "tags": ["#Promo", "#Cash"],
+    "notes": "Pamflet digital + rate card + link testimoni.",
     "subtasks": []
   },
   {
-    "id": "t-10",
-    "title": "Write weekly retro notes",
-    "project": "Productiv",
+    "id": "t-pb-draft",
+    "title": "[Personal Brand] Tulis draft naskah video perkenalan",
+    "project": "Personal Brand (Content Creator)",
     "priority": "low",
-    "est": "20m",
-    "due": "24 Sep",
-    "date": "2026-09-24",
-    "completedAt": "2026-09-24",
-    "status": "completed",
-    "completed": true,
-    "timeSpent": "20m",
-    "tags": [
-      "#Review"
-    ],
-    "notes": "What went well / friction / next experiments.",
+    "est": "1h est",
+    "due": "Next week",
+    "date": "2026-09-29",
+    "status": "upcoming",
+    "completed": false,
+    "timeSpent": "0m",
+    "tags": ["#Content", "#Backlog"],
+    "notes": "Struktur: hook 3 detik → siapa gue → 6 hustle → CTA follow.",
     "subtasks": []
   },
   {
-    "id": "t-11",
-    "title": "Fix auth token refresh bug",
-    "project": "Productiv",
-    "priority": "high",
-    "est": "1h",
-    "due": "23 Sep",
-    "date": "2026-09-23",
-    "completedAt": "2026-09-23",
-    "status": "completed",
-    "completed": true,
-    "timeSpent": "55m",
-    "tags": [
-      "#Backend"
-    ],
-    "notes": "Race between refresh and parallel requests.",
-    "subtasks": []
-  },
-  {
-    "id": "t-12",
-    "title": "Grocery run & meal prep",
-    "project": "Health",
+    "id": "t-fin-rekap",
+    "title": "[Finance] Rekap ulang pengeluaran e-wallet bulan ini",
+    "project": "Capital & Assets",
     "priority": "low",
-    "est": "1h",
-    "due": "22 Sep",
-    "date": "2026-09-22",
-    "completedAt": "2026-09-22",
-    "status": "completed",
-    "completed": true,
-    "timeSpent": "1h 05m",
-    "tags": [
-      "#Life"
-    ],
-    "notes": "Protein + veggies for 3 days.",
-    "subtasks": []
-  },
-  {
-    "id": "t-13",
-    "title": "Read Postgres MVCC chapter",
-    "project": "Learning",
-    "priority": "med",
-    "est": "1h",
-    "due": "21 Sep",
-    "date": "2026-09-21",
-    "completedAt": "2026-09-21",
-    "status": "completed",
-    "completed": true,
-    "timeSpent": "50m",
-    "tags": [
-      "#Database"
-    ],
-    "notes": "Snapshots, xmin/xmax, vacuum basics.",
-    "subtasks": []
-  },
-  {
-    "id": "t-14",
-    "title": "Pay electricity bill",
-    "project": "Finance",
-    "priority": "med",
-    "est": "10m",
-    "due": "20 Sep",
-    "date": "2026-09-20",
-    "completedAt": "2026-09-20",
-    "status": "completed",
-    "completed": true,
-    "timeSpent": "10m",
-    "tags": [
-      "#Bills"
-    ],
-    "notes": "Via m-banking, save receipt PDF.",
+    "est": "30m",
+    "due": "Next week",
+    "date": "2026-09-29",
+    "status": "upcoming",
+    "completed": false,
+    "timeSpent": "0m",
+    "tags": ["#Finance", "#Backlog"],
+    "notes": "Export mutasi Gopay/OVO, kategorikan ke budget.",
     "subtasks": []
   }
 ]

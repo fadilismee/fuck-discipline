@@ -12,6 +12,8 @@ import { ProjectModal } from './components/modals/ProjectModal';
 import { RoutineModal } from './components/modals/RoutineModal';
 import { Toast } from './components/common/Toast';
 import { ConfirmModal } from './components/common/ConfirmModal';
+import { PinLock } from './components/common/PinLock';
+import { PwaInstallBar } from './components/common/PwaInstallBar';
 import { FloatingTimer } from './components/common/FloatingTimer';
 
 import { TodayPage } from './pages/TodayPage';
@@ -77,6 +79,7 @@ export const App: React.FC = () => {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       const st = useLifeOSStore.getState();
+      if (st.isLocked) return;
       const tag = (document.activeElement?.tagName || '').toUpperCase();
       const typing = tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT';
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
@@ -131,6 +134,8 @@ export const App: React.FC = () => {
       <RoutineModal />
       <FloatingTimer />
       <ConfirmModal />
+      <PwaInstallBar />
+      <PinLock />
       <Toast />
     </div>
   );

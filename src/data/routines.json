@@ -1,116 +1,101 @@
 [
   {
-    "id": "r-1",
-    "title": "Wake up at 05:30 (Fajr)",
+    "id": "r-spirit",
+    "title": "Spiritual & Mindset (Ibadah + afirmasi)",
     "block": "morning",
-    "time": "05:30",
-    "streak": 42,
-    "doneToday": true,
+    "time": "05:00",
+    "streak": 0,
+    "doneToday": false,
     "tag": "Prime Discipline",
-    "desc": "Alarm sync · Circadian start",
-    "history": {
-      "2026-09-20": true,
-      "2026-09-21": true,
-      "2026-09-22": true,
-      "2026-09-23": true,
-      "2026-09-24": true,
-      "2026-09-25": true,
-      "2026-09-26": true
-    }
+    "desc": "Ibadah pagi, afirmasi target harian",
+    "history": {}
   },
   {
-    "id": "r-2",
-    "title": "Daily Prayers (Fajr-Asr)",
+    "id": "r-boot",
+    "title": "System Boot (cek OS + set Doing)",
     "block": "morning",
     "time": "06:00",
-    "streak": 60,
-    "doneToday": true,
-    "tag": "Spiritual",
-    "desc": "Fajr, Dhuhr, Asr on time",
-    "history": {
-      "2026-09-20": true,
-      "2026-09-21": true,
-      "2026-09-22": true,
-      "2026-09-23": true,
-      "2026-09-24": true,
-      "2026-09-25": true,
-      "2026-09-26": true
-    }
+    "streak": 0,
+    "doneToday": false,
+    "tag": "System Check",
+    "desc": "Buka Productiv OS, cek kalender, geser task ke Doing",
+    "history": {}
   },
   {
-    "id": "r-3",
-    "title": "Qur'an Recitation (1 Juz)",
+    "id": "r-cash",
+    "title": "Quick Cash Sweep (DM orderan)",
     "block": "morning",
-    "time": "06:30",
-    "streak": 28,
-    "doneToday": true,
-    "tag": "Daily Reading",
-    "desc": "Consistent morning reflection",
-    "history": {
-      "2026-09-20": true,
-      "2026-09-21": true,
-      "2026-09-22": false,
-      "2026-09-23": true,
-      "2026-09-24": true,
-      "2026-09-25": true,
-      "2026-09-26": true
-    }
+    "time": "07:30",
+    "streak": 0,
+    "doneToday": false,
+    "tag": "Cash Flow",
+    "desc": "Cek DM pesanan Tasking Manager & email klien",
+    "history": {}
   },
   {
-    "id": "r-4",
-    "title": "Workout & Stretch",
+    "id": "r-deepwork",
+    "title": "Deep Work Sprint 50m + Alpha Waves",
     "block": "afternoon",
-    "time": "16:00",
-    "streak": 14,
+    "time": "13:00",
+    "streak": 0,
+    "doneToday": false,
+    "tag": "Deep Work",
+    "desc": "Nyalakan Focus Timer 50 menit, headphone on",
+    "history": {}
+  },
+  {
+    "id": "r-clipper",
+    "title": "Clipper Mode (potong video santai)",
+    "block": "afternoon",
+    "time": "15:30",
+    "streak": 0,
+    "doneToday": false,
+    "tag": "Content",
+    "desc": "Sambil rehat: potong-potong video",
+    "history": {}
+  },
+  {
+    "id": "r-followup",
+    "title": "Client Follow-up (update klien)",
+    "block": "afternoon",
+    "time": "16:30",
+    "streak": 0,
+    "doneToday": false,
+    "tag": "Client",
+    "desc": "Kirim update ke klien Web Dev / Tasking Manager",
+    "history": {}
+  },
+  {
+    "id": "r-workout",
+    "title": "THE IRON THERAPY (Workout wajib)",
+    "block": "evening",
+    "time": "17:30",
+    "streak": 0,
     "doneToday": false,
     "tag": "Physical",
-    "desc": "Upper Body Push & Thoracic Mobility",
-    "history": {
-      "2026-09-20": true,
-      "2026-09-21": false,
-      "2026-09-22": true,
-      "2026-09-23": true,
-      "2026-09-24": false,
-      "2026-09-25": true,
-      "2026-09-26": false
-    }
+    "desc": "Push/Pull/Legs atau kardio — jaga postur dari duduk 10 jam",
+    "history": {}
   },
   {
-    "id": "r-5",
-    "title": "English Speaking Practice",
+    "id": "r-skill",
+    "title": "Skill Up (1 hal baru)",
     "block": "evening",
-    "time": "18:30",
-    "streak": 9,
+    "time": "20:00",
+    "streak": 0,
     "doneToday": false,
     "tag": "Skill Flow",
-    "desc": "20m active conversational flow",
-    "history": {
-      "2026-09-20": true,
-      "2026-09-21": true,
-      "2026-09-22": true,
-      "2026-09-23": false,
-      "2026-09-24": true,
-      "2026-09-25": false,
-      "2026-09-26": false
-    }
+    "desc": "Tutorial Web Dev / AI / n8n / SEO",
+    "history": {}
   },
   {
-    "id": "r-6",
-    "title": "Deep Reading (Non-screen)",
+    "id": "r-shutdown",
+    "title": "System Shutdown (jurnal + rapikan meja)",
     "block": "evening",
     "time": "22:00",
-    "streak": 19,
+    "streak": 0,
     "doneToday": false,
     "tag": "Winddown",
-    "desc": "Bedtime physical book reading",
-    "history": {
-      "2026-09-20": true,
-      "2026-09-21": true,
-      "2026-09-22": true,
-      "2026-09-23": true,
-      "2026-09-24": true,
-      "2026-09-25": false,
-      "2026-09-26": false
-    }
+    "desc": "Isi jurnal singkat di #review, tutup semua tab",
+    "history": {}
   }
 ]

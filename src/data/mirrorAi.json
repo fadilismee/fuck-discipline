@@ -1,18 +1,11 @@
 {
-  "cognitiveLoad": 78.4,
-  "frictionIndex": "+18.2%",
+  "cognitiveLoad": 0,
+  "frictionIndex": "+0%",
   "systemConfidence": "94.2%",
   "recommendations": [
-    "Focus on completing 'Finish Productiv UI' before 16:00 to preserve evening cognitive capacity.",
-    "Morning routines are at 100% cadence today. Excellent behavioral momentum.",
-    "Daily expenditure is currently at Rp 47.000 (47% of Rp 100.000 limit) — Safe status."
+    "Mulai dari Quick Cash Sweep: cek DM orderan Tasking Manager pagi ini.",
+    "Maksimal 3 task di kolom Doing — selesaikan satu-satu, jangan maruk.",
+    "Kalau Cognitive Load > 85: pause Clipper/Personal Brand seminggu, fokus ke cash cepat (Tasking/Web Dev)."
   ],
-  "chatHistory": [
-    {
-      "id": "m-msg-1",
-      "sender": "ai",
-      "time": "14:30",
-      "text": "Executive Terminal online. Cognitive capacity steady at 88%. You have 3 tasks remaining for today. Would you like me to optimize your evening timeboxing or review pending tasks?"
-    }
-  ]
+  "chatHistory": []
 }

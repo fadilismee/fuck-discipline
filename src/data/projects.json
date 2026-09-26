@@ -1,116 +1,110 @@
 [
   {
-    "id": "proj-1",
-    "name": "Productiv",
-    "tagline": "Personal OS v2.4",
-    "description": "High-agency executive dashboard and digital craftsmanship operating system for power users.",
-    "category": "Software",
+    "id": "proj-clipper",
+    "name": "Short-Form Empire (Clipper)",
+    "tagline": "Tunggangi algoritma, curi perhatian.",
+    "description": "Memotong podcast atau video viral menjadi format vertikal yang engaging dengan caption dinamis. Low barrier to entry, butuh konsistensi gila.",
+    "category": "Content / Cash Cow",
     "status": "active",
-    "progress": 72,
+    "progress": 0,
     "color": "emerald",
     "lead": "Fadil",
     "milestones": [
-      {
-        "id": "m-1",
-        "name": "Alpha Prototype Wireframes",
-        "done": true,
-        "due": "Sep 15"
-      },
-      {
-        "id": "m-2",
-        "name": "Top Navigation & JSON Store",
-        "done": true,
-        "due": "Sep 26"
-      },
-      {
-        "id": "m-3",
-        "name": "Live Interactive Release",
-        "done": false,
-        "due": "Sep 30"
-      }
+      { "id": "m-clipper-1", "name": "Buat template caption & hook di CapCut/Premiere", "done": false, "due": "Okt W1" },
+      { "id": "m-clipper-2", "name": "Kumpulkan 5 sumber YouTube/Podcast Blue Ocean", "done": false, "due": "Okt W1" },
+      { "id": "m-clipper-3", "name": "Capai 30 video ter-upload di bulan pertama", "done": false, "due": "Okt W4" }
     ],
-    "notes": "## Fokus rilis v2.4\n- Timer + stopwatch stabil, PiP auto pop-out.\n- Kanban drag & drop antar kolom.\n- Keputusan: data tetap JSON lokal dulu (offline-first), sync cloud belakangan.",
+    "notes": "## Aturan main\n- Batch creation: 1 hari khusus motong, jangan dicicil.\n- Jangan tambah proyek ke-7 sebelum 1 pilar jalan otomatis / stabil.",
     "images": []
   },
   {
-    "id": "proj-2",
-    "name": "Learning Hub",
-    "tagline": "Engineering & CS Deep Dive",
-    "description": "Structured curriculum covering database engines, distributed consensus, and microkernel architecture.",
-    "category": "Education",
+    "id": "proj-youtube",
+    "name": "YouTube Monetization Engine",
+    "tagline": "Aset digital jangka panjang yang bekerja saat tidur.",
+    "description": "Saluran YouTube faceless atau edukasi yang didesain murni untuk AdSense dan Sponsorship.",
+    "category": "Media / Long-Term Wealth",
     "status": "active",
-    "progress": 45,
+    "progress": 0,
     "color": "sky",
     "lead": "Fadil",
     "milestones": [
-      {
-        "id": "m-4",
-        "name": "SQL & Query Optimization",
-        "done": true,
-        "due": "Sep 20"
-      },
-      {
-        "id": "m-5",
-        "name": "Distributed Raft Consensus",
-        "done": false,
-        "due": "Oct 10"
-      }
+      { "id": "m-yt-1", "name": "Tentukan niche RPM tinggi (Finance, Tech, AI)", "done": false, "due": "Okt W1" },
+      { "id": "m-yt-2", "name": "Tembus 1.000 subs & 4.000 jam tayang", "done": false, "due": "Q4" },
+      { "id": "m-yt-3", "name": "Cairkan gaji AdSense pertama", "done": false, "due": "Q1" }
     ],
-    "notes": "## Kurikulum aktif\n- Fokus: indexing + EXPLAIN ANALYZE.\n- Berikutnya: Raft leader election (bacaan + simulasi).",
+    "notes": "## Strategi\n- Fokus RPM tinggi, bukan views kosong.\n- Pause dulu kalau cash-flow mingguan seret — ini aset jangka panjang.",
     "images": []
   },
   {
-    "id": "proj-3",
-    "name": "Physical Resilience",
-    "tagline": "Health & Bio-Optimization",
-    "description": "Strength training protocol, circadian alignment, clean nutrition, and daily mobility work.",
-    "category": "Health",
+    "id": "proj-webdev",
+    "name": "Web Dev & Tech Services",
+    "tagline": "High-Income Skill untuk B2B.",
+    "description": "Jasa pembuatan Landing Page, Company Profile, hingga Web App kustom untuk UMKM dan klien korporat.",
+    "category": "Freelance / Agency",
     "status": "active",
-    "progress": 85,
+    "progress": 0,
     "color": "emerald",
     "lead": "Fadil",
     "milestones": [
-      {
-        "id": "m-6",
-        "name": "Maintain 30-day streak of Morning prayers & workout",
-        "done": true,
-        "due": "Sep 28"
-      },
-      {
-        "id": "m-7",
-        "name": "Complete 100km total monthly running",
-        "done": false,
-        "due": "Sep 30"
-      }
+      { "id": "m-web-1", "name": "Beli domain .com + live-kan web portfolio", "done": false, "due": "Okt W2" },
+      { "id": "m-web-2", "name": "Susun pricing tier (Basic 1.5Jt, Pro 3Jt+)", "done": false, "due": "Okt W2" },
+      { "id": "m-web-3", "name": "Close deal klien berbayar pertama > Rp 3.000.000", "done": false, "due": "Okt W4" }
     ],
-    "notes": "## Protokol\n- Push/pull/legs bergantian, mobility tiap sesi.\n- Lari easy 5K tiap 2 hari, catat di routines.",
+    "notes": "## Prioritas cash\n- Ini mesin uang utama bareng Tasking Manager.\n- Deep work 50 menit, headphone on.",
     "images": []
   },
   {
-    "id": "proj-4",
-    "name": "Capital & Assets",
-    "tagline": "Finance & Investment Protocol",
-    "description": "Ledger tracking, high-yield cash preservation, expense discipline, and portfolio allocation.",
-    "category": "Finance",
+    "id": "proj-tasking",
+    "name": "Tasking Manager (Biro Jasa)",
+    "tagline": "Jemput bola uang cepat dari kemalasan orang lain.",
+    "description": "Jasa pengerjaan tugas akademik, ketik/input data, Excel, Word, dan presentasi untuk mahasiswa & karyawan.",
+    "category": "Services / B2C",
     "status": "active",
-    "progress": 60,
+    "progress": 0,
+    "color": "emerald",
+    "lead": "Fadil",
+    "milestones": [
+      { "id": "m-tsk-1", "name": "Buat akun IG/TikTok khusus promosi jasa", "done": false, "due": "Okt W1" },
+      { "id": "m-tsk-2", "name": "Susun SOP pengerjaan kilat dengan bantuan AI", "done": false, "due": "Okt W2" },
+      { "id": "m-tsk-3", "name": "Dapatkan 10 testimoni positif pelanggan pertama", "done": false, "due": "Okt W4" }
+    ],
+    "notes": "## SOP kilat\n- Terima order → kerjakan pakai AI 10x → kirim → minta testimoni.\n- Uang masuk langsung ke Hustle Account, jangan campur.",
+    "images": []
+  },
+  {
+    "id": "proj-brand",
+    "name": "Personal Brand (Content Creator)",
+    "tagline": "Menjual expertise dan mendokumentasikan perjalanan sukses.",
+    "description": "Membagikan wawasan tentang tech, side hustle, dan dokumentasi journey Menuju Kaya.",
+    "category": "Personal / Branding",
+    "status": "active",
+    "progress": 0,
     "color": "violet",
     "lead": "Fadil",
     "milestones": [
-      {
-        "id": "m-8",
-        "name": "Emergency Fund 6 Months Buffer",
-        "done": true,
-        "due": "Sep 01"
-      },
-      {
-        "id": "m-9",
-        "name": "Q3 Ledger Audit & Optimization",
-        "done": false,
-        "due": "Sep 30"
-      }
+      { "id": "m-pb-1", "name": "Setup lighting + microphone di meja kerja", "done": false, "due": "Okt W2" },
+      { "id": "m-pb-2", "name": "Tentukan 3 content pillar (Edukasi, Motivasi, VLOG)", "done": false, "due": "Okt W2" },
+      { "id": "m-pb-3", "name": "Rilis video Perkenalan pertama", "done": false, "due": "Okt W3" }
     ],
-    "notes": "## Aturan kas\n- Spending harian max Rp 100rb.\n- Setiap pembelian > Rp 500rb wajib masuk Target Pembelian dulu.",
+    "notes": "## Cadence\n- 2x seminggu. Behind the scenes hustle + belajar tech.\n- Kandidat pertama untuk di-pause kalau burnout.",
+    "images": []
+  },
+  {
+    "id": "proj-homelab",
+    "name": "AI Workflow & Homelab",
+    "tagline": "Sang Karyawan Digital yang tidak perlu digaji.",
+    "description": "Server lokal (Homelab) dan alur kerja AI untuk mempercepat Clipper, Web Dev, dan Tasking Manager.",
+    "category": "Infrastructure / R&D",
+    "status": "active",
+    "progress": 0,
+    "color": "sky",
+    "lead": "Fadil",
+    "milestones": [
+      { "id": "m-hl-1", "name": "Setup mini PC / server Homelab (Proxmox/Docker)", "done": false, "due": "Okt W3" },
+      { "id": "m-hl-2", "name": "Buat pipeline AI ringkasan teks klien", "done": false, "due": "Okt W4" },
+      { "id": "m-hl-3", "name": "Otomatisasi scripting konten YouTube", "done": false, "due": "Q4" }
+    ],
+    "notes": "## Prinsip leverage\n- Setiap otomatisasi harus menghemat ≥ 2 jam/minggu atau jangan dibangun.\n- Target: 1 dari 5 proyek terotomatisasi.",
     "images": []
   }
 ]

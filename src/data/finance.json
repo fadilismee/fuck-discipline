@@ -1,255 +1,103 @@
 {
-  "liquidBalance": 2450000,
+  "liquidBalance": 0,
   "dailyTarget": 100000,
-  "monthlyBudget": 3500000,
-  "monthlySpent": 1850000,
+  "monthlyBudget": 1500000,
+  "monthlySpent": 0,
   "currency": "Rp",
-  "transactions": [
-    {
-      "id": "f-1",
-      "title": "Warung Makan (Lunch)",
-      "category": "Food",
-      "amount": 25000,
-      "type": "expense",
-      "date": "2026-09-26",
-      "time": "13:15",
-      "icon": "lunch_dining",
-      "notes": "Nutritional midday meal"
-    },
-    {
-      "id": "f-2",
-      "title": "Americano Kopi",
-      "category": "Coffee",
-      "amount": 22000,
-      "type": "expense",
-      "date": "2026-09-26",
-      "time": "08:30",
-      "icon": "local_cafe",
-      "notes": "Daily focus fuel"
-    },
-    {
-      "id": "f-3",
-      "title": "Client Milestone Payout",
-      "category": "Income",
-      "amount": 1500000,
-      "type": "income",
-      "date": "2026-09-25",
-      "time": "15:00",
-      "icon": "payments",
-      "notes": "Frontend architecture deliverable"
-    },
-    {
-      "id": "f-4",
-      "title": "Fiber Internet Subscription",
-      "category": "Utilities",
-      "amount": 350000,
-      "type": "expense",
-      "date": "2026-09-23",
-      "time": "10:00",
-      "icon": "wifi",
-      "notes": "Monthly gigabit connection"
-    },
-    {
-      "id": "f-5",
-      "title": "System Design Reference Book",
-      "category": "Education",
-      "amount": 120000,
-      "type": "expense",
-      "date": "2026-09-21",
-      "time": "14:20",
-      "icon": "menu_book",
-      "notes": "Hardcover learning edition"
-    },
-    {
-      "id": "f-6",
-      "title": "Freelance Landing Page DP",
-      "category": "Income",
-      "amount": 800000,
-      "type": "income",
-      "date": "2026-09-11",
-      "time": "11:00",
-      "icon": "payments",
-      "notes": "50% down payment"
-    },
-    {
-      "id": "f-7",
-      "title": "Monthly Groceries",
-      "category": "Food",
-      "amount": 420000,
-      "type": "expense",
-      "date": "2026-09-07",
-      "time": "17:30",
-      "icon": "shopping_cart",
-      "notes": "Protein + veggies stock"
-    },
-    {
-      "id": "f-8",
-      "title": "Commuter + Parking",
-      "category": "Transport",
-      "amount": 150000,
-      "type": "expense",
-      "date": "2026-09-13",
-      "time": "08:10",
-      "icon": "directions_bus",
-      "notes": "Weekly topup"
-    },
-    {
-      "id": "f-9",
-      "title": "Electricity Bill",
-      "category": "Utilities",
-      "amount": 185000,
-      "type": "expense",
-      "date": "2026-09-06",
-      "time": "19:00",
-      "icon": "bolt",
-      "notes": "September bill"
-    },
-    {
-      "id": "f-10",
-      "title": "Kopi + Snack Sprint",
-      "category": "Coffee",
-      "amount": 68000,
-      "type": "expense",
-      "date": "2026-09-17",
-      "time": "15:40",
-      "icon": "local_cafe",
-      "notes": "Design sprint fuel"
-    },
-    {
-      "id": "f-11",
-      "title": "Online Course (Algorithms)",
-      "category": "Education",
-      "amount": 250000,
-      "type": "expense",
-      "date": "2026-09-09",
-      "time": "20:15",
-      "icon": "school",
-      "notes": "Lifetime access promo"
-    },
-    {
-      "id": "f-12",
-      "title": "Bug Bounty Payout",
-      "category": "Income",
-      "amount": 600000,
-      "type": "income",
-      "date": "2026-09-19",
-      "time": "13:00",
-      "icon": "payments",
-      "notes": "Side quest reward"
-    },
-    {
-      "id": "f-13",
-      "title": "Dinner with Family",
-      "category": "Food",
-      "amount": 175000,
-      "type": "expense",
-      "date": "2026-09-20",
-      "time": "19:30",
-      "icon": "restaurant",
-      "notes": "Weekend dinner"
-    },
-    {
-      "id": "f-14",
-      "title": "Fuel Topup",
-      "category": "Transport",
-      "amount": 100000,
-      "type": "expense",
-      "date": "2026-09-24",
-      "time": "07:45",
-      "icon": "local_gas_station",
-      "notes": "Weekly fuel"
-    }
-  ],
+  "transactions": [],
   "targets": [
     {
-      "id": "pt-1",
-      "name": "Laptop Kerja (ThinkPad)",
-      "targetPrice": 15000000,
-      "saved": 4200000,
-      "priority": "high",
-      "note": "Buat dev + build mobile. Target Q4.",
-      "bought": false,
-      "createdAt": "2026-09-11"
-    },
-    {
-      "id": "pt-2",
+      "id": "pt-kursi",
       "name": "Kursi Ergonomis",
       "targetPrice": 3500000,
-      "saved": 1100000,
-      "priority": "med",
-      "note": "Punggung sudah protes tiap sprint.",
+      "saved": 0,
+      "priority": "high",
+      "note": "Sangat penting agar tidak sakit pinggang.",
       "bought": false,
-      "createdAt": "2026-09-13"
+      "createdAt": "2026-09-26"
     },
     {
-      "id": "pt-3",
-      "name": "Monitor 4K 27\"",
-      "targetPrice": 5000000,
+      "id": "pt-ram",
+      "name": "Upgrade RAM / Storage Server Homelab",
+      "targetPrice": 1800000,
+      "saved": 0,
+      "priority": "med",
+      "note": "Biar AI jalan lebih mulus.",
+      "bought": false,
+      "createdAt": "2026-09-26"
+    },
+    {
+      "id": "pt-mic",
+      "name": "Microphone Podcast Premium",
+      "targetPrice": 1200000,
+      "saved": 0,
+      "priority": "med",
+      "note": "Untuk YouTube & voiceover.",
+      "bought": false,
+      "createdAt": "2026-09-26"
+    },
+    {
+      "id": "pt-whey",
+      "name": "Suplemen / Whey Protein",
+      "targetPrice": 600000,
       "saved": 0,
       "priority": "low",
-      "note": "Nice to have setelah laptop.",
+      "note": "Modal fisik workout.",
       "bought": false,
-      "createdAt": "2026-09-21"
+      "createdAt": "2026-09-26"
     }
   ],
   "budgets": [
     {
-      "id": "b-1",
-      "name": "Food & Groceries",
-      "category": "Food",
-      "cap": 800000,
-      "color": "error"
-    },
-    {
-      "id": "b-2",
-      "name": "Transport & Fuel",
-      "category": "Transport",
+      "id": "b-tech",
+      "name": "Tech & Ops",
+      "category": "Tech",
       "cap": 500000,
       "color": "tertiary-fixed"
     },
     {
-      "id": "b-3",
-      "name": "Bills & Utilities",
-      "category": "Utilities",
-      "cap": 400000,
-      "color": "outline"
-    },
-    {
-      "id": "b-4",
-      "name": "Education & Courses",
-      "category": "Education",
+      "id": "b-marketing",
+      "name": "Marketing & Ads",
+      "category": "Marketing",
       "cap": 300000,
       "color": "secondary-fixed"
     },
     {
-      "id": "b-5",
-      "name": "Coffee & Beverage",
-      "category": "Coffee",
-      "cap": 300000,
+      "id": "b-fitness",
+      "name": "Fitness & Health",
+      "category": "Health",
+      "cap": 400000,
+      "color": "error"
+    },
+    {
+      "id": "b-fuel",
+      "name": "Daily Fuel & Meals",
+      "category": "Food",
+      "cap": 600000,
       "color": "primary-fixed"
     }
   ],
   "accounts": [
     {
-      "id": "a-1",
-      "name": "Cash Physical",
-      "detail": "Wallet Ledger",
-      "balance": 450000,
-      "icon": "payments"
-    },
-    {
-      "id": "a-2",
-      "name": "Bank Account",
-      "detail": "BCA / Mandiri",
-      "balance": 1500000,
+      "id": "a-bank",
+      "name": "Main Bank (Safe)",
+      "detail": "Tabungan utama & dana darurat",
+      "balance": 0,
       "icon": "account_balance"
     },
     {
-      "id": "a-3",
-      "name": "Digital E-Wallet",
-      "detail": "GoPay / ShopeePay",
-      "balance": 500000,
+      "id": "a-wallet",
+      "name": "Daily Wallet (Gopay/OVO)",
+      "detail": "Jatah jajan, kopi, kebutuhan harian",
+      "balance": 0,
       "icon": "contactless"
+    },
+    {
+      "id": "a-hustle",
+      "name": "Hustle Account (Jago/SeaBank)",
+      "detail": "Khusus terima bayaran klien — jangan campur!",
+      "balance": 0,
+      "icon": "payments"
     }
   ]
 }

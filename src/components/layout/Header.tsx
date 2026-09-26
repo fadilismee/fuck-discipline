@@ -12,6 +12,7 @@ export const Header: React.FC = () => {
   const tasks = useLifeOSStore((s) => s.data.tasks);
   const routines = useLifeOSStore((s) => s.data.routines);
   const openDrawer = useLifeOSStore((s) => s.openDrawer);
+  const lock = useLifeOSStore((s) => s.lock);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -102,6 +103,14 @@ export const Header: React.FC = () => {
             </div>
           )}
         </div>
+
+        <button
+          onClick={lock}
+          className="flex items-center justify-center w-9 h-9 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-error transition-colors cursor-pointer"
+          type="button" title="Lock Terminal" aria-label="Lock terminal"
+        >
+          <span className="material-symbols-outlined text-[20px]">lock</span>
+        </button>
 
         <div onClick={() => setActiveView('settings')} className="flex items-center gap-space-sm pl-2 sm:pl-space-xs border-l border-outline-variant/30 cursor-pointer" title="Go to Settings">
           <div className="relative flex items-center justify-center w-9 h-9 rounded-full bg-surface-container-highest text-primary font-bold border border-outline-variant/50 text-[14px]">

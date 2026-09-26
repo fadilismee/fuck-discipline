@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { LifeOSData, Task, Project, ProjectImage, CalendarEvent, Routine, Transaction, ReviewItem, ViewKey, AiMessage, SettingsState, FinanceState, Budget, Account, PurchaseTarget } from '../types';
 import { BASE_TODAY_ISO } from '../utils/date';
+import { APP_PIN, UNLOCK_SESSION_KEY } from '../security/pin';
 
 import userJson from '../data/user.json';
 import tasksJson from '../data/tasks.json';
@@ -13,7 +14,7 @@ import reviewJson from '../data/review.json';
 import mirrorAiJson from '../data/mirrorAi.json';
 import settingsJson from '../data/settings.json';
 
-const STORAGE_KEY = 'PRODUCTIV_LIFE_OS_V2_DATA';
+const STORAGE_KEY = 'PRODUCTIV_LIFE_OS_V3_DATA';
 
 const INITIAL_DATA: LifeOSData = {
   user: userJson as LifeOSData['user'],
@@ -104,6 +105,7 @@ interface LifeOSStoreState {
   reviewPeriod: 'daily' | 'weekly' | 'monthly';
   taskFilter: 'all' | 'today' | 'upcoming' | 'overdue' | 'completed';
   taskViewMode: 'list' | 'kanban';
+  isLocked: boolean;
   toast: { message: string; type: 'info' | 'success' } | null;
   confirmState: {
     title: string;
@@ -148,6 +150,8 @@ interface LifeOSStoreState {
   closeDrawer: () => void;
   setTaskFilter: (filter: 'all' | 'today' | 'upcoming' | 'overdue' | 'completed') => void;
   setTaskViewMode: (mode: 'list' | 'kanban') => void;
+  unlock: (pin: string) => boolean;
+  lock: () => void;
   showToast: (message: string, type?: 'info' | 'success') => void;
   requestConfirm: (opts: { title: string; message: string; confirmLabel?: string; onConfirm: () => void }) => void;
   closeConfirm: () => void;
@@ -257,6 +261,13 @@ export const useLifeOSStore = create<LifeOSStoreState>((set, get) => ({
   reviewPeriod: 'daily',
   taskFilter: 'all',
   taskViewMode: 'list',
+  isLocked: (() => {
+    try {
+      return sessionStorage.getItem(UNLOCK_SESSION_KEY) !== '1';
+    } catch {
+      return true;
+    }
+  })(),
   toast: null,
   confirmState: null,
 
@@ -318,6 +329,35 @@ export const useLifeOSStore = create<LifeOSStoreState>((set, get) => ({
 
   setTaskFilter: (filter) => set({ taskFilter: filter }),
   setTaskViewMode: (mode) => set({ taskViewMode: mode }),
+
+  unlock: (pin) => {
+    if (pin === APP_PIN) {
+      try {
+        sessionStorage.setItem(UNLOCK_SESSION_KEY, '1');
+      } catch {
+        /* abaikan */
+      }
+      set({ isLocked: false });
+      get().showToast('Terminal unlocked. Welcome back.', 'success');
+      return true;
+    }
+    return false;
+  },
+  lock: () => {
+    try {
+      sessionStorage.removeItem(UNLOCK_SESSION_KEY);
+    } catch {
+      /* abaikan */
+    }
+    set({
+      isLocked: true,
+      isSidebarOpen: false,
+      isCmdkOpen: false,
+      isNotifOpen: false,
+      isDrawerOpen: false,
+      selectedTaskId: null,
+    });
+  },
 
   showToast: (message, type = 'info') => {
     set({ toast: { message, type } });
