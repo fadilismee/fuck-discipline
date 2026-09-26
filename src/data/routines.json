@@ -1,0 +1,116 @@
+[
+  {
+    "id": "r-1",
+    "title": "Wake up at 05:30 (Fajr)",
+    "block": "morning",
+    "time": "05:30",
+    "streak": 42,
+    "doneToday": true,
+    "tag": "Prime Discipline",
+    "desc": "Alarm sync · Circadian start",
+    "history": {
+      "2026-09-19": true,
+      "2026-09-20": true,
+      "2026-09-21": true,
+      "2026-09-22": true,
+      "2026-09-23": true,
+      "2026-09-24": true,
+      "2026-09-25": true
+    }
+  },
+  {
+    "id": "r-2",
+    "title": "Daily Prayers (Fajr-Asr)",
+    "block": "morning",
+    "time": "06:00",
+    "streak": 60,
+    "doneToday": true,
+    "tag": "Spiritual",
+    "desc": "Fajr, Dhuhr, Asr on time",
+    "history": {
+      "2026-09-19": true,
+      "2026-09-20": true,
+      "2026-09-21": true,
+      "2026-09-22": true,
+      "2026-09-23": true,
+      "2026-09-24": true,
+      "2026-09-25": true
+    }
+  },
+  {
+    "id": "r-3",
+    "title": "Qur'an Recitation (1 Juz)",
+    "block": "morning",
+    "time": "06:30",
+    "streak": 28,
+    "doneToday": true,
+    "tag": "Daily Reading",
+    "desc": "Consistent morning reflection",
+    "history": {
+      "2026-09-19": true,
+      "2026-09-20": true,
+      "2026-09-21": false,
+      "2026-09-22": true,
+      "2026-09-23": true,
+      "2026-09-24": true,
+      "2026-09-25": true
+    }
+  },
+  {
+    "id": "r-4",
+    "title": "Workout & Stretch",
+    "block": "afternoon",
+    "time": "16:00",
+    "streak": 14,
+    "doneToday": false,
+    "tag": "Physical",
+    "desc": "Upper Body Push & Thoracic Mobility",
+    "history": {
+      "2026-09-19": true,
+      "2026-09-20": false,
+      "2026-09-21": true,
+      "2026-09-22": true,
+      "2026-09-23": false,
+      "2026-09-24": true,
+      "2026-09-25": false
+    }
+  },
+  {
+    "id": "r-5",
+    "title": "English Speaking Practice",
+    "block": "evening",
+    "time": "18:30",
+    "streak": 9,
+    "doneToday": false,
+    "tag": "Skill Flow",
+    "desc": "20m active conversational flow",
+    "history": {
+      "2026-09-19": true,
+      "2026-09-20": true,
+      "2026-09-21": true,
+      "2026-09-22": false,
+      "2026-09-23": true,
+      "2026-09-24": false,
+      "2026-09-25": false
+    }
+  },
+  {
+    "id": "r-6",
+    "title": "Deep Reading (Non-screen)",
+    "block": "evening",
+    "time": "22:00",
+    "streak": 19,
+    "doneToday": false,
+    "tag": "Winddown",
+    "desc": "Bedtime physical book reading",
+    "history": {
+      "2026-09-19": true,
+      "2026-09-20": true,
+      "2026-09-21": true,
+      "2026-09-22": true,
+      "2026-09-23": true,
+      "2026-09-24": false,
+      "2026-09-25": false
+    }
+  }
+]

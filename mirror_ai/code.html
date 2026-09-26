@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary-fixed":"#6ffbbe","secondary-fixed-dim":"#c6c5cf","inverse-on-surface":"#313032","surface-container-low":"#1c1b1d","outline-variant":"#444749","on-primary-fixed-variant":"#454748","primary-container":"#e2e2e3","surface-bright":"#39393b","primary-fixed-dim":"#c6c6c7","error-container":"#93000a","surface-container-highest":"#353437","surface-variant":"#353437","surface":"#131315","on-secondary-container":"#bcbbc5","surface-container-high":"#2a2a2c","tertiary-container":"#6ffbbe","on-secondary":"#2f3038","on-secondary-fixed":"#1a1b22","inverse-surface":"#e5e1e4","on-surface-variant":"#c4c7c9","tertiary-fixed-dim":"#4edea3","primary":"#ffffff","on-secondary-fixed-variant":"#46464e","background":"#131315","secondary":"#c6c5cf","on-primary-container":"#636466","surface-container":"#201f22","primary-fixed":"#e2e2e3","secondary-container":"#4a4b53","secondary-fixed":"#e3e1ec","surface-dim":"#131315","tertiary":"#ffffff","on-primary-fixed":"#1a1c1d","on-tertiary":"#003824","on-tertiary-fixed-variant":"#005236","inverse-primary":"#5d5e60","on-tertiary-container":"#00734e","outline":"#8e9193","on-surface":"#e5e1e4","surface-tint":"#c6c6c7","on-background":"#e5e1e4","on-tertiary-fixed":"#002113","on-error":"#690005","on-primary":"#2f3132","error":"#ffb4ab","surface-container-lowest":"#0e0e10","on-error-container":"#ffdad6"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"gutter-dense":"0.5rem","margin-compact":"1rem","space-xl":"1.5rem",gutter:"1rem","space-md":"0.75rem","space-2xl":"2rem","space-lg":"1rem","space-2xs":"0.125rem","space-xs":"0.25rem",margin:"1.5rem","space-sm":"0.5rem"},fontFamily:{"label-default":["JetBrains Mono"],display:["Geist"],"body-default":["Geist"],"headline-lg":["Geist"],"headline-md":["Geist"],"headline-sm":["Geist"],"body-lg":["Geist"],"body-sm":["Geist"],"label-sm":["JetBrains Mono"],kbd:["JetBrains Mono"]},fontSize:{"label-default":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"500"}],display:["32px",{lineHeight:"40px",letterSpacing:"-0.03em",fontWeight:"600"}],"body-default":["13px",{lineHeight:"20px",letterSpacing:"-0.005em",fontWeight:"400"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.025em",fontWeight:"600"}],"headline-md":["18px",{lineHeight:"26px",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-sm":["15px",{lineHeight:"22px",letterSpacing:"-0.015em",fontWeight:"500"}],"body-lg":["15px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"500"}],kbd:["10px",{lineHeight:"12px",letterSpacing:"0.05em",fontWeight:"500"}]}}}};</script></head><body class="bg-surface font-body-default text-body-default text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[240px] bg-surface-container-lowest z-50 flex flex-col justify-between py-space-md border-r border-outline-variant/30 select-none"><div class="flex flex-col gap-space-sm px-space-xs"><div class="flex items-center gap-space-sm px-space-sm py-space-xs mx-0.5 rounded-xl transition-colors hover:bg-surface-container-low"><img alt="PRODUCTIV App Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XBh2iHKfTMnJu_MCyhBdZWvPsyuVuzJIhvujJeTCSXg0dT7XI5Ww0TeuVHrv-QZc_AAEHQPHjtqvtargM8-QmuWL5Kp52MI0_9Nho8F0OILvB_hw3jhxZcX7GLJ6eTpW29dkRZmX1NH1h0FkJZDb8IGzjKIKSws68t6K3wPWIxefvxxcw12WAHemUp7uaF50OBCJBY9-jLfy_p7kxY22926B57DlLl5SzCahio7_64LMMh2IR1tCctYEM"/><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-[14px] text-primary tracking-tight font-semibold leading-none">PRODUCTIV</span><span class="font-kbd text-[9px] px-1 py-0.5 rounded bg-surface-container-high text-tertiary-fixed font-medium leading-none">OS</span></div><span class="font-label-sm text-[10px] text-outline tracking-wider leading-none mt-1">v2.4 workspace</span></div></div><div class="mt-1"><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container-high text-primary font-medium border-l-2 border-tertiary-fixed pl-[calc(theme(spacing.space-sm)-2px)]"><span class="px-space-sm py-1 font-label-sm text-[10px] text-outline/80 uppercase tracking-widest font-semibold">System</span><a class="flex items-center justify-between px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all group font-body-default text-body-sm" data-path="today" href="#"><span>Today</span><span class="font-label-sm text-[10px] px-1.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-medium">Now</span></a><a class="flex items-center justify-between px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all group font-body-default text-body-sm" data-path="tasks" href="#"><span>Tasks</span><span class="font-label-sm text-[10px] px-1.5 py-0.5 rounded-full bg-surface-container-highest text-tertiary-fixed font-medium">5</span></a><a class="flex items-center justify-between px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all group font-body-default text-body-sm" data-path="projects" href="#"><span>Projects</span><span class="font-label-sm text-[10px] px-1.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-medium">3</span></a><a class="flex items-center justify-between px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all group font-body-default text-body-sm" data-path="calendar" href="#"><span>Calendar</span></a><a class="flex items-center justify-between px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all group font-body-default text-body-sm" data-path="finance" href="#"><span>Finance</span></a><a class="flex items-center justify-between px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all group font-body-default text-body-sm" data-path="routines" href="#"><span>Routines</span></a><div class="my-2.5 h-[1px] bg-outline-variant/30 mx-space-sm"></div><span class="px-space-sm py-1 font-label-sm text-[10px] text-outline/80 uppercase tracking-widest font-semibold">Deep Work &amp; Insights</span><a class="flex items-center justify-between px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all group font-body-default text-body-sm" data-path="focus" href="#"><span>Focus</span><span class="flex items-center gap-1 font-label-sm text-[10px] px-1.5 py-0.5 rounded-full bg-tertiary-fixed/10 text-tertiary-fixed border border-tertiary-fixed/20"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed animate-pulse"></span>Live</span></a><a class="flex items-center justify-between px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all group font-body-default text-body-sm" data-path="review" href="#"><span>Review</span><span class="font-label-sm text-[10px] px-1.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-medium">Weekly</span></a><a class="flex items-center justify-between px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all group font-body-default text-body-sm" data-path="mirror" href="#"><span>Mirror</span><span class="font-kbd text-[9px] px-1.5 py-0.2 rounded bg-tertiary-fixed/10 text-tertiary-fixed border border-tertiary-fixed/20 font-semibold">AI</span></a></nav></div></div><div class="px-space-xs pt-space-xs border-t border-outline-variant/30"><nav class="flex flex-col" data-active-classes="bg-surface-container-high text-primary font-medium border-l-2 border-tertiary-fixed pl-[calc(theme(spacing.space-sm)-2px)]"><a class="flex items-center justify-between px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all group font-body-default text-body-sm" data-path="settings" href="#"><span>Settings</span><kbd class="font-kbd text-[10px] px-1 py-0.5 rounded bg-surface-container text-outline group-hover:text-on-surface transition-colors">⌘,</kbd></a></nav></div></aside><div class="pl-[240px]"><header class="fixed top-0 left-[240px] right-0 h-14 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-sm"><span class="font-label-default text-label-default text-outline">WORKSPACE /</span><span class="font-body-default text-body-default text-on-surface font-medium">Friday, 25 Sep</span></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-space-md h-8 px-space-md bg-surface-container-lowest border border-outline-variant/40 rounded-lg text-on-surface-variant hover:border-outline transition-colors" type="button"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px]">search</span><span class="font-body-sm text-body-sm text-on-surface-variant">Search or type...</span></div><kbd class="font-kbd text-kbd px-1 py-0.5 bg-surface-container-high text-on-surface rounded">⌘K</kbd></button><button class="flex items-center gap-1 h-8 px-space-sm bg-primary text-on-primary rounded-lg hover:bg-primary-fixed transition-colors font-body-sm text-body-sm font-medium" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Capture</span></button><button class="relative flex items-center justify-center w-8 h-8 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary-fixed border border-surface"></span></button><div class="flex items-center gap-space-sm pl-space-xs border-l border-outline-variant/30 cursor-pointer"><div class="relative flex items-center justify-center w-8 h-8 rounded-full bg-surface-container-highest text-primary font-headline-sm text-headline-sm font-bold border border-outline-variant/50"><span>F</span><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-tertiary-fixed border-2 border-surface-container-lowest"></span></div><div class="flex flex-col text-left"><span class="font-body-sm text-[12px] text-primary font-medium leading-none">Fadil</span><span class="font-label-sm text-[10px] text-outline leading-none mt-0.5">Personal</span></div><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></div></div></header><main class="w-full pt-14 px-space-xl pb-space-2xl bg-surface min-h-screen"><div class="flex flex-col w-full gap-space-xl">
+<!-- Top Telemetry Ribbon & Protocol Header -->
+<header class="flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-lowest px-space-md py-space-xs rounded-xl shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-ping"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed -ml-2.5"></span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider font-semibold">Live Telemetry Pipeline</span>
+</div>
+<span class="text-outline-variant/60 font-label-sm">/</span>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-outline">date_range</span>
+<span>Window: <span class="text-on-surface font-medium">21–25 Sep 2026</span></span>
+</div>
+</div>
+<div class="flex items-center gap-space-lg font-label-sm text-label-sm">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="text-outline">Confidence Score:</span>
+<span class="text-tertiary-fixed font-semibold bg-tertiary-fixed/10 px-1.5 py-0.5 rounded">94.2%</span>
+</div>
+<div class="flex items-center gap-1 text-outline">
+<span class="material-symbols-outlined text-[13px]">sync</span>
+<span>Synced 14m ago</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pt-space-xs">
+<div class="flex flex-col gap-1 max-w-3xl">
+<div class="flex items-center gap-space-sm">
+<h1 class="font-display text-display text-primary tracking-tight font-semibold">MIRROR AI</h1>
+<span class="font-kbd text-kbd px-2 py-0.5 rounded bg-surface-container-high text-tertiary-fixed uppercase font-semibold">Autonomous System Analyst v2.4</span>
+</div>
+<p class="font-body-default text-body-default text-on-surface-variant">
+          Deep telemetry synthesis from your tasks, calendar, time-tracking, and biometric energy cycles. AI acts on human approval only.
+        </p>
+</div>
+<!-- Quick Telemetry Metric Badges -->
+<div class="flex items-center gap-space-xs self-start md:self-auto">
+<div class="flex flex-col px-space-md py-space-xs bg-surface-container rounded-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-outline">COGNITIVE LOAD</span>
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">78.4<span class="font-label-sm text-label-sm text-outline font-normal">/100</span></span>
+</div>
+<div class="flex flex-col px-space-md py-space-xs bg-surface-container rounded-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-outline">FRICTION INDEX</span>
+<span class="font-headline-sm text-headline-sm text-error font-semibold">+18.2%</span>
+</div>
+</div>
+</div>
+</header>
+<!-- SECTION 1: CORE OBSERVATIONS (Week 39 Telemetry) -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-semibold uppercase">01 // OBSERVATION SUITE</span>
+<span class="font-label-sm text-label-sm text-outline">· Week 39 Behavioral Snapshot</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Source: Linear + Calendar + HealthKit</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Card 1: Task Completion Velocity (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col justify-between bg-surface-container-low p-space-lg rounded-xl shadow-sm hover:bg-surface-container/40 transition-colors">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-medium">Metric 01</span>
+<h2 class="font-headline-md text-headline-md text-primary font-semibold">Task Completion Velocity</h2>
+</div>
+<span class="font-label-default text-label-default px-2 py-0.5 rounded bg-surface-container-high text-tertiary-fixed">
+              64.3% Realized
+            </span>
+</div>
+<div class="flex flex-wrap items-baseline gap-space-sm">
+<span class="font-display text-display text-primary font-bold">27</span>
+<span class="font-headline-sm text-headline-sm text-on-surface-variant font-medium">of 42 Planned Tasks Shipped</span>
+</div>
+<!-- Mini Inline Bar Telemetry Chart -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm text-outline">
+<span>Mon — Wed: 21 tasks</span>
+<span class="text-error font-medium">Thu — Fri Velocity Dip (-41%)</span>
+</div>
+<div class="w-full h-2.5 bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="h-full bg-primary" style="width: 64.3%;"></div>
+<div class="h-full bg-error/70" style="width: 14.2%;"></div>
+<div class="h-full bg-outline-variant/30" style="width: 21.5%;"></div>
+</div>
+<div class="flex items-center gap-space-md font-label-sm text-[10px] text-outline pt-0.5">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary"></span> 27 Shipped</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-error/70"></span> 6 Dropped</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-outline-variant/40"></span> 9 Rolled Over</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-md bg-surface-container/50 -mx-space-lg -mb-space-lg p-space-lg rounded-b-xl flex items-center justify-between gap-space-sm">
+<p class="font-body-default text-body-default text-on-surface-variant leading-relaxed">
+<strong class="text-primary font-medium">18h 20m</strong> logged in deep focus. 15 tasks either deferred or rolled over to next week. Velocity dipped on Thursday post-lunch due to cognitive back-to-backs.
+          </p>
+<span class="material-symbols-outlined text-outline text-[20px] shrink-0">trending_down</span>
+</div>
+</div>
+<!-- Card 2: High-Friction Outlier (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col justify-between bg-surface-container-low p-space-lg rounded-xl shadow-sm hover:bg-surface-container/40 transition-colors">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-error uppercase tracking-wider font-semibold">Anomalous Resistance</span>
+<h2 class="font-headline-md text-headline-md text-primary font-semibold">Study SQL &amp; Indexing</h2>
+</div>
+<div class="flex items-center gap-1 px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">warning</span>
+<span>Postponed 3x</span>
+</div>
+</div>
+<!-- Migration Timeline Trace -->
+<div class="flex flex-col gap-2 my-space-xs bg-surface-container p-space-sm rounded-lg">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline">Tue 19:00</span>
+<span class="material-symbols-outlined text-[14px] text-outline">arrow_forward</span>
+<span class="text-outline">Wed 20:00</span>
+<span class="material-symbols-outlined text-[14px] text-outline">arrow_forward</span>
+<span class="text-error font-medium">Fri 19:00 (Pending)</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm pt-1 bg-surface-container-highest/40 px-space-xs rounded">
+<span class="text-on-surface-variant">Scheduled Cognitive Fatigue:</span>
+<span class="font-semibold text-error">84% Avg</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Behavioral Diagnosis</span>
+<p class="font-body-default text-body-default text-on-surface-variant">
+              SQL requires abstract logical synthesis which persistently collides with post-18:00 biological depletion.
+            </p>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Avoidance Pattern: Structural, not motivation.</span>
+<span class="font-kbd text-kbd px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface">SYS-ALERT</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: BEHAVIORAL PATTERNS & CIRCADIAN BIOMARKERS -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-semibold uppercase">02 // CIRCADIAN TELEMETRY</span>
+<span class="font-label-sm text-label-sm text-outline">· High-Density Focus Time Matrix</span>
+</div>
+<div class="flex items-center gap-space-md font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-tertiary-fixed"></span> Peak (90-100%)</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-surface-container-highest"></span> Baseline (50-80%)</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-error/50"></span> Collapse (&lt;35%)</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Circadian Matrix Card -->
+<div class="lg:col-span-8 bg-surface-container-low p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold">Focus Quality &amp; Energy Topology</h3>
+<p class="font-body-sm text-body-sm text-outline">Monitored across 124 deep sessions (Keystroke velocity + biometric HRV drift)</p>
+</div>
+<span class="font-kbd text-kbd px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">24-HOUR RADIAL MAP</span>
+</div>
+<!-- Density Heatmap Visualization Strip -->
+<div class="flex flex-col gap-2">
+<!-- Timeline Scale Labels -->
+<div class="grid grid-cols-8 font-label-sm text-[10px] text-outline px-1">
+<span>08:00</span>
+<span>10:00</span>
+<span>12:00</span>
+<span>14:00</span>
+<span>16:00</span>
+<span>18:00</span>
+<span>20:00</span>
+<span class="text-right">22:00</span>
+</div>
+<!-- Heatmap Segments -->
+<div class="grid grid-cols-16 gap-1 h-9 bg-surface-container-lowest p-1 rounded-lg">
+<!-- 08:00 - 12:30 (Peak Prime Focus) -->
+<div class="bg-tertiary-fixed/40 rounded-sm hover:bg-tertiary-fixed/60 transition-colors" title="08:00 Focus: 78%"></div>
+<div class="bg-tertiary-fixed/90 rounded-sm hover:bg-tertiary-fixed transition-colors" title="09:00 Focus: 96%"></div>
+<div class="bg-tertiary-fixed rounded-sm shadow-sm" title="10:00 Focus: 98% (Prime Peak)"></div>
+<div class="bg-tertiary-fixed/90 rounded-sm hover:bg-tertiary-fixed transition-colors" title="11:00 Focus: 94%"></div>
+<div class="bg-tertiary-fixed/70 rounded-sm hover:bg-tertiary-fixed/80 transition-colors" title="12:00 Focus: 86%"></div>
+<!-- 13:00 - 15:30 (Post Lunch Trough) -->
+<div class="bg-surface-container-highest rounded-sm" title="13:00 Transition"></div>
+<div class="bg-error/30 rounded-sm hover:bg-error/50 transition-colors" title="14:00 Focus: 42% (Post-Lunch Trough)"></div>
+<div class="bg-error/40 rounded-sm hover:bg-error/60 transition-colors" title="15:00 Focus: 38%"></div>
+<!-- 16:00 - 19:30 (Recovery Block) -->
+<div class="bg-surface-container-high rounded-sm" title="16:00 Recovery"></div>
+<div class="bg-tertiary-fixed/30 rounded-sm hover:bg-tertiary-fixed/40 transition-colors" title="17:00 Second Wind"></div>
+<div class="bg-surface-container-high rounded-sm" title="18:00 Admin Window"></div>
+<div class="bg-surface-container-highest rounded-sm" title="19:00 Dinner Break"></div>
+<!-- 20:00 - 23:00 (Evening Fatigue Collapse) -->
+<div class="bg-error/70 rounded-sm hover:bg-error transition-colors" title="20:00 Fatigue Collapse: 31%"></div>
+<div class="bg-error/80 rounded-sm hover:bg-error transition-colors" title="21:00 Completion Rate: 28%"></div>
+<div class="bg-error rounded-sm shadow-sm" title="22:00 Severe Depletion: 19%"></div>
+<div class="bg-surface-container-lowest rounded-sm opacity-40" title="23:00 Sleep Phase"></div>
+</div>
+</div>
+<!-- Detailed Zone Metrics Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm pt-space-xs">
+<!-- Zone 1 -->
+<div class="flex flex-col gap-1 p-space-sm bg-surface-container rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-semibold">09:00 — 12:30</span>
+<span class="font-kbd text-[9px] px-1 bg-tertiary-fixed/10 text-tertiary-fixed rounded">PRIME</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Prime Focus Peak</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Focus Quality: <strong class="text-tertiary-fixed font-medium">96%</strong> | Avg Deep Session: 82m</span>
+</div>
+<!-- Zone 2 -->
+<div class="flex flex-col gap-1 p-space-sm bg-surface-container rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline font-semibold">13:30 — 15:30</span>
+<span class="font-kbd text-[9px] px-1 bg-surface-container-high text-outline rounded">TROUGH</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Post-Lunch Trough</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Distraction rate <strong class="text-error font-medium">3.4x higher</strong> than baseline morning.</span>
+</div>
+<!-- Zone 3 -->
+<div class="flex flex-col gap-1 p-space-sm bg-surface-container rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-error font-semibold">20:00 — 22:30</span>
+<span class="font-kbd text-[9px] px-1 bg-error-container text-on-error-container rounded">COLLAPSE</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Fatigue Collapse</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lowest completion: <strong class="text-error font-medium">28%</strong>. Highest cognitive drift.</span>
+</div>
+</div>
+</div>
+<!-- Telemetry Insight Callout Card (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col justify-between bg-surface-container-low p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs text-outline">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Cognitive Heuristic</span>
+</div>
+<div class="p-space-md bg-surface-container rounded-xl">
+<p class="font-headline-sm text-headline-sm text-primary font-medium italic leading-snug">
+              “You consistently over-estimate your evening capacity by ~90 minutes.”
+            </p>
+</div>
+<p class="font-body-default text-body-default text-on-surface-variant leading-relaxed">
+            Planning demanding synthesis work after 19:00 results in chronic task postponement and psychological debt. Reallocating logic blocks to morning unlocks immediate velocity.
+          </p>
+</div>
+<div class="flex items-center justify-between pt-space-md font-label-sm text-label-sm text-outline">
+<span>Drift Confidence: p &lt; 0.001</span>
+<span class="text-tertiary-fixed font-medium">Verified Over 4 Wks</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: DIAGNOSTIC INQUIRY (Personal Reflection Prompt) -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-semibold uppercase">03 // ACTIVE DIAGNOSTIC INQUIRY</span>
+<span class="font-label-sm text-label-sm text-outline">· Targeted Human-in-the-Loop Root Cause</span>
+</div>
+<span class="font-kbd text-kbd px-1.5 py-0.5 rounded bg-surface-container-high text-outline">INPUT REQUIRED</span>
+</div>
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md" id="diagnostic-inquiry-box">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">help_outline</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase font-medium">System Telemetry Query #284</span>
+<h3 class="font-headline-md text-headline-md text-primary font-semibold">
+              Why was "Study SQL &amp; Database Indexing" postponed 3 times this week?
+            </h3>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-1 rounded">Telemetry flagged Friday 19:00 stall</span>
+</div>
+<!-- Quick Option Chips -->
+<div class="flex flex-wrap items-center gap-space-xs pt-1">
+<button class="quick-chip active h-8 px-space-md rounded-lg font-body-sm text-body-sm transition-all flex items-center gap-1.5 bg-primary text-on-primary font-medium" data-val="Evening energy depleted" type="button">
+<span class="material-symbols-outlined text-[15px]">bolt</span>
+<span>Evening energy depleted</span>
+</button>
+<button class="quick-chip h-8 px-space-md rounded-lg font-body-sm text-body-sm transition-all flex items-center gap-1.5 bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" data-val="Prerequisites unclear" type="button">
+<span class="material-symbols-outlined text-[15px]">quiz</span>
+<span>Prerequisites unclear</span>
+</button>
+<button class="quick-chip h-8 px-space-md rounded-lg font-body-sm text-body-sm transition-all flex items-center gap-1.5 bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" data-val="Work tasks overran" type="button">
+<span class="material-symbols-outlined text-[15px]">schedule</span>
+<span>Work tasks overran</span>
+</button>
+<button class="quick-chip h-8 px-space-md rounded-lg font-body-sm text-body-sm transition-all flex items-center gap-1.5 bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" data-val="Custom" type="button">
+<span class="material-symbols-outlined text-[15px]">edit_note</span>
+<span>Custom note...</span>
+</button>
+</div>
+<!-- Interactive Input Area -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-outline uppercase font-medium" for="reflection-input">User Context Memo (Feed into Behavioral Model):</label>
+<div class="relative w-full">
+<input class="w-full h-11 px-space-md bg-surface-container-lowest rounded-lg font-body-default text-body-default text-primary placeholder-outline focus:outline-none focus:ring-1 focus:ring-outline transition-all" id="reflection-input" placeholder="Document cognitive state or blockers..." type="text" value="Brain felt burned out after 4 hours of design systems."/>
+<button class="absolute right-1.5 top-1.5 h-8 px-space-sm rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-body-sm text-body-sm font-medium transition-colors flex items-center gap-1" id="save-reflection-btn" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">check</span>
+<span>Record Signal</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: SYSTEMIC RECOMMENDATIONS (One-Click Actionable Proposals) -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-semibold uppercase">04 // SYNTHESIZED SYSTEMIC PROPOSALS</span>
+<span class="font-label-sm text-label-sm text-outline">· Direct Calendar &amp; Task Pipeline Mutations</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 Actions Ready for Approval</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Proposal 1: SQL Reschedule -->
+<div class="flex flex-col justify-between bg-surface-container-low p-space-lg rounded-xl shadow-sm group hover:bg-surface-container/60 transition-all">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed/10 text-tertiary-fixed flex items-center justify-center font-kbd text-kbd font-bold">
+              01
+            </div>
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-semibold bg-tertiary-fixed/10 px-2 py-0.5 rounded">
+              High Impact
+            </span>
+</div>
+<div class="flex flex-col gap-1">
+<h4 class="font-headline-sm text-headline-sm text-primary font-semibold">Move SQL &amp; Analytical Tasks to 09:00 Block</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Reschedules all database indexing blocks to Monday, Wednesday, and Friday morning deep-work sprints.
+            </p>
+</div>
+<div class="p-space-sm bg-surface-container rounded-lg flex flex-col gap-1">
+<span class="font-label-sm text-[10px] text-outline uppercase font-semibold">Forecasted Impact</span>
+<div class="flex items-center gap-1.5 font-body-sm text-body-sm text-primary font-medium">
+<span class="material-symbols-outlined text-tertiary-fixed text-[18px]">trending_up</span>
+<span>+42% completion likelihood</span>
+</div>
+<span class="font-label-sm text-[11px] text-outline">Calculated from historical 96% morning focus quality.</span>
+</div>
+</div>
+<div class="pt-space-lg">
+<button class="w-full h-9 px-space-md rounded-lg bg-tertiary-fixed hover:bg-tertiary-fixed-dim text-on-tertiary font-body-default text-body-default font-semibold transition-all flex items-center justify-center gap-1.5 shadow-sm active:scale-[0.99]" onclick="applyMutation(this, 'Calendar updated: SQL moved to 09:00 Mon/Wed/Fri')" type="button">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+<span>Apply to Calendar &amp; Tasks</span>
+</button>
+</div>
+</div>
+<!-- Proposal 2: Daily MIT Cap -->
+<div class="flex flex-col justify-between bg-surface-container-low p-space-lg rounded-xl shadow-sm group hover:bg-surface-container/60 transition-all">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center font-kbd text-kbd font-bold">
+              02
+            </div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded">
+              Rule Policy
+            </span>
+</div>
+<div class="flex flex-col gap-1">
+<h4 class="font-headline-sm text-headline-sm text-primary font-semibold">Cap Daily Active Task Quota to 4 High-Impact MITs</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Enforces a strict WIP limit. Locks the 5th task behind deliberate deferral or completion of current queue.
+            </p>
+</div>
+<div class="p-space-sm bg-surface-container rounded-lg flex flex-col gap-1">
+<span class="font-label-sm text-[10px] text-outline uppercase font-semibold">Forecasted Impact</span>
+<div class="flex items-center gap-1.5 font-body-sm text-body-sm text-primary font-medium">
+<span class="material-symbols-outlined text-primary text-[18px]">security</span>
+<span>Eliminates rollover anxiety</span>
+</div>
+<span class="font-label-sm text-[11px] text-outline">Currently carrying 7 avg tasks/day causing rollover drag.</span>
+</div>
+</div>
+<div class="pt-space-lg">
+<button class="w-full h-9 px-space-md rounded-lg bg-surface-container-highest hover:bg-primary hover:text-on-primary text-primary font-body-default text-body-default font-medium transition-all flex items-center justify-center gap-1.5 active:scale-[0.99]" onclick="applyMutation(this, 'System policy enabled: 4-MIT Cap active')" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span>Enable 4-MIT Cap</span>
+</button>
+</div>
+</div>
+<!-- Proposal 3: Workout Shift -->
+<div class="flex flex-col justify-between bg-surface-container-low p-space-lg rounded-xl shadow-sm group hover:bg-surface-container/60 transition-all">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center font-kbd text-kbd font-bold">
+              03
+            </div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded">
+              Circadian Reset
+            </span>
+</div>
+<div class="flex flex-col gap-1">
+<h4 class="font-headline-sm text-headline-sm text-primary font-semibold">Shift Workout to 16:30 as a Hard Cognitive Break</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Splits afternoon mental drag before dinner. Shifts 18:00 gym routine 90 minutes earlier to sever workday inertia.
+            </p>
+</div>
+<div class="p-space-sm bg-surface-container rounded-lg flex flex-col gap-1">
+<span class="font-label-sm text-[10px] text-outline uppercase font-semibold">Forecasted Impact</span>
+<div class="flex items-center gap-1.5 font-body-sm text-body-sm text-primary font-medium">
+<span class="material-symbols-outlined text-tertiary-fixed text-[18px]">bolt</span>
+<span>Resets afternoon energy dip</span>
+</div>
+<span class="font-label-sm text-[11px] text-outline">Provides a physiological barrier preventing brain fatigue.</span>
+</div>
+</div>
+<div class="pt-space-lg">
+<button class="w-full h-9 px-space-md rounded-lg bg-surface-container-highest hover:bg-primary hover:text-on-primary text-primary font-body-default text-body-default font-medium transition-all flex items-center justify-center gap-1.5 active:scale-[0.99]" onclick="applyMutation(this, 'Routine cadence shifted: Workout moved to 16:30')" type="button">
+<span class="material-symbols-outlined text-[18px]">fitness_center</span>
+<span>Adjust Routine Cadence</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Governance & Security Footer Banner -->
+<footer class="flex flex-col sm:flex-row items-center justify-between gap-space-sm px-space-md py-space-sm bg-surface-container-lowest rounded-xl shadow-sm mt-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-6 h-6 rounded-md bg-surface-container-high flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<strong class="text-on-surface font-medium">Human Sovereignty Guard:</strong> Zero autonomous mutations permitted. All adjustments require your explicit approval.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm text-outline">
+<span>Audit Trail: #MUT-2026-941</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="text-tertiary-fixed">Policy Enforced</span>
+</div>
+</footer>
+</div>
+<script>
+  // Diagnostic Inquiry Chip selector micro-interaction
+  document.querySelectorAll('.quick-chip').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.quick-chip').forEach(b => {
+        b.classList.remove('bg-primary', 'text-on-primary', 'font-medium');
+        b.classList.add('bg-surface-container', 'text-on-surface-variant');
+      });
+      button.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      button.classList.add('bg-primary', 'text-on-primary', 'font-medium');
+      
+      const val = button.getAttribute('data-val');
+      const input = document.getElementById('reflection-input');
+      if (val === 'Custom') {
+        input.value = '';
+        input.focus();
+      } else {
+        input.value = button.textContent.trim();
+      }
+    });
+  });
+
+  // Save reflection confirmation toast
+  const saveBtn = document.getElementById('save-reflection-btn');
+  if (saveBtn) {
+    saveBtn.addEventListener('click', () => {
+      const originalText = saveBtn.innerHTML;
+      saveBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">check_circle</span><span>Signal Stored</span>';
+      saveBtn.classList.add('bg-surface-container');
+      setTimeout(() => {
+        saveBtn.innerHTML = originalText;
+        saveBtn.classList.remove('bg-surface-container');
+      }, 2000);
+    });
+  }
+
+  // One-click Mutation proposal execution handler
+  function applyMutation(btn, message) {
+    btn.disabled = true;
+    btn.className = "w-full h-9 px-space-md rounded-lg bg-surface-container-highest text-tertiary-fixed font-body-default text-body-default font-medium flex items-center justify-center gap-1.5 cursor-default";
+    btn.innerHTML = `<span class="material-symbols-outlined text-[16px]">check_circle</span><span>Approved &amp; Scheduled</span>`;
+  }
+</script></main></div>
+</body></html>

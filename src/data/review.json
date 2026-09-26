@@ -1,0 +1,28 @@
+{
+  "currentDate": "2026-09-25",
+  "throughputPercent": 88.4,
+  "history": [
+    {
+      "id": "rev-1",
+      "date": "2026-09-25",
+      "period": "daily",
+      "win": "Finished high-speed top navigation and unified JSON store architecture.",
+      "friction": "Midday context switching between design and research.",
+      "decision": "Group deep tasks into unified 90-minute blocks without notifications.",
+      "productivityRating": 9,
+      "energyLevel": "High",
+      "cognitiveScore": 88
+    },
+    {
+      "id": "rev-2",
+      "date": "2026-09-24",
+      "period": "daily",
+      "win": "Completed freelance milestone ahead of schedule.",
+      "friction": "Slightly delayed morning workout.",
+      "decision": "Prep gym clothes the night before.",
+      "productivityRating": 8,
+      "energyLevel": "Medium-High",
+      "cognitiveScore": 84
+    }
+  ]
+}

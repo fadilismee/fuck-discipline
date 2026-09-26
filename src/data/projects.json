@@ -1,0 +1,116 @@
+[
+  {
+    "id": "proj-1",
+    "name": "Productiv",
+    "tagline": "Personal OS v2.4",
+    "description": "High-agency executive dashboard and digital craftsmanship operating system for power users.",
+    "category": "Software",
+    "status": "active",
+    "progress": 72,
+    "color": "emerald",
+    "lead": "Fadil",
+    "milestones": [
+      {
+        "id": "m-1",
+        "name": "Alpha Prototype Wireframes",
+        "done": true,
+        "due": "Sep 15"
+      },
+      {
+        "id": "m-2",
+        "name": "Top Navigation & JSON Store",
+        "done": true,
+        "due": "Sep 25"
+      },
+      {
+        "id": "m-3",
+        "name": "Live Interactive Release",
+        "done": false,
+        "due": "Sep 30"
+      }
+    ],
+    "notes": "## Fokus rilis v2.4\n- Timer + stopwatch stabil, PiP auto pop-out.\n- Kanban drag & drop antar kolom.\n- Keputusan: data tetap JSON lokal dulu (offline-first), sync cloud belakangan.",
+    "images": []
+  },
+  {
+    "id": "proj-2",
+    "name": "Learning Hub",
+    "tagline": "Engineering & CS Deep Dive",
+    "description": "Structured curriculum covering database engines, distributed consensus, and microkernel architecture.",
+    "category": "Education",
+    "status": "active",
+    "progress": 45,
+    "color": "sky",
+    "lead": "Fadil",
+    "milestones": [
+      {
+        "id": "m-4",
+        "name": "SQL & Query Optimization",
+        "done": true,
+        "due": "Sep 20"
+      },
+      {
+        "id": "m-5",
+        "name": "Distributed Raft Consensus",
+        "done": false,
+        "due": "Oct 10"
+      }
+    ],
+    "notes": "## Kurikulum aktif\n- Fokus: indexing + EXPLAIN ANALYZE.\n- Berikutnya: Raft leader election (bacaan + simulasi).",
+    "images": []
+  },
+  {
+    "id": "proj-3",
+    "name": "Physical Resilience",
+    "tagline": "Health & Bio-Optimization",
+    "description": "Strength training protocol, circadian alignment, clean nutrition, and daily mobility work.",
+    "category": "Health",
+    "status": "active",
+    "progress": 85,
+    "color": "emerald",
+    "lead": "Fadil",
+    "milestones": [
+      {
+        "id": "m-6",
+        "name": "Maintain 30-day streak of Morning prayers & workout",
+        "done": true,
+        "due": "Sep 28"
+      },
+      {
+        "id": "m-7",
+        "name": "Complete 100km total monthly running",
+        "done": false,
+        "due": "Sep 30"
+      }
+    ],
+    "notes": "## Protokol\n- Push/pull/legs bergantian, mobility tiap sesi.\n- Lari easy 5K tiap 2 hari, catat di routines.",
+    "images": []
+  },
+  {
+    "id": "proj-4",
+    "name": "Capital & Assets",
+    "tagline": "Finance & Investment Protocol",
+    "description": "Ledger tracking, high-yield cash preservation, expense discipline, and portfolio allocation.",
+    "category": "Finance",
+    "status": "active",
+    "progress": 60,
+    "color": "violet",
+    "lead": "Fadil",
+    "milestones": [
+      {
+        "id": "m-8",
+        "name": "Emergency Fund 6 Months Buffer",
+        "done": true,
+        "due": "Sep 01"
+      },
+      {
+        "id": "m-9",
+        "name": "Q3 Ledger Audit & Optimization",
+        "done": false,
+        "due": "Sep 30"
+      }
+    ],
+    "notes": "## Aturan kas\n- Spending harian max Rp 100rb.\n- Setiap pembelian > Rp 500rb wajib masuk Target Pembelian dulu.",
+    "images": []
+  }
+]

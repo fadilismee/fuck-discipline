@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed":"#e2e2e3","inverse-on-surface":"#313032","secondary-container":"#4a4b53","secondary":"#c6c5cf","surface":"#131315","surface-container":"#201f22","on-surface-variant":"#c4c7c9","secondary-fixed":"#e3e1ec","surface-container-high":"#2a2a2c","error":"#ffb4ab","primary":"#ffffff","on-tertiary-fixed-variant":"#005236","on-secondary-fixed":"#1a1b22","inverse-surface":"#e5e1e4","tertiary-fixed":"#6ffbbe","surface-container-highest":"#353437","error-container":"#93000a","surface-dim":"#131315","on-background":"#e5e1e4","on-tertiary-container":"#00734e","on-secondary-fixed-variant":"#46464e","tertiary-container":"#6ffbbe","surface-tint":"#c6c6c7","on-error":"#690005","on-error-container":"#ffdad6","secondary-fixed-dim":"#c6c5cf","on-secondary-container":"#bcbbc5","tertiary-fixed-dim":"#4edea3","surface-container-lowest":"#0e0e10","on-primary-fixed-variant":"#454748","surface-variant":"#353437","background":"#131315","on-secondary":"#2f3038","surface-bright":"#39393b","on-primary":"#2f3132","outline":"#8e9193","on-tertiary-fixed":"#002113","surface-container-low":"#1c1b1d","inverse-primary":"#5d5e60","primary-container":"#e2e2e3","primary-fixed-dim":"#c6c6c7","on-primary-container":"#636466","outline-variant":"#444749","on-primary-fixed":"#1a1c1d","on-surface":"#e5e1e4","on-tertiary":"#003824","tertiary":"#ffffff"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-lg":"1rem",margin:"1.5rem","space-2xs":"0.125rem","space-2xl":"2rem","space-xs":"0.25rem","margin-compact":"1rem","space-md":"0.75rem","space-sm":"0.5rem","gutter-dense":"0.5rem","space-xl":"1.5rem",gutter:"1rem"},fontFamily:{"headline-lg":["Geist"],"label-default":["JetBrains Mono"],display:["Geist"],"label-sm":["JetBrains Mono"],"body-lg":["Geist"],"headline-sm":["Geist"],"headline-md":["Geist"],"body-default":["Geist"],"body-sm":["Geist"],kbd:["JetBrains Mono"]},fontSize:{"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.025em",fontWeight:"600"}],"label-default":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"500"}],display:["32px",{lineHeight:"40px",letterSpacing:"-0.03em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"500"}],"body-lg":["15px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"400"}],"headline-sm":["15px",{lineHeight:"22px",letterSpacing:"-0.015em",fontWeight:"500"}],"headline-md":["18px",{lineHeight:"26px",letterSpacing:"-0.02em",fontWeight:"600"}],"body-default":["13px",{lineHeight:"20px",letterSpacing:"-0.005em",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"400"}],kbd:["10px",{lineHeight:"12px",letterSpacing:"0.05em",fontWeight:"500"}]}}}};</script></head><body class="bg-surface font-body-default text-body-default text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[240px] bg-surface-container-lowest z-50 flex flex-col justify-between py-space-md border-r border-outline-variant/30 select-none"><div class="flex flex-col gap-space-sm px-space-xs"><div class="flex items-center gap-space-sm px-space-sm py-space-xs mx-0.5 rounded-xl transition-colors hover:bg-surface-container-low"><img alt="PRODUCTIV App Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XBh2iHKfTMnJu_MCyhBdZWvPsyuVuzJIhvujJeTCSXg0dT7XI5Ww0TeuVHrv-QZc_AAEHQPHjtqvtargM8-QmuWL5Kp52MI0_9Nho8F0OILvB_hw3jhxZcX7GLJ6eTpW29dkRZmX1NH1h0FkJZDb8IGzjKIKSws68t6K3wPWIxefvxxcw12WAHemUp7uaF50OBCJBY9-jLfy_p7kxY22926B57DlLl5SzCahio7_64LMMh2IR1tCctYEM"/><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-[14px] text-primary tracking-tight font-semibold leading-none">PRODUCTIV</span><span class="font-kbd text-[9px] px-1 py-0.5 rounded bg-surface-container-high text-tertiary-fixed font-medium leading-none">OS</span></div><span class="font-label-sm text-[10px] text-outline tracking-wider leading-none mt-1">v2.4 workspace</span></div></div><div class="mt-1"><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container text-primary font-medium border border-outline-variant/50 shadow-sm"><span class="px-space-sm py-1 font-label-sm text-[10px] text-outline/80 uppercase tracking-widest font-semibold">System</span><a class="flex items-center justify-between px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all group" data-path="today" href="#"><span class="font-body-default text-body-sm font-medium">Today</span><span class="w-1.5 h-1.5 rounded-full bg-outline/40 group-hover:bg-tertiary-fixed transition-colors"></span></a><a class="flex items-center justify-between px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all group" data-path="tasks" href="#"><span class="font-body-default text-body-sm font-medium">Tasks</span><span class="font-label-sm text-[10px] px-1.5 py-0.5 rounded-full bg-surface-container-highest text-tertiary-fixed font-medium">5</span></a><a class="flex items-center justify-between px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all group" data-path="projects" href="#"><span class="font-body-default text-body-sm font-medium">Projects</span><span class="font-label-sm text-[10px] px-1.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-medium">3</span></a><a class="flex items-center justify-between px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all group" data-path="calendar" href="#"><span class="font-body-default text-body-sm font-medium">Calendar</span><span class="font-label-sm text-[10px] text-outline/70 font-mono">SEP 25</span></a><a class="flex items-center justify-between px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all group" data-path="finance" href="#"><span class="font-body-default text-body-sm font-medium">Finance</span><span class="font-label-sm text-[10px] px-1.5 py-0.5 rounded bg-surface-container-high/60 text-outline-variant font-mono">$</span></a><a aria-current="page" class="flex items-center justify-between px-space-sm h-8 rounded-lg transition-all group bg-surface-container text-primary font-medium border border-outline-variant/50 shadow-sm" data-path="routines" href="#"><span class="font-body-default text-body-sm font-medium">Routines</span><span class="font-label-sm text-[10px] px-1.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-medium">4</span></a><div class="my-2.5 h-[1px] bg-outline-variant/30 mx-space-sm"></div><span class="px-space-sm py-1 font-label-sm text-[10px] text-outline/80 uppercase tracking-widest font-semibold">Deep Work &amp; Insights</span><a class="flex items-center justify-between px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all group" data-path="focus" href="#"><span class="font-body-default text-body-sm font-medium">Focus</span><span class="flex items-center gap-1 font-label-sm text-[10px] px-1.5 py-0.5 rounded-full bg-tertiary-fixed/10 text-tertiary-fixed border border-tertiary-fixed/20"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed animate-pulse"></span>Live</span></a><a class="flex items-center justify-between px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all group" data-path="review" href="#"><span class="font-body-default text-body-sm font-medium">Review</span><span class="font-label-sm text-[10px] text-outline/70 font-mono">W39</span></a><a class="flex items-center justify-between px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all group" data-path="mirror" href="#"><span class="font-body-default text-body-sm font-medium">Mirror</span><span class="font-kbd text-[9px] px-1.5 py-0.2 rounded bg-surface-container-highest text-primary font-semibold">AI</span></a></nav></div></div><div class="px-space-xs pt-space-xs border-t border-outline-variant/30"><nav class="flex flex-col" data-active-classes="bg-surface-container text-primary font-medium border border-outline-variant/50 shadow-sm"><a class="flex items-center justify-between px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all group" data-path="settings" href="#"><span class="font-body-default text-body-sm font-medium">Settings</span><kbd class="font-kbd text-[10px] px-1 py-0.5 rounded bg-surface-container text-outline group-hover:text-on-surface transition-colors">⌘,</kbd></a></nav></div></aside><div class="pl-[240px]"><header class="fixed top-0 left-[240px] right-0 h-14 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-sm"><span class="font-label-default text-label-default text-outline">WORKSPACE /</span><span class="font-body-default text-body-default text-on-surface font-medium">Friday, 25 Sep</span></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-space-md h-8 px-space-md bg-surface-container-lowest border border-outline-variant/40 rounded-lg text-on-surface-variant hover:border-outline transition-colors cursor-pointer group" type="button"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-outline group-hover:text-on-surface transition-colors">search</span><span class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface transition-colors">Command palette or search...</span></div><kbd class="font-kbd text-kbd px-1.5 py-0.5 bg-surface-container-high text-on-surface rounded border border-outline-variant/40">⌘K</kbd></button><button class="flex items-center gap-1.5 h-8 px-space-sm bg-primary text-on-primary rounded-lg hover:bg-primary-fixed transition-colors font-body-sm text-body-sm font-medium cursor-pointer shadow-sm active:scale-95 transition-transform" type="button"><span class="material-symbols-outlined text-[17px] font-semibold">add</span><span>Quick Add</span></button><button class="relative flex items-center justify-center w-8 h-8 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors cursor-pointer" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary-fixed border border-surface"></span></button><div class="flex items-center gap-space-sm pl-space-xs border-l border-outline-variant/30 cursor-pointer"><div class="relative flex items-center justify-center w-8 h-8 rounded-full bg-surface-container-highest text-primary font-headline-sm text-headline-sm font-bold border border-outline-variant/50"><span class="">F</span><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-tertiary-fixed border-2 border-surface-container-lowest"></span></div><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></div></div></header><main class="w-full pt-14 px-space-xl pb-space-2xl bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-lg mb-space-2xl pb-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-tertiary-fixed font-semibold tracking-wider uppercase">Protocol Engine</span>
+<span>/</span>
+<span class="font-mono text-outline">AUTONOMOUS CADENCE</span>
+</div>
+<div class="flex items-baseline gap-space-md">
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">ROUTINES &amp; HABITS</h1>
+<span class="font-label-sm text-label-sm text-tertiary-fixed bg-surface-container-high px-space-xs py-0.5 rounded-sm">7/9 COMPLETED TODAY</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xl">
+        Algorithmic daily sequences, micro-habits, and telemetry tracking optimized for uninterrupted flow.
+      </p>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center bg-surface-container-lowest p-1 rounded-xl shadow-sm">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-high text-primary font-body-sm text-body-sm font-medium transition-all shadow-sm flex items-center gap-1.5" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"></span>
+<span>Today's Routine</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm transition-colors" type="button">
+          Habit Tracker
+        </button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm transition-colors" type="button">
+          Schedule &amp; Frequency
+        </button>
+</div>
+<button class="flex items-center gap-1.5 h-8 px-space-md bg-primary text-on-primary rounded-lg hover:bg-primary-fixed transition-colors font-body-sm text-body-sm font-medium shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>New Routine</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<div class="lg:col-span-7 flex flex-col gap-space-xl">
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="flex items-center justify-center w-7 h-7 rounded-lg bg-surface-container-highest text-tertiary-fixed">
+<span class="material-symbols-outlined text-[18px]">wb_twilight</span>
+</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight">Morning Block</h2>
+<p class="font-label-sm text-label-sm text-outline font-mono">06:00 — 09:00 · PRIME DISCIPLINE</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest text-tertiary-fixed font-medium">3/3 DONE</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="group flex items-center justify-between px-space-md py-2.5 rounded-lg bg-surface-container transition-colors">
+<div class="flex items-center gap-space-md min-w-0">
+<button aria-label="Toggle task" class="w-4 h-4 rounded bg-primary flex items-center justify-center text-on-primary transition-transform active:scale-90">
+<span class="material-symbols-outlined text-[13px] font-bold">check</span>
+</button>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-default text-body-default text-on-surface line-through opacity-60 truncate">Wake up at 05:30 (Fajr)</span>
+<span class="font-label-sm text-[10px] text-tertiary-fixed font-mono flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                    42d
+                  </span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono">Completed 05:32 · Alarm sync</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm opacity-40 group-hover:opacity-100 transition-opacity">
+<span class="font-label-sm text-label-sm text-outline-variant font-mono">05:30</span>
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" title="Edit routine">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</button>
+</div>
+</div>
+<div class="group flex items-center justify-between px-space-md py-2.5 rounded-lg bg-surface-container transition-colors">
+<div class="flex items-center gap-space-md min-w-0">
+<button aria-label="Toggle task" class="w-4 h-4 rounded bg-primary flex items-center justify-center text-on-primary transition-transform active:scale-90">
+<span class="material-symbols-outlined text-[13px] font-bold">check</span>
+</button>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-default text-body-default text-on-surface line-through opacity-60 truncate">Morning Prayer</span>
+<span class="font-label-sm text-[10px] text-tertiary-fixed font-mono flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                    42d
+                  </span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono">Completed 05:45 · Sacred stillness</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm opacity-40 group-hover:opacity-100 transition-opacity">
+<span class="font-label-sm text-label-sm text-outline-variant font-mono">05:45</span>
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" title="Edit routine">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</button>
+</div>
+</div>
+<div class="group flex items-center justify-between px-space-md py-2.5 rounded-lg bg-surface-container transition-colors">
+<div class="flex items-center gap-space-md min-w-0">
+<button aria-label="Toggle task" class="w-4 h-4 rounded bg-primary flex items-center justify-center text-on-primary transition-transform active:scale-90">
+<span class="material-symbols-outlined text-[13px] font-bold">check</span>
+</button>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-default text-body-default text-on-surface line-through opacity-60 truncate">Qur'an Recitation (1 Juz)</span>
+<span class="font-label-sm text-[10px] text-tertiary-fixed font-mono flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                    18d
+                  </span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono">Completed 06:20 · Juz 14 finished</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm opacity-40 group-hover:opacity-100 transition-opacity">
+<span class="font-label-sm text-label-sm text-outline-variant font-mono">06:00</span>
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" title="Edit routine">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="flex items-center justify-center w-7 h-7 rounded-lg bg-surface-container-highest text-tertiary-fixed">
+<span class="material-symbols-outlined text-[18px]">wb_sunny</span>
+</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight">Day Block</h2>
+<p class="font-label-sm text-label-sm text-outline font-mono">12:00 — 18:00 · HIGH-LEVERAGE PEAK</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-medium">1/3 COMPLETED</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="group flex items-center justify-between px-space-md py-2.5 rounded-lg bg-surface-container transition-colors">
+<div class="flex items-center gap-space-md min-w-0">
+<button aria-label="Toggle task" class="w-4 h-4 rounded bg-primary flex items-center justify-center text-on-primary transition-transform active:scale-90">
+<span class="material-symbols-outlined text-[13px] font-bold">check</span>
+</button>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-default text-body-default text-on-surface line-through opacity-60 truncate">Study &amp; Deep Work Sprint</span>
+<span class="font-label-sm text-[10px] text-tertiary-fixed font-mono flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                    9d
+                  </span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono">Completed 12:45 · 90 min uninterrupted</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm opacity-40 group-hover:opacity-100 transition-opacity">
+<span class="font-label-sm text-label-sm text-outline-variant font-mono">12:00</span>
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" title="Edit routine">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</button>
+</div>
+</div>
+<div class="group flex items-center justify-between px-space-md py-3 rounded-lg bg-surface-container-high transition-colors shadow-sm">
+<div class="flex items-center gap-space-md min-w-0">
+<button aria-label="Mark task done" class="w-4 h-4 rounded bg-surface-container-highest transition-colors hover:bg-outline-variant/60 active:scale-90 flex items-center justify-center">
+</button>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-default text-body-default text-primary font-medium truncate">Exercise &amp; Upper Body Workout</span>
+<span class="font-label-sm text-[10px] text-tertiary-fixed font-mono flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                    14 days
+                  </span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Target: 45m · Push &amp; Pull Volume</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="flex items-center gap-1 h-7 px-2.5 rounded-lg bg-tertiary-fixed/15 text-tertiary-fixed hover:bg-tertiary-fixed/25 font-label-sm text-label-sm font-medium transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span>Start Timer</span>
+</button>
+<span class="font-label-sm text-label-sm text-outline-variant font-mono">16:00</span>
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" title="Edit routine">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</button>
+</div>
+</div>
+<div class="group flex items-center justify-between px-space-md py-2.5 rounded-lg bg-surface-container transition-colors">
+<div class="flex items-center gap-space-md min-w-0">
+<button aria-label="Mark task done" class="w-4 h-4 rounded bg-surface-container-highest transition-colors hover:bg-outline-variant/60 active:scale-90 flex items-center justify-center">
+</button>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-default text-body-default text-on-surface truncate">English Speaking &amp; Shadowing Practice</span>
+<span class="font-label-sm text-[10px] text-tertiary-fixed font-mono flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                    21 days
+                  </span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono">20m · BBC Tech podcast echo</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm opacity-40 group-hover:opacity-100 transition-opacity">
+<span class="font-label-sm text-label-sm text-outline-variant font-mono">17:30</span>
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" title="Edit routine">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="flex items-center justify-center w-7 h-7 rounded-lg bg-surface-container-highest text-tertiary-fixed">
+<span class="material-symbols-outlined text-[18px]">bedtime</span>
+</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight">Night Block</h2>
+<p class="font-label-sm text-label-sm text-outline font-mono">20:00 — 23:00 · CONSOLIDATION</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-medium">0/3 PENDING</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="group flex items-center justify-between px-space-md py-2.5 rounded-lg bg-surface-container transition-colors">
+<div class="flex items-center gap-space-md min-w-0">
+<button aria-label="Mark task done" class="w-4 h-4 rounded bg-surface-container-highest transition-colors hover:bg-outline-variant/60 active:scale-90 flex items-center justify-center">
+</button>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-default text-body-default text-on-surface truncate">Deep Reading &amp; Book Notes</span>
+<span class="font-label-sm text-[10px] text-tertiary-fixed font-mono flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                    6d
+                  </span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono">30m · High Output Management</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm opacity-40 group-hover:opacity-100 transition-opacity">
+<span class="font-label-sm text-label-sm text-outline-variant font-mono">20:30</span>
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" title="Edit routine">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</button>
+</div>
+</div>
+<div class="group flex items-center justify-between px-space-md py-2.5 rounded-lg bg-surface-container transition-colors">
+<div class="flex items-center gap-space-md min-w-0">
+<button aria-label="Mark task done" class="w-4 h-4 rounded bg-surface-container-highest transition-colors hover:bg-outline-variant/60 active:scale-90 flex items-center justify-center">
+</button>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-default text-body-default text-on-surface truncate">Daily Evening Review &amp; Reflection</span>
+<span class="font-label-sm text-[10px] text-tertiary-fixed font-mono flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                    14d
+                  </span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono">15m · Obsidian Daily Note dump</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm opacity-40 group-hover:opacity-100 transition-opacity">
+<span class="font-label-sm text-label-sm text-outline-variant font-mono">21:45</span>
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" title="Edit routine">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</button>
+</div>
+</div>
+<div class="group flex items-center justify-between px-space-md py-2.5 rounded-lg bg-surface-container transition-colors">
+<div class="flex items-center gap-space-md min-w-0">
+<button aria-label="Mark task done" class="w-4 h-4 rounded bg-surface-container-highest transition-colors hover:bg-outline-variant/60 active:scale-90 flex items-center justify-center">
+</button>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-default text-body-default text-on-surface truncate">Plan Tomorrow's 3 MITs</span>
+<span class="font-label-sm text-[10px] text-tertiary-fixed font-mono flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                    31d
+                  </span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono">Most Important Tasks prioritization</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm opacity-40 group-hover:opacity-100 transition-opacity">
+<span class="font-label-sm text-label-sm text-outline-variant font-mono">22:15</span>
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" title="Edit routine">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col gap-space-xl">
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight">Habit Matrix &amp; Frequency</h2>
+<span class="font-label-sm text-label-sm text-outline font-mono">W39 TELEMETRY · 21 - 25 SEP</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-mono">82% EFFICIENCY</span>
+</div>
+<div class="grid grid-cols-6 gap-1 mb-space-sm pb-1 text-center font-label-sm text-label-sm text-outline">
+<div class="text-left font-body-sm text-body-sm text-on-surface-variant font-medium">Habit</div>
+<div class="font-mono text-[10px]">21 M</div>
+<div class="font-mono text-[10px]">22 T</div>
+<div class="font-mono text-[10px]">23 W</div>
+<div class="font-mono text-[10px]">24 T</div>
+<div class="font-mono text-[10px] text-primary font-semibold">25 F</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="bg-surface-container rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex flex-col min-w-[90px]">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Exercise</span>
+<span class="font-label-sm text-[10px] text-outline font-mono">3/5 this wk</span>
+</div>
+<div class="grid grid-cols-5 gap-1.5 flex-1 max-w-[210px]">
+<div class="h-6 rounded bg-tertiary-fixed/20 text-tertiary-fixed flex items-center justify-center font-mono text-[11px] font-bold">✓</div>
+<div class="h-6 rounded bg-surface-container-highest text-outline flex items-center justify-center font-mono text-[11px]">✕</div>
+<div class="h-6 rounded bg-tertiary-fixed/20 text-tertiary-fixed flex items-center justify-center font-mono text-[11px] font-bold">✓</div>
+<div class="h-6 rounded bg-surface-container-highest text-outline flex items-center justify-center font-mono text-[11px]">✕</div>
+<div class="h-6 rounded bg-surface-container-high text-tertiary-fixed flex items-center justify-center font-mono text-[10px] font-semibold">Today</div>
+</div>
+</div>
+<div class="bg-surface-container rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex flex-col min-w-[90px]">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">English</span>
+<span class="font-label-sm text-[10px] text-outline font-mono">4/5 this wk</span>
+</div>
+<div class="grid grid-cols-5 gap-1.5 flex-1 max-w-[210px]">
+<div class="h-6 rounded bg-tertiary-fixed/20 text-tertiary-fixed flex items-center justify-center font-mono text-[11px] font-bold">✓</div>
+<div class="h-6 rounded bg-tertiary-fixed/20 text-tertiary-fixed flex items-center justify-center font-mono text-[11px] font-bold">✓</div>
+<div class="h-6 rounded bg-tertiary-fixed/20 text-tertiary-fixed flex items-center justify-center font-mono text-[11px] font-bold">✓</div>
+<div class="h-6 rounded bg-tertiary-fixed/20 text-tertiary-fixed flex items-center justify-center font-mono text-[11px] font-bold">✓</div>
+<div class="h-6 rounded bg-surface-container-high text-tertiary-fixed flex items-center justify-center font-mono text-[10px] font-semibold">Today</div>
+</div>
+</div>
+<div class="bg-surface-container rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex flex-col min-w-[90px]">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Reading</span>
+<span class="font-label-sm text-[10px] text-outline font-mono">2/5 this wk</span>
+</div>
+<div class="grid grid-cols-5 gap-1.5 flex-1 max-w-[210px]">
+<div class="h-6 rounded bg-surface-container-highest text-outline flex items-center justify-center font-mono text-[11px]">✕</div>
+<div class="h-6 rounded bg-tertiary-fixed/20 text-tertiary-fixed flex items-center justify-center font-mono text-[11px] font-bold">✓</div>
+<div class="h-6 rounded bg-tertiary-fixed/20 text-tertiary-fixed flex items-center justify-center font-mono text-[11px] font-bold">✓</div>
+<div class="h-6 rounded bg-surface-container-highest text-outline flex items-center justify-center font-mono text-[11px]">✕</div>
+<div class="h-6 rounded bg-surface-container-high text-tertiary-fixed flex items-center justify-center font-mono text-[10px] font-semibold">Today</div>
+</div>
+</div>
+<div class="bg-surface-container rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex flex-col min-w-[90px]">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Qur'an</span>
+<span class="font-label-sm text-[10px] text-tertiary-fixed font-mono font-semibold">5/5 streak</span>
+</div>
+<div class="grid grid-cols-5 gap-1.5 flex-1 max-w-[210px]">
+<div class="h-6 rounded bg-tertiary-fixed/20 text-tertiary-fixed flex items-center justify-center font-mono text-[11px] font-bold">✓</div>
+<div class="h-6 rounded bg-tertiary-fixed/20 text-tertiary-fixed flex items-center justify-center font-mono text-[11px] font-bold">✓</div>
+<div class="h-6 rounded bg-tertiary-fixed/20 text-tertiary-fixed flex items-center justify-center font-mono text-[11px] font-bold">✓</div>
+<div class="h-6 rounded bg-tertiary-fixed/20 text-tertiary-fixed flex items-center justify-center font-mono text-[11px] font-bold">✓</div>
+<div class="h-6 rounded bg-tertiary-fixed text-surface flex items-center justify-center font-mono text-[10px] font-bold">Done</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span class="font-mono text-[10px]">TOTAL COMPLETION: 14 / 20</span>
+<div class="flex items-center gap-1.5 font-mono text-[10px] text-tertiary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"></span>
+<span>+18% VS PREV WEEK</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm">
+<div class="flex items-start justify-between mb-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-mono uppercase tracking-wide">Protocol Specs</span>
+<h3 class="font-headline-sm text-headline-sm text-primary tracking-tight">Exercise Routine</h3>
+</div>
+<button class="p-1 rounded bg-surface-container text-on-surface-variant hover:text-primary transition-colors" title="Settings">
+<span class="material-symbols-outlined text-[16px]">settings</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-space-sm mb-space-lg">
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col">
+<span class="font-label-sm text-[10px] text-outline uppercase font-mono">Frequency</span>
+<span class="font-body-default text-body-default text-on-surface font-semibold mt-0.5">3x / week</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col">
+<span class="font-label-sm text-[10px] text-outline uppercase font-mono">Preferred Time</span>
+<span class="font-body-default text-body-default text-on-surface font-semibold mt-0.5">16:00 (Evening)</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col">
+<span class="font-label-sm text-[10px] text-outline uppercase font-mono">Target Duration</span>
+<span class="font-body-default text-body-default text-on-surface font-semibold mt-0.5">45 minutes</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col">
+<span class="font-label-sm text-[10px] text-outline uppercase font-mono">Linked Pillar</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"></span>
+<span class="font-body-default text-body-default text-primary font-medium">Health &amp; Vigor</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Monthly Adherence</span>
+<span class="font-label-sm text-label-sm font-mono text-tertiary-fixed font-bold">78% TARGET</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary-fixed h-full rounded-full transition-all duration-500" style="width: 78%;"></div>
+</div>
+<div class="flex items-center justify-between text-outline font-label-sm text-[10px] font-mono">
+<span>Cycle: Day 25 of 30</span>
+<span>Target: &gt;75% required</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]">psychology</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-primary font-medium">Neural Drift Forecast</span>
+<span class="font-label-sm text-label-sm text-outline">Evening fatigue probability peaks at 21:30.</span>
+</div>
+</div>
+<kbd class="font-kbd text-kbd px-1.5 py-0.5 bg-surface-container text-outline-variant rounded">AI</kbd>
+</div>
+</div>
+</div>
+</div></main></div>
+</body></html>

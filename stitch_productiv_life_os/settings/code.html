@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary-fixed":"#6ffbbe","secondary-fixed-dim":"#c6c5cf","inverse-on-surface":"#313032","surface-container-low":"#1c1b1d","outline-variant":"#444749","on-primary-fixed-variant":"#454748","primary-container":"#e2e2e3","surface-bright":"#39393b","primary-fixed-dim":"#c6c6c7","error-container":"#93000a","surface-container-highest":"#353437","surface-variant":"#353437","surface":"#131315","on-secondary-container":"#bcbbc5","surface-container-high":"#2a2a2c","tertiary-container":"#6ffbbe","on-secondary":"#2f3038","on-secondary-fixed":"#1a1b22","inverse-surface":"#e5e1e4","on-surface-variant":"#c4c7c9","tertiary-fixed-dim":"#4edea3","primary":"#ffffff","on-secondary-fixed-variant":"#46464e","background":"#131315","secondary":"#c6c5cf","on-primary-container":"#636466","surface-container":"#201f22","primary-fixed":"#e2e2e3","secondary-container":"#4a4b53","secondary-fixed":"#e3e1ec","surface-dim":"#131315","tertiary":"#ffffff","on-primary-fixed":"#1a1c1d","on-tertiary":"#003824","on-tertiary-fixed-variant":"#005236","inverse-primary":"#5d5e60","on-tertiary-container":"#00734e","outline":"#8e9193","on-surface":"#e5e1e4","surface-tint":"#c6c6c7","on-background":"#e5e1e4","on-tertiary-fixed":"#002113","on-error":"#690005","on-primary":"#2f3132","error":"#ffb4ab","surface-container-lowest":"#0e0e10","on-error-container":"#ffdad6"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"gutter-dense":"0.5rem","margin-compact":"1rem","space-xl":"1.5rem",gutter:"1rem","space-md":"0.75rem","space-2xl":"2rem","space-lg":"1rem","space-2xs":"0.125rem","space-xs":"0.25rem",margin:"1.5rem","space-sm":"0.5rem"},fontFamily:{"label-default":["JetBrains Mono"],display:["Geist"],"body-default":["Geist"],"headline-lg":["Geist"],"headline-md":["Geist"],"headline-sm":["Geist"],"body-lg":["Geist"],"body-sm":["Geist"],"label-sm":["JetBrains Mono"],kbd:["JetBrains Mono"]},fontSize:{"label-default":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"500"}],display:["32px",{lineHeight:"40px",letterSpacing:"-0.03em",fontWeight:"600"}],"body-default":["13px",{lineHeight:"20px",letterSpacing:"-0.005em",fontWeight:"400"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.025em",fontWeight:"600"}],"headline-md":["18px",{lineHeight:"26px",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-sm":["15px",{lineHeight:"22px",letterSpacing:"-0.015em",fontWeight:"500"}],"body-lg":["15px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"500"}],kbd:["10px",{lineHeight:"12px",letterSpacing:"0.05em",fontWeight:"500"}]}}}};</script></head><body class="bg-surface font-body-default text-body-default text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[240px] bg-surface-container-lowest z-50 flex flex-col justify-between py-space-md border-r border-outline-variant/30 select-none"><div class="flex flex-col gap-space-sm px-space-xs"><div class="flex items-center gap-space-sm px-space-sm py-space-xs mx-0.5 rounded-xl transition-colors hover:bg-surface-container-low"><img alt="PRODUCTIV App Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XBh2iHKfTMnJu_MCyhBdZWvPsyuVuzJIhvujJeTCSXg0dT7XI5Ww0TeuVHrv-QZc_AAEHQPHjtqvtargM8-QmuWL5Kp52MI0_9Nho8F0OILvB_hw3jhxZcX7GLJ6eTpW29dkRZmX1NH1h0FkJZDb8IGzjKIKSws68t6K3wPWIxefvxxcw12WAHemUp7uaF50OBCJBY9-jLfy_p7kxY22926B57DlLl5SzCahio7_64LMMh2IR1tCctYEM"/><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-[14px] text-primary tracking-tight font-semibold leading-none">PRODUCTIV</span><span class="font-kbd text-[9px] px-1 py-0.5 rounded bg-surface-container-high text-tertiary-fixed font-medium leading-none">OS</span></div><span class="font-label-sm text-[10px] text-outline tracking-wider leading-none mt-1">v2.4 workspace</span></div></div><div class="mt-1"><nav class="flex flex-col gap-0.5" data-active-classes="bg-surface-container-high text-primary font-medium border-l-2 border-tertiary-fixed pl-[calc(theme(spacing.space-sm)-2px)]"><span class="px-space-sm py-1 font-label-sm text-[10px] text-outline/80 uppercase tracking-widest font-semibold">System</span><a class="flex items-center justify-between px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all group font-body-default text-body-sm" data-path="today" href="#"><span>Today</span><span class="font-label-sm text-[10px] px-1.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-medium">Now</span></a><a class="flex items-center justify-between px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all group font-body-default text-body-sm" data-path="tasks" href="#"><span>Tasks</span><span class="font-label-sm text-[10px] px-1.5 py-0.5 rounded-full bg-surface-container-highest text-tertiary-fixed font-medium">5</span></a><a class="flex items-center justify-between px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all group font-body-default text-body-sm" data-path="projects" href="#"><span>Projects</span><span class="font-label-sm text-[10px] px-1.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-medium">3</span></a><a class="flex items-center justify-between px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all group font-body-default text-body-sm" data-path="calendar" href="#"><span>Calendar</span></a><a class="flex items-center justify-between px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all group font-body-default text-body-sm" data-path="finance" href="#"><span>Finance</span></a><a class="flex items-center justify-between px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all group font-body-default text-body-sm" data-path="routines" href="#"><span>Routines</span></a><div class="my-2.5 h-[1px] bg-outline-variant/30 mx-space-sm"></div><span class="px-space-sm py-1 font-label-sm text-[10px] text-outline/80 uppercase tracking-widest font-semibold">Deep Work &amp; Insights</span><a class="flex items-center justify-between px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all group font-body-default text-body-sm" data-path="focus" href="#"><span>Focus</span><span class="flex items-center gap-1 font-label-sm text-[10px] px-1.5 py-0.5 rounded-full bg-tertiary-fixed/10 text-tertiary-fixed border border-tertiary-fixed/20"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed animate-pulse"></span>Live</span></a><a class="flex items-center justify-between px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all group font-body-default text-body-sm" data-path="review" href="#"><span>Review</span><span class="font-label-sm text-[10px] px-1.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-medium">Weekly</span></a><a class="flex items-center justify-between px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-all group font-body-default text-body-sm" data-path="mirror" href="#"><span>Mirror</span><span class="font-kbd text-[9px] px-1.5 py-0.2 rounded bg-tertiary-fixed/10 text-tertiary-fixed border border-tertiary-fixed/20 font-semibold">AI</span></a></nav></div></div><div class="px-space-xs pt-space-xs border-t border-outline-variant/30"><nav class="flex flex-col" data-active-classes="bg-surface-container-high text-primary font-medium border-l-2 border-tertiary-fixed pl-[calc(theme(spacing.space-sm)-2px)]"><a aria-current="page" class="flex items-center justify-between px-space-sm h-8 rounded-lg transition-all group bg-surface-container-high text-primary font-medium border-l-2 border-tertiary-fixed pl-[calc(theme(spacing.space-sm)-2px)]" data-path="settings" href="#"><span>Settings</span><kbd class="font-kbd text-[10px] px-1 py-0.5 rounded bg-surface-container text-outline group-hover:text-on-surface transition-colors">⌘,</kbd></a></nav></div></aside><div class="pl-[240px]"><header class="fixed top-0 left-[240px] right-0 h-14 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-sm"><span class="font-label-default text-label-default text-outline">WORKSPACE /</span><span class="font-body-default text-body-default text-on-surface font-medium">Friday, 25 Sep</span></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-space-md h-8 px-space-md bg-surface-container-lowest border border-outline-variant/40 rounded-lg text-on-surface-variant hover:border-outline transition-colors" type="button"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px]">search</span><span class="font-body-sm text-body-sm text-on-surface-variant">Search or type...</span></div><kbd class="font-kbd text-kbd px-1 py-0.5 bg-surface-container-high text-on-surface rounded">⌘K</kbd></button><button class="flex items-center gap-1 h-8 px-space-sm bg-primary text-on-primary rounded-lg hover:bg-primary-fixed transition-colors font-body-sm text-body-sm font-medium" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Capture</span></button><button class="relative flex items-center justify-center w-8 h-8 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary-fixed border border-surface"></span></button><div class="flex items-center gap-space-sm pl-space-xs border-l border-outline-variant/30 cursor-pointer"><div class="relative flex items-center justify-center w-8 h-8 rounded-full bg-surface-container-highest text-primary font-headline-sm text-headline-sm font-bold border border-outline-variant/50"><span>F</span><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-tertiary-fixed border-2 border-surface-container-lowest"></span></div><div class="flex flex-col text-left"><span class="font-body-sm text-[12px] text-primary font-medium leading-none">Fadil</span><span class="font-label-sm text-[10px] text-outline leading-none mt-0.5">Personal</span></div><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></div></div></header><main class="w-full pt-14 px-space-xl pb-space-2xl bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="flex flex-col gap-space-lg w-full">
+<!-- Top System Header Status Bar -->
+<div class="flex items-center justify-between py-space-sm px-space-md bg-surface-container-low rounded-xl">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs font-label-default text-label-default text-on-surface">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed shadow-sm"></span>
+<span class="text-tertiary-fixed font-semibold tracking-wider">SYSTEM CONFIG</span>
+</div>
+<span class="text-outline text-body-sm font-label-sm">|</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Target: Node-01 (Hydra Core)</span>
+</div>
+<div class="flex items-center gap-space-md font-label-sm text-label-sm">
+<span class="text-outline">LATENCY: <span class="text-tertiary-fixed">4ms</span></span>
+<span class="text-outline">STORE: <span class="text-on-surface">IndexedDB v24.2</span></span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-kbd text-kbd">REVISION 8C4E2</span>
+</div>
+</div>
+<!-- Main Two-Pane Settings Layout -->
+<div class="flex items-start gap-space-xl w-full">
+<!-- Left Pane: Category Navigation (260px) -->
+<div class="w-[260px] shrink-0 sticky top-16 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-space-sm pb-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Preferences</span>
+<span class="font-kbd text-kbd text-tertiary-fixed bg-surface-container-highest px-1.5 py-0.5 rounded">7 NODES</span>
+</div>
+<nav class="flex flex-col gap-1 w-full" id="settings-nav">
+<!-- Active Account Nav Item -->
+<a class="settings-nav-item flex items-center justify-between px-space-md py-2.5 rounded-lg bg-surface-container-high text-primary font-body-default text-body-default shadow-sm group transition-all" data-target="section-account" href="#section-account">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-medium tracking-tight">Account</span>
+</div>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed shadow-sm"></span>
+</a>
+<a class="settings-nav-item flex items-center justify-between px-space-md py-2.5 rounded-lg bg-transparent hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface font-body-default text-body-default transition-all group" data-target="section-appearance" href="#section-appearance">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-outline group-hover:text-on-surface">palette</span>
+<span>Appearance</span>
+</div>
+<span class="font-kbd text-kbd text-outline">02</span>
+</a>
+<a class="settings-nav-item flex items-center justify-between px-space-md py-2.5 rounded-lg bg-transparent hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface font-body-default text-body-default transition-all group" data-target="section-productivity" href="#section-productivity">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-outline group-hover:text-on-surface">timer</span>
+<span>Productivity &amp; Focus</span>
+</div>
+<span class="font-kbd text-kbd text-outline">03</span>
+</a>
+<a class="settings-nav-item flex items-center justify-between px-space-md py-2.5 rounded-lg bg-transparent hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface font-body-default text-body-default transition-all group" data-target="section-finance" href="#section-finance">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-outline group-hover:text-on-surface">account_balance_wallet</span>
+<span>Finance &amp; Ledger</span>
+</div>
+<span class="font-kbd text-kbd text-outline">04</span>
+</a>
+<a class="settings-nav-item flex items-center justify-between px-space-md py-2.5 rounded-lg bg-transparent hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface font-body-default text-body-default transition-all group" data-target="section-notifications" href="#section-notifications">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-outline group-hover:text-on-surface">notifications_active</span>
+<span>Notifications &amp; Cadence</span>
+</div>
+<span class="font-kbd text-kbd text-outline">05</span>
+</a>
+<a class="settings-nav-item flex items-center justify-between px-space-md py-2.5 rounded-lg bg-transparent hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface font-body-default text-body-default transition-all group" data-target="section-storage" href="#section-storage">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-outline group-hover:text-on-surface">database</span>
+<span>Data &amp; Persistence</span>
+</div>
+<span class="font-kbd text-kbd text-outline">06</span>
+</a>
+<a class="settings-nav-item flex items-center justify-between px-space-md py-2.5 rounded-lg bg-transparent hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface font-body-default text-body-default transition-all group" data-target="section-telemetry" href="#section-telemetry">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-outline group-hover:text-on-surface">terminal</span>
+<span>Logs &amp; Telemetry</span>
+</div>
+<span class="font-kbd text-kbd text-outline">07</span>
+</a>
+</nav>
+<!-- Environment Micro Card -->
+<div class="mt-space-md p-space-md bg-surface-container-lowest rounded-xl flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">ENGINE HEALTH</span>
+<span class="font-kbd text-kbd text-tertiary-fixed bg-tertiary-fixed/10 px-1.5 py-0.5 rounded">OPTIMAL</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full overflow-hidden mt-1">
+<div class="bg-tertiary-fixed h-full w-[94%]"></div>
+</div>
+<span class="font-label-sm text-[10px] text-outline leading-tight mt-1">94% Local Cache Memory intact. Zero cloud-bleed active.</span>
+</div>
+</div>
+<!-- Right Pane: Main Detailed Content Canvas -->
+<div class="flex-1 flex flex-col gap-space-xl min-w-0">
+<!-- CARD 1: ACCOUNT & OPERATOR PROFILE -->
+<section class="flex flex-col bg-surface-container-low rounded-xl p-space-xl gap-space-lg shadow-sm" id="section-account">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-semibold tracking-wider uppercase">Node 01 // Identity</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-0.5">Account &amp; Operator Profile</h2>
+</div>
+<div class="flex items-center gap-space-xs px-2.5 py-1 rounded bg-surface-container-highest text-tertiary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"></span>
+<span>PRODUCTIV OS v2.4 (Pro Dedicated)</span>
+</div>
+</div>
+<!-- Avatar & Identifier Row -->
+<div class="flex flex-wrap items-center gap-space-lg p-space-md bg-surface-container rounded-lg">
+<div class="relative shrink-0">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-headline-lg text-headline-lg font-bold shadow-md">
+                F
+              </div>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-tertiary-fixed ring-2 ring-surface-container"></span>
+</div>
+<div class="flex flex-col gap-1 min-w-[200px] flex-1">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary font-medium">Fadil</span>
+<span class="font-kbd text-kbd px-1.5 py-0.5 rounded bg-tertiary-fixed/15 text-tertiary-fixed font-semibold tracking-wider">ROOT OPERATOR</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Avatar is encrypted locally in Vault DB and synced peer-to-peer.</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="h-8 px-space-md bg-primary text-on-primary font-body-sm text-body-sm font-medium rounded-lg hover:bg-primary-fixed transition-colors" type="button">
+                Change Avatar
+              </button>
+<button class="h-8 px-space-md bg-surface-container-high text-on-surface-variant hover:text-error hover:bg-surface-container-highest font-body-sm text-body-sm font-medium rounded-lg transition-colors" type="button">
+                Remove
+              </button>
+</div>
+</div>
+<!-- Fields Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Operator Full Name</label>
+<input class="h-9 px-space-md bg-surface-container-lowest text-primary font-body-default text-body-default rounded-lg focus:outline-none focus:bg-surface-container transition-all" type="text" value="Fadil"/>
+<span class="font-label-sm text-[10px] text-outline">Displayed in task attribution logs and focus sessions.</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Operator System Handle</label>
+<div class="relative flex items-center">
+<input class="w-full h-9 px-space-md bg-surface-container-lowest text-primary font-label-default text-label-default rounded-lg focus:outline-none focus:bg-surface-container transition-all font-mono" type="text" value="@fadil_arch"/>
+<span class="absolute right-3 font-kbd text-kbd text-tertiary-fixed">STATIC</span>
+</div>
+<span class="font-label-sm text-[10px] text-outline">Assigned cryptographic peer addressing string.</span>
+</div>
+<div class="flex flex-col gap-1.5 md:col-span-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Primary System Email</label>
+<div class="flex items-center gap-space-sm">
+<input class="flex-1 h-9 px-space-md bg-surface-container-lowest text-primary font-body-default text-body-default rounded-lg focus:outline-none font-mono" readonly="" type="email" value="fadil@productiv.io"/>
+<span class="flex items-center gap-1.5 h-9 px-space-md rounded-lg bg-surface-container text-tertiary-fixed font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Verified Identity</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Visual Profile Metric Spark -->
+<div class="p-space-md bg-surface-container-lowest rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary-fixed">
+<span class="material-symbols-outlined text-[20px]">shield</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-default text-body-default text-primary font-medium">Session Cryptographic Signature Valid</span>
+<span class="font-label-sm text-label-sm text-outline">Ed25519 Hardware enclave authenticated via macOS Keychain</span>
+</div>
+</div>
+<button class="h-7 px-space-sm bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant text-label-sm font-label-sm rounded transition-colors" type="button">
+              Manage Keys
+            </button>
+</div>
+</section>
+<!-- CARD 2: APPEARANCE & THEME -->
+<section class="flex flex-col bg-surface-container-low rounded-xl p-space-xl gap-space-lg shadow-sm" id="section-appearance">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-semibold tracking-wider uppercase">Node 02 // Interface Optics</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-0.5">Appearance &amp; Theme Canvas</h2>
+</div>
+<span class="font-kbd text-kbd px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">DISPLAY 60Hz</span>
+</div>
+<!-- Theme Mode Switcher -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Canvas Theme Mode</span>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm mt-1">
+<!-- Selected: Dark (Obsidian) -->
+<div class="theme-choice-card cursor-pointer p-space-md rounded-xl bg-surface-container-high flex flex-col gap-space-sm transition-all" data-theme="obsidian">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-surface-container-lowest"></span>
+<span class="font-body-default text-body-default text-primary font-medium">Dark (Obsidian)</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">check_circle</span>
+</div>
+<div class="h-6 w-full rounded bg-surface-container-lowest flex items-center px-2 gap-1.5">
+<div class="w-2 h-2 rounded-full bg-surface-container-highest"></div>
+<div class="h-1.5 w-12 bg-surface-container-high rounded"></div>
+<div class="h-1.5 w-6 bg-tertiary-fixed rounded ml-auto"></div>
+</div>
+</div>
+<!-- OLED Black -->
+<div class="theme-choice-card cursor-pointer p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high flex flex-col gap-space-sm transition-all" data-theme="oled">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-black"></span>
+<span class="font-body-default text-body-default text-on-surface font-medium">OLED Black</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>
+</div>
+<div class="h-6 w-full rounded bg-black flex items-center px-2 gap-1.5">
+<div class="w-2 h-2 rounded-full bg-surface-container-high"></div>
+<div class="h-1.5 w-12 bg-surface-container rounded"></div>
+<div class="h-1.5 w-6 bg-surface-container-highest rounded ml-auto"></div>
+</div>
+</div>
+<!-- Light (Slate) -->
+<div class="theme-choice-card cursor-pointer p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high flex flex-col gap-space-sm transition-all" data-theme="light">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary-container"></span>
+<span class="font-body-default text-body-default text-on-surface font-medium">Light (Slate)</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>
+</div>
+<div class="h-6 w-full rounded bg-primary-container flex items-center px-2 gap-1.5">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="h-1.5 w-12 bg-on-secondary-container rounded"></div>
+<div class="h-1.5 w-6 bg-inverse-primary rounded ml-auto"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Accent Glow Selection -->
+<div class="flex flex-col gap-space-xs mt-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Semantic Accent Matrix</span>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm mt-1">
+<!-- Emerald (Selected) -->
+<button class="accent-choice flex items-center justify-between p-space-sm rounded-lg bg-surface-container-high text-primary transition-all" type="button">
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-3.5 rounded-full bg-tertiary-fixed shadow-sm"></span>
+<span class="font-label-default text-label-default">Emerald</span>
+</div>
+<span class="font-kbd text-kbd text-tertiary-fixed">ACTIVE</span>
+</button>
+<!-- Sky -->
+<button class="accent-choice flex items-center justify-between p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-all" type="button">
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-3.5 rounded-full bg-secondary-fixed"></span>
+<span class="font-label-default text-label-default">Sky Blue</span>
+</div>
+<span class="font-kbd text-kbd text-outline">OPT</span>
+</button>
+<!-- Violet -->
+<button class="accent-choice flex items-center justify-between p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-all" type="button">
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-3.5 rounded-full bg-secondary"></span>
+<span class="font-label-default text-label-default">Violet</span>
+</div>
+<span class="font-kbd text-kbd text-outline">OPT</span>
+</button>
+<!-- Amber -->
+<button class="accent-choice flex items-center justify-between p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-all" type="button">
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-3.5 rounded-full bg-primary-container"></span>
+<span class="font-label-default text-label-default">Amber Gold</span>
+</div>
+<span class="font-kbd text-kbd text-outline">OPT</span>
+</button>
+</div>
+</div>
+<!-- Toggles Rows -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-center justify-between p-space-md bg-surface-container rounded-lg">
+<div class="flex flex-col">
+<span class="font-body-default text-body-default text-primary font-medium">Compact Dense Mode</span>
+<span class="font-label-sm text-label-sm text-outline">Adheres to strict 34px list row footprints for maximum screen telemetry yields.</span>
+</div>
+<button class="toggle-btn w-11 h-6 rounded-full bg-tertiary-fixed p-0.5 flex items-center justify-end transition-colors" data-state="true" type="button">
+<span class="w-5 h-5 rounded-full bg-surface-container-lowest shadow-md transition-transform"></span>
+</button>
+</div>
+<div class="flex items-center justify-between p-space-md bg-surface-container rounded-lg">
+<div class="flex flex-col">
+<span class="font-body-default text-body-default text-primary font-medium">Monospace Numerals for Telemetry</span>
+<span class="font-label-sm text-label-sm text-outline">Forces JetBrains Mono tabular numeral alignment for timers, budgets, and timestamps.</span>
+</div>
+<button class="toggle-btn w-11 h-6 rounded-full bg-tertiary-fixed p-0.5 flex items-center justify-end transition-colors" data-state="true" type="button">
+<span class="w-5 h-5 rounded-full bg-surface-container-lowest shadow-md transition-transform"></span>
+</button>
+</div>
+</div>
+</section>
+<!-- CARD 3: PRODUCTIVITY ENGINE & FOCUS DEFAULTS -->
+<section class="flex flex-col bg-surface-container-low rounded-xl p-space-xl gap-space-lg shadow-sm" id="section-productivity">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-semibold tracking-wider uppercase">Node 03 // Deep Work Physics</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-0.5">Productivity Engine &amp; Focus Defaults</h2>
+</div>
+<div class="flex items-center gap-1 font-kbd text-kbd text-tertiary-fixed bg-tertiary-fixed/10 px-2 py-0.5 rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed animate-pulse"></span>
+<span>FOCUS RUNTIME ACTIVE</span>
+</div>
+</div>
+<!-- Configuration Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Default Focus Sprint</label>
+<select class="h-9 px-space-md bg-surface-container-lowest text-primary font-label-default text-label-default rounded-lg focus:outline-none cursor-pointer">
+<option selected="">25 minutes (Standard Pomodoro)</option>
+<option>45 minutes (Deep Cycle)</option>
+<option>60 minutes (Heavy Architecture)</option>
+<option>90 minutes (Ultradian Rhythm)</option>
+</select>
+<span class="font-label-sm text-[10px] text-outline">Triggers micro-break alarm.</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Short Rest Break</label>
+<select class="h-9 px-space-md bg-surface-container-lowest text-primary font-label-default text-label-default rounded-lg focus:outline-none cursor-pointer">
+<option>3 minutes</option>
+<option selected="">5 minutes (Default)</option>
+<option>8 minutes</option>
+<option>10 minutes</option>
+</select>
+<span class="font-label-sm text-[10px] text-outline">Post-sprint cognitive reset.</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Long Break Cadence</label>
+<select class="h-9 px-space-md bg-surface-container-lowest text-primary font-label-default text-label-default rounded-lg focus:outline-none cursor-pointer">
+<option>10 minutes</option>
+<option selected="">15 minutes (Default)</option>
+<option>20 minutes</option>
+<option>30 minutes (Refuel)</option>
+</select>
+<span class="font-label-sm text-[10px] text-outline">Triggered every 4 cycles.</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Calendar Epoch / Week Starts On</label>
+<select class="h-9 px-space-md bg-surface-container-lowest text-primary font-label-default text-label-default rounded-lg focus:outline-none cursor-pointer">
+<option selected="">Monday (ISO 8601 Standard)</option>
+<option>Sunday</option>
+<option>Saturday</option>
+</select>
+<span class="font-label-sm text-[10px] text-outline">Dictates Weekly Review sprint reset.</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Daily Deep Target</label>
+<div class="relative flex items-center">
+<input class="w-full h-9 px-space-md bg-surface-container-lowest text-primary font-label-default text-label-default rounded-lg focus:outline-none font-mono" type="text" value="5h 00m"/>
+<span class="material-symbols-outlined absolute right-3 text-[18px] text-outline">flag</span>
+</div>
+<span class="font-label-sm text-[10px] text-outline">Target for mirror completion metric.</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Default Task Ingestion Priority</label>
+<select class="h-9 px-space-md bg-surface-container-lowest text-primary font-label-default text-label-default rounded-lg focus:outline-none cursor-pointer">
+<option>P1 - Critical / Blocked</option>
+<option>P2 - High Priority</option>
+<option selected="">P3 - Medium (Default)</option>
+<option>P4 - Low / Backlog</option>
+</select>
+<span class="font-label-sm text-[10px] text-outline">Applied during rapid ⌘K capture.</span>
+</div>
+</div>
+<!-- Distraction Shield Interactive Module -->
+<div class="p-space-md bg-surface-container rounded-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-tertiary-fixed">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-default text-body-default text-primary font-medium">Distraction Shield (DND &amp; Domain Blocker)</span>
+<span class="font-label-sm text-label-sm text-outline">Local packet-filter daemon drops distracting DNS calls during active timer.</span>
+</div>
+</div>
+<button class="toggle-btn w-11 h-6 rounded-full bg-tertiary-fixed p-0.5 flex items-center justify-end transition-colors" data-state="true" type="button">
+<span class="w-5 h-5 rounded-full bg-surface-container-lowest shadow-md transition-transform"></span>
+</button>
+</div>
+<div class="flex flex-wrap items-center gap-1.5 pt-1">
+<span class="font-label-sm text-label-sm text-outline mr-1">Blocked Filters:</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-mono text-label-sm">twitter.com</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-mono text-label-sm">x.com</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-mono text-label-sm">youtube.com</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-mono text-label-sm">reddit.com</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-mono text-label-sm">news.ycombinator.com</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-tertiary-fixed font-kbd text-kbd">+9 others</span>
+<button class="ml-auto text-tertiary-fixed hover:underline font-label-sm text-label-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">edit</span>Edit List
+              </button>
+</div>
+</div>
+</section>
+<!-- CARD 4: FINANCE & CURRENCY CONFIGURATION -->
+<section class="flex flex-col bg-surface-container-low rounded-xl p-space-xl gap-space-lg shadow-sm" id="section-finance">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-semibold tracking-wider uppercase">Node 04 // Capital &amp; Runway</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-0.5">Finance &amp; Ledger Configuration</h2>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase">Double-entry local ledger</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Base Currency Engine</label>
+<select class="h-9 px-space-md bg-surface-container-lowest text-primary font-label-default text-label-default rounded-lg focus:outline-none cursor-pointer">
+<option selected="">IDR (Rp - Indonesian Rupiah)</option>
+<option>USD ($ - US Dollar)</option>
+<option>EUR (€ - Euro)</option>
+<option>SGD (S$ - Singapore Dollar)</option>
+</select>
+<span class="font-label-sm text-[10px] text-outline">All cross-border FX transactions normalize to this ticker.</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Monthly Budget Alarm Threshold</label>
+<div class="relative flex items-center">
+<input class="w-full h-9 px-space-md bg-surface-container-lowest text-primary font-label-default text-label-default rounded-lg focus:outline-none font-mono" type="text" value="80% depletion"/>
+<span class="material-symbols-outlined absolute right-3 text-[18px] text-outline">warning</span>
+</div>
+<span class="font-label-sm text-[10px] text-outline">Pushes a high-priority system chime when burn reaches 80%.</span>
+</div>
+</div>
+<!-- Active Accounts Table -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Active Liquid Accounts (3 Configured)</span>
+<button class="text-tertiary-fixed hover:text-primary font-label-sm text-label-sm flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span>Add Account
+              </button>
+</div>
+<div class="flex flex-col bg-surface-container rounded-lg overflow-hidden">
+<!-- Row 1: Cash Ledger -->
+<div class="flex items-center justify-between px-space-md h-[34px] hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">payments</span>
+<span class="font-body-default text-body-default text-primary font-medium">Physical Cash Ledger</span>
+</div>
+<div class="flex items-center gap-space-lg font-mono text-label-sm">
+<span class="text-on-surface-variant">IDR CASH_BOX</span>
+<span class="text-tertiary-fixed font-semibold">SYNCED</span>
+<span class="material-symbols-outlined text-[16px] text-outline cursor-pointer hover:text-primary">more_vert</span>
+</div>
+</div>
+<!-- Row 2: Bank -->
+<div class="flex items-center justify-between px-space-md h-[34px] bg-surface-container-low/50 hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">account_balance</span>
+<span class="font-body-default text-body-default text-primary font-medium">BCA / Mandiri Bank Primary</span>
+</div>
+<div class="flex items-center gap-space-lg font-mono text-label-sm">
+<span class="text-on-surface-variant">IDR CHECKING (..4921)</span>
+<span class="text-tertiary-fixed font-semibold">SYNCED</span>
+<span class="material-symbols-outlined text-[16px] text-outline cursor-pointer hover:text-primary">more_vert</span>
+</div>
+</div>
+<!-- Row 3: E-Wallet -->
+<div class="flex items-center justify-between px-space-md h-[34px] hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">phone_iphone</span>
+<span class="font-body-default text-body-default text-primary font-medium">GoPay / ShopeePay E-Wallet Aggregator</span>
+</div>
+<div class="flex items-center gap-space-lg font-mono text-label-sm">
+<span class="text-on-surface-variant">IDR WALLET_ROUTER</span>
+<span class="text-tertiary-fixed font-semibold">SYNCED</span>
+<span class="material-symbols-outlined text-[16px] text-outline cursor-pointer hover:text-primary">more_vert</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CARD 5: DATA, LOCAL-FIRST CACHE & BACKUP -->
+<section class="flex flex-col bg-surface-container-low rounded-xl p-space-xl gap-space-lg shadow-sm" id="section-storage">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-semibold tracking-wider uppercase">Node 06 // Local-First Vault</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-0.5">Data, Local-First Cache &amp; Backup</h2>
+</div>
+<div class="flex items-center gap-space-xs font-kbd text-kbd text-on-surface bg-surface-container-high px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed">cloud_off</span>
+<span>100% AIR-GAPPED BY DEFAULT</span>
+</div>
+</div>
+<!-- Status Bar Storage Visual -->
+<div class="p-space-md bg-surface-container rounded-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-body-default text-body-default text-primary font-medium">IndexedDB Storage Allocated</span>
+<span class="font-kbd text-kbd px-1.5 py-0.5 rounded bg-tertiary-fixed/10 text-tertiary-fixed">SYNCED</span>
+</div>
+<span class="font-mono text-label-default text-tertiary-fixed">14.2 MB / 2,048 MB (0.7%)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-lowest overflow-hidden flex">
+<div class="bg-tertiary-fixed h-full w-[25%]" title="Tasks &amp; Projects (3.5MB)"></div>
+<div class="bg-secondary-fixed h-full w-[35%]" title="Ledger &amp; Receipts (5.0MB)"></div>
+<div class="bg-primary-container h-full w-[40%]" title="Notes &amp; Markdown Vault (5.7MB)"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-[10px] text-outline pt-1">
+<span>● Tasks: 3.5 MB</span>
+<span>● Ledger: 5.0 MB</span>
+<span>● Vault Notes: 5.7 MB</span>
+<span>SQLite WASM Ready</span>
+</div>
+</div>
+<!-- Export Suite -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Export Full Workspace Archive</span>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm mt-1">
+<button class="flex items-center justify-center gap-2 h-9 px-space-md bg-surface-container hover:bg-surface-container-high text-primary font-body-sm text-body-sm font-medium rounded-lg transition-colors group" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed group-hover:scale-110 transition-transform">data_object</span>
+<span>Export JSON Raw</span>
+</button>
+<button class="flex items-center justify-center gap-2 h-9 px-space-md bg-surface-container hover:bg-surface-container-high text-primary font-body-sm text-body-sm font-medium rounded-lg transition-colors group" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed group-hover:scale-110 transition-transform">folder_zip</span>
+<span>Markdown Vault</span>
+</button>
+<button class="flex items-center justify-center gap-2 h-9 px-space-md bg-surface-container hover:bg-surface-container-high text-primary font-body-sm text-body-sm font-medium rounded-lg transition-colors group" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed group-hover:scale-110 transition-transform">table_chart</span>
+<span>Financial CSV</span>
+</button>
+</div>
+</div>
+<!-- Import Container -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Import Snapshot Archive</span>
+<div class="border-2 border-dashed border-outline-variant/30 hover:border-tertiary-fixed/60 rounded-xl p-space-lg flex flex-col items-center justify-center gap-space-xs bg-surface-container-lowest/50 hover:bg-surface-container cursor-pointer transition-all">
+<span class="material-symbols-outlined text-[28px] text-outline">cloud_upload</span>
+<span class="font-body-default text-body-default text-primary font-medium">Click to select or drop .productiv archive file</span>
+<span class="font-label-sm text-label-sm text-outline">Encrypted backup blobs, Obsidian JSON, or SQLite snapshots supported.</span>
+</div>
+</div>
+<!-- Danger Zone -->
+<div class="mt-space-sm p-space-md rounded-xl bg-error-container/20 flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-error">warning</span>
+<span class="font-label-sm text-label-sm text-error font-semibold uppercase tracking-wider">Irreversible Action Matrix // Danger Zone</span>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<span class="font-body-default text-body-default text-on-surface font-medium">Purge Completed Tasks &gt; 90 Days</span>
+<span class="font-label-sm text-label-sm text-outline">Removes archived task history and task telemetry to recover memory.</span>
+</div>
+<button class="h-8 px-space-md bg-surface-container-high hover:bg-surface-container-highest text-error font-body-sm text-body-sm font-medium rounded-lg transition-colors" type="button">
+                Purge 90d+ Tasks
+              </button>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex flex-col">
+<span class="font-body-default text-body-default text-error font-medium">Reset Entire Workspace Node</span>
+<span class="font-label-sm text-label-sm text-outline">Permanently destroys the local IndexedDB database, caches, and keychains.</span>
+</div>
+<button class="h-8 px-space-md bg-error-container text-on-error-container hover:bg-error hover:text-on-error font-body-sm text-body-sm font-medium rounded-lg transition-colors" type="button">
+                Reset Workspace
+              </button>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Sticky Persistent Action Status Bar -->
+<div class="sticky bottom-4 z-30 flex items-center justify-between px-space-xl py-space-sm bg-surface-container-high/95 backdrop-blur-md rounded-xl shadow-xl mt-space-md">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-ping"></span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Auto-save daemon active</span>
+</div>
+<span class="text-outline text-body-sm font-label-sm">|</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Unsaved changes: None (Hash-verified)</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="h-8 px-space-md bg-surface-container hover:bg-surface-container-highest text-on-surface-variant font-body-sm text-body-sm rounded-lg transition-colors" id="discard-btn" type="button">
+          Discard
+        </button>
+<button class="flex items-center gap-1.5 h-8 px-space-lg bg-primary text-on-primary hover:bg-primary-fixed font-body-sm text-body-sm font-medium rounded-lg shadow-sm transition-all active:scale-95" id="save-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">save</span>
+<span>Save Changes</span>
+<kbd class="font-kbd text-kbd bg-on-primary/20 text-on-primary px-1 py-0.5 rounded ml-1">⌘S</kbd>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple interactive handling for tabs, toggles, and shortcuts
+  document.querySelectorAll('.toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isTrue = btn.getAttribute('data-state') === 'true';
+      if (isTrue) {
+        btn.setAttribute('data-state', 'false');
+        btn.classList.remove('bg-tertiary-fixed', 'justify-end');
+        btn.classList.add('bg-surface-container-highest', 'justify-start');
+      } else {
+        btn.setAttribute('data-state', 'true');
+        btn.classList.remove('bg-surface-container-highest', 'justify-start');
+        btn.classList.add('bg-tertiary-fixed', 'justify-end');
+      }
+    });
+  });
+
+  // Category navigation scroll spy & active state toggle
+  const navItems = document.querySelectorAll('.settings-nav-item');
+  navItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+      navItems.forEach(i => {
+        i.classList.remove('bg-surface-container-high', 'text-primary');
+        i.classList.add('bg-transparent', 'text-on-surface-variant');
+      });
+      item.classList.add('bg-surface-container-high', 'text-primary');
+      item.classList.remove('bg-transparent', 'text-on-surface-variant');
+    });
+  });
+
+  // Save changes toast micro-interaction
+  const saveBtn = document.getElementById('save-btn');
+  if (saveBtn) {
+    saveBtn.addEventListener('click', () => {
+      const originalText = saveBtn.innerHTML;
+      saveBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] text-tertiary-fixed animate-spin">sync</span><span>Committed...</span>';
+      setTimeout(() => {
+        saveBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">done</span><span>Saved</span>';
+        setTimeout(() => {
+          saveBtn.innerHTML = originalText;
+        }, 1400);
+      }, 600);
+    });
+  }
+
+  // Keyboard shortcut cmd+s
+  window.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 's') {
+      e.preventDefault();
+      saveBtn?.click();
+    }
+  });
+</script></main></div>
+</body></html>

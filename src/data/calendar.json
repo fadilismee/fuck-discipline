@@ -1,0 +1,68 @@
+[
+  {
+    "id": "ev-1",
+    "title": "UT Lecture & Quiz",
+    "category": "Academics",
+    "location": "Online / Zoom",
+    "startTime": "09:00",
+    "endTime": "10:30",
+    "date": "2026-09-25",
+    "done": true,
+    "color": "slate"
+  },
+  {
+    "id": "ev-2",
+    "title": "Productiv UI Design Sprint",
+    "category": "Engineering",
+    "location": "Local Workstation",
+    "startTime": "11:00",
+    "endTime": "13:00",
+    "date": "2026-09-25",
+    "done": true,
+    "color": "emerald"
+  },
+  {
+    "id": "ev-3",
+    "title": "Lunch & Nutritional Reset",
+    "category": "Break",
+    "location": "Dining",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "date": "2026-09-25",
+    "done": true,
+    "color": "slate"
+  },
+  {
+    "id": "ev-4",
+    "title": "Exercise & Mobility Workout",
+    "category": "Health",
+    "location": "Gym / Park",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "date": "2026-09-25",
+    "done": false,
+    "color": "emerald"
+  },
+  {
+    "id": "ev-5",
+    "title": "Study SQL & Database Indexing",
+    "category": "Learning",
+    "location": "Desk",
+    "startTime": "19:00",
+    "endTime": "20:30",
+    "date": "2026-09-25",
+    "done": false,
+    "color": "sky"
+  },
+  {
+    "id": "ev-6",
+    "title": "Weekly Audit & Retrospective",
+    "category": "Review",
+    "location": "Obsidian Terminal",
+    "startTime": "21:00",
+    "endTime": "22:00",
+    "date": "2026-09-25",
+    "done": false,
+    "color": "violet"
+  }
+]

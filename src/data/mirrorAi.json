@@ -1,0 +1,18 @@
+{
+  "cognitiveLoad": 78.4,
+  "frictionIndex": "+18.2%",
+  "systemConfidence": "94.2%",
+  "recommendations": [
+    "Focus on completing 'Finish Productiv UI' before 16:00 to preserve evening cognitive capacity.",
+    "Morning routines are at 100% cadence today. Excellent behavioral momentum.",
+    "Daily expenditure is currently at Rp 47.000 (47% of Rp 100.000 limit) — Safe status."
+  ],
+  "chatHistory": [
+    {
+      "id": "m-msg-1",
+      "sender": "ai",
+      "time": "14:30",
+      "text": "Executive Terminal online. Cognitive capacity steady at 88%. You have 3 tasks remaining for today. Would you like me to optimize your evening timeboxing or review pending tasks?"
+    }
+  ]
+}

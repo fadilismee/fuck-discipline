@@ -1,0 +1,13 @@
+{
+  "userName": "Fadil",
+  "email": "fadil@productiv.local",
+  "theme": "obsidian-dark",
+  "soundEffects": true,
+  "pomodoroDuration": 25,
+  "shortBreakDuration": 5,
+  "longBreakDuration": 15,
+  "dailySpendLimit": 100000,
+  "telemetryEnabled": true,
+  "notificationsEnabled": true,
+  "autoSyncLocalStorage": true
+}
