@@ -10,6 +10,7 @@ export const RoutinesPage: React.FC = () => {
   const toggleRoutine = useLifeOSStore((state) => state.toggleRoutine);
   const toggleRoutineForDate = useLifeOSStore((s) => s.toggleRoutineForDate);
   const deleteRoutine = useLifeOSStore((s) => s.deleteRoutine);
+  const requestConfirm = useLifeOSStore((s) => s.requestConfirm);
   const updateRoutine = useLifeOSStore((s) => s.updateRoutine);
   const openRoutineModal = useLifeOSStore((s) => s.openRoutineModal);
   const { playSuccessChime, playBeep } = useWebAudio();
@@ -109,7 +110,7 @@ export const RoutinesPage: React.FC = () => {
           <span className="material-symbols-outlined text-[16px]">edit</span>
         </button>
         <button
-          onClick={(e) => { e.stopPropagation(); if (window.confirm(`Hapus routine "${r.title}"?`)) deleteRoutine(r.id); }}
+          onClick={(e) => { e.stopPropagation(); requestConfirm({ title: 'Hapus routine?', message: `"${r.title}" beserta streak ${r.streak} hari dan riwayatnya akan dihapus.`, onConfirm: () => deleteRoutine(r.id) }); }}
           aria-label="Delete routine"
           className="w-8 h-8 rounded-lg flex items-center justify-center text-outline sm:opacity-0 sm:group-hover:opacity-100 hover:text-error hover:bg-error/10"
         >

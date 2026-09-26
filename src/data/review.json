@@ -1,10 +1,10 @@
 {
-  "currentDate": "2026-09-25",
+  "currentDate": "2026-09-26",
   "throughputPercent": 88.4,
   "history": [
     {
       "id": "rev-1",
-      "date": "2026-09-25",
+      "date": "2026-09-26",
       "period": "daily",
       "win": "Finished high-speed top navigation and unified JSON store architecture.",
       "friction": "Midday context switching between design and research.",
@@ -15,7 +15,7 @@
     },
     {
       "id": "rev-2",
-      "date": "2026-09-24",
+      "date": "2026-09-25",
       "period": "daily",
       "win": "Completed freelance milestone ahead of schedule.",
       "friction": "Slightly delayed morning workout.",

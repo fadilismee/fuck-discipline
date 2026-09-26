@@ -125,7 +125,7 @@ export const MirrorAIPage: React.FC = () => {
           <div className="flex items-center gap-1 text-on-surface-variant font-mono">
             <span className="material-symbols-outlined text-[14px] text-outline">date_range</span>
             <span>
-              Window: <span className="text-on-surface font-medium">21–25 Sep 2026</span>
+              Window: <span className="text-on-surface font-medium">22–26 Sep 2026</span>
             </span>
           </div>
         </div>

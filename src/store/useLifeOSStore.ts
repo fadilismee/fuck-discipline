@@ -105,6 +105,12 @@ interface LifeOSStoreState {
   taskFilter: 'all' | 'today' | 'upcoming' | 'overdue' | 'completed';
   taskViewMode: 'list' | 'kanban';
   toast: { message: string; type: 'info' | 'success' } | null;
+  confirmState: {
+    title: string;
+    message: string;
+    confirmLabel: string;
+    onConfirm: () => void;
+  } | null;
 
   timerState: {
     isRunning: boolean;
@@ -143,6 +149,9 @@ interface LifeOSStoreState {
   setTaskFilter: (filter: 'all' | 'today' | 'upcoming' | 'overdue' | 'completed') => void;
   setTaskViewMode: (mode: 'list' | 'kanban') => void;
   showToast: (message: string, type?: 'info' | 'success') => void;
+  requestConfirm: (opts: { title: string; message: string; confirmLabel?: string; onConfirm: () => void }) => void;
+  closeConfirm: () => void;
+  confirmDialog: () => void;
 
   addTask: (taskData: Partial<Task>) => Task | null;
   updateTask: (taskId: string, updates: Partial<Task>) => void;
@@ -249,6 +258,7 @@ export const useLifeOSStore = create<LifeOSStoreState>((set, get) => ({
   taskFilter: 'all',
   taskViewMode: 'list',
   toast: null,
+  confirmState: null,
 
   timerState: {
     isRunning: false,
@@ -314,6 +324,22 @@ export const useLifeOSStore = create<LifeOSStoreState>((set, get) => ({
     setTimeout(() => {
       set((state) => (state.toast?.message === message ? { toast: null } : {}));
     }, 3000);
+  },
+
+  requestConfirm: (opts) =>
+    set({
+      confirmState: {
+        title: opts.title,
+        message: opts.message,
+        confirmLabel: opts.confirmLabel || 'Hapus',
+        onConfirm: opts.onConfirm,
+      },
+    }),
+  closeConfirm: () => set({ confirmState: null }),
+  confirmDialog: () => {
+    const fn = get().confirmState?.onConfirm;
+    set({ confirmState: null });
+    if (fn) fn();
   },
 
   addTask: (taskData) => {
@@ -572,7 +598,7 @@ export const useLifeOSStore = create<LifeOSStoreState>((set, get) => ({
   getTodayExpenses: () => {
     const todayStr = new Date().toISOString().slice(0, 10);
     return get().data.finance.transactions
-      .filter((t) => (t.date === todayStr || t.date === '2026-09-25') && t.type === 'expense')
+      .filter((t) => (t.date === todayStr || t.date === '2026-09-26') && t.type === 'expense')
       .reduce((acc, t) => acc + t.amount, 0);
   },
 
@@ -909,7 +935,7 @@ export const useLifeOSStore = create<LifeOSStoreState>((set, get) => ({
       location: eventData.location || 'Local',
       startTime: eventData.startTime || '10:00',
       endTime: eventData.endTime || '11:00',
-      date: eventData.date || '2026-09-25',
+      date: eventData.date || '2026-09-26',
       done: false,
       color: eventData.color || 'emerald',
     };

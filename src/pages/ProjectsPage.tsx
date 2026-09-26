@@ -9,6 +9,7 @@ export const ProjectsPage: React.FC = () => {
   const tasks = useLifeOSStore((state) => state.data.tasks);
   const toggleMilestone = useLifeOSStore((state) => state.toggleMilestone);
   const deleteProject = useLifeOSStore((s) => s.deleteProject);
+  const requestConfirm = useLifeOSStore((s) => s.requestConfirm);
   const openProjectModal = useLifeOSStore((s) => s.openProjectModal);
   const updateProjectNotes = useLifeOSStore((s) => s.updateProjectNotes);
   const addProjectImage = useLifeOSStore((s) => s.addProjectImage);
@@ -209,7 +210,7 @@ export const ProjectsPage: React.FC = () => {
                 <span className="w-2 h-2 rounded-full bg-tertiary-fixed animate-pulse"></span>
                 In Progress
               </span>
-              <button onClick={() => { if (window.confirm(`Hapus project "${selectedProj.name}"?`)) deleteProject(selectedProj.id); }} aria-label="Delete project" className="w-9 h-9 rounded-lg flex items-center justify-center text-outline hover:text-error hover:bg-error/10 border border-outline-variant/30">
+              <button onClick={() => requestConfirm({ title: 'Hapus project?', message: `"${selectedProj.name}" beserta milestone, notes, dan galerinya akan dihapus permanen.`, confirmLabel: 'Hapus Project', onConfirm: () => deleteProject(selectedProj.id) })} aria-label="Delete project" className="w-9 h-9 rounded-lg flex items-center justify-center text-outline hover:text-error hover:bg-error/10 border border-outline-variant/30">
                 <span className="material-symbols-outlined text-[18px]">delete</span>
               </button>
             </div>
@@ -380,7 +381,7 @@ export const ProjectsPage: React.FC = () => {
                   <div className="flex items-center justify-between px-2 py-1">
                     <span className="font-mono text-[10px] text-outline truncate">{img.name} · {img.sizeKB}KB</span>
                     <button
-                      onClick={() => { if (window.confirm(`Hapus gambar "${img.name}"?`)) deleteProjectImage(selectedProj.id, img.id); }}
+                      onClick={() => requestConfirm({ title: 'Hapus gambar?', message: `"${img.name}" (${img.sizeKB}KB) akan dihapus dari galeri.`, onConfirm: () => deleteProjectImage(selectedProj.id, img.id) })}
                       aria-label={`Delete ${img.name}`}
                       className="w-7 h-7 rounded flex items-center justify-center text-outline hover:text-error hover:bg-error/10 shrink-0"
                     >

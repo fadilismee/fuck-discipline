@@ -49,22 +49,22 @@ export const AutoSidebar: React.FC = () => {
 
   return (
     <>
-      {/* 1. Invisible Left-Edge Hover Trigger Zone */}
+      {/* 1. Invisible Left-Edge Hover Trigger Zone (desktop only — mobile pakai burger menu) */}
       <div
         id="sidebar-hover-zone"
         onMouseEnter={handleMouseEnter}
-        className="fixed left-0 top-0 bottom-0 w-4 z-40 cursor-pointer"
+        className="hidden md:block fixed left-0 top-0 bottom-0 w-4 z-40 cursor-pointer"
         title="Hover to show sidebar"
       />
 
-      {/* 2. Floating Pill Arrow Toggle Button ( > ) */}
+      {/* 2. Floating Pill Arrow Toggle Button ( > ) — desktop only */}
       <button
         id="sidebar-toggle-btn"
         onClick={(e) => {
           e.stopPropagation();
           toggleSidebar();
         }}
-        className="fixed left-0 top-1/2 -translate-y-1/2 z-40 bg-surface-container-high/90 hover:bg-surface-container-highest border border-outline-variant/40 text-tertiary-fixed rounded-r-lg px-1.5 py-3 shadow-2xl transition-all duration-200 cursor-pointer flex items-center justify-center group"
+        className="hidden md:flex fixed left-0 top-1/2 -translate-y-1/2 z-40 bg-surface-container-high/90 hover:bg-surface-container-highest border border-outline-variant/40 text-tertiary-fixed rounded-r-lg px-1.5 py-3 shadow-2xl transition-all duration-200 cursor-pointer items-center justify-center group"
         title="Toggle Navigation Sidebar"
       >
         <span

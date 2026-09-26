@@ -11,6 +11,7 @@ import { EventModal } from './components/modals/EventModal';
 import { ProjectModal } from './components/modals/ProjectModal';
 import { RoutineModal } from './components/modals/RoutineModal';
 import { Toast } from './components/common/Toast';
+import { ConfirmModal } from './components/common/ConfirmModal';
 import { FloatingTimer } from './components/common/FloatingTimer';
 
 import { TodayPage } from './pages/TodayPage';
@@ -47,6 +48,20 @@ export const App: React.FC = () => {
   useEffect(() => {
     audioEngine.setBinaural(ambientPlaying, ambientVolume ?? 50);
   }, [ambientPlaying, ambientVolume]);
+
+  // Minta browser jangan hapus LocalStorage otomatis (persistent storage)
+  useEffect(() => {
+    try {
+      const nav = navigator as Navigator & { storage?: { persist?: () => Promise<boolean> } };
+      if (nav.storage?.persist) {
+        nav.storage.persist().then((granted) => {
+          if (!granted) console.info('Persistent storage tidak diberikan browser.');
+        });
+      }
+    } catch {
+      /* abaikan — browser lama */
+    }
+  }, []);
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -115,6 +130,7 @@ export const App: React.FC = () => {
       <ProjectModal />
       <RoutineModal />
       <FloatingTimer />
+      <ConfirmModal />
       <Toast />
     </div>
   );

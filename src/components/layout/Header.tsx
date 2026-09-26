@@ -40,7 +40,7 @@ export const Header: React.FC = () => {
         </button>
         <span className="font-label-default text-label-default text-outline uppercase font-mono hidden sm:inline">WORKSPACE /</span>
         <span className="font-body-default text-body-default text-on-surface font-medium truncate text-[13px] sm:text-[14px]">
-          {dateStr ? dateStr.split('—')[0].trim() : 'Friday, 25 Sep'}
+          {dateStr ? dateStr.split('—')[0].trim() : 'Saturday, 26 Sep'}
         </span>
       </div>
 

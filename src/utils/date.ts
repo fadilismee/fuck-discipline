@@ -1,5 +1,5 @@
 // Tanggal acuan data seed (sesuai finance.json & calendar seed)
-export const BASE_TODAY_ISO = '2026-09-25';
+export const BASE_TODAY_ISO = '2026-09-26';
 
 export function toISO(d: Date): string {
   const y = d.getFullYear();

@@ -10,6 +10,7 @@ export const ReviewPage: React.FC = () => {
   const focus = useLifeOSStore((s) => s.data.focus);
   const addReviewEntry = useLifeOSStore((state) => state.addReviewEntry);
   const deleteReviewEntry = useLifeOSStore((s) => s.deleteReviewEntry);
+  const requestConfirm = useLifeOSStore((s) => s.requestConfirm);
   const exportSingleJson = useLifeOSStore((s) => s.exportSingleJson);
   const reviewPeriod = useLifeOSStore((s) => s.reviewPeriod);
   const setReviewPeriod = useLifeOSStore((s) => s.setReviewPeriod);
@@ -125,7 +126,7 @@ export const ReviewPage: React.FC = () => {
           <div className="flex items-center bg-surface-container-lowest p-0.5 rounded-xl border border-outline-variant/20 shadow-sm">
             {(['daily', 'weekly', 'monthly'] as const).map((p) => (
               <button key={p} onClick={() => setReviewPeriod(p)} className={`px-space-md h-9 rounded-lg font-body-sm font-medium transition-colors capitalize min-w-[80px] ${reviewPeriod === p ? 'bg-surface-container-high text-primary' : 'text-on-surface-variant hover:text-primary'}`} type="button">
-                {p === 'daily' ? 'Daily (25 Sep)' : p === 'weekly' ? 'Weekly (W39)' : 'Monthly (Sep)'}
+                {p === 'daily' ? 'Daily (26 Sep)' : p === 'weekly' ? 'Weekly (W39)' : 'Monthly (Sep)'}
               </button>
             ))}
           </div>
@@ -144,7 +145,7 @@ export const ReviewPage: React.FC = () => {
             <div className="flex items-center justify-between pb-space-sm mb-space-sm border-b border-surface-container">
               <div className="flex items-center gap-2">
                 <span className="font-label-sm text-outline uppercase tracking-wider">
-                  {reviewPeriod === 'daily' ? 'Day 25' : reviewPeriod === 'weekly' ? 'Week 39' : 'September'} Throughput Delta
+                  {reviewPeriod === 'daily' ? 'Day 26' : reviewPeriod === 'weekly' ? 'Week 39' : 'September'} Throughput Delta
                 </span>
                 <span className="font-kbd text-[10px] text-tertiary-fixed bg-surface-container-highest px-1.5 py-0.5 rounded">
                   EXEC_SYNCED
@@ -331,7 +332,7 @@ export const ReviewPage: React.FC = () => {
                   <span className="text-tertiary-fixed font-bold">{r.date} • {r.period}</span>
                   <span className="flex items-center gap-2">
                     <span className="text-primary font-medium">Score: {r.productivityRating}/10 • {r.energyLevel}</span>
-                    <button onClick={() => { if (window.confirm('Hapus review ini?')) deleteReviewEntry(r.id); }} aria-label="Delete review" className="w-8 h-8 rounded-lg flex items-center justify-center text-outline sm:opacity-0 sm:group-hover:opacity-100 hover:text-error hover:bg-error/10">
+                    <button onClick={() => requestConfirm({ title: 'Hapus review?', message: `Catatan tanggal ${r.date} (${r.period}) akan dihapus permanen.`, onConfirm: () => deleteReviewEntry(r.id) })} aria-label="Delete review" className="w-8 h-8 rounded-lg flex items-center justify-center text-outline sm:opacity-0 sm:group-hover:opacity-100 hover:text-error hover:bg-error/10">
                       <span className="material-symbols-outlined text-[16px]">delete</span>
                     </button>
                   </span>

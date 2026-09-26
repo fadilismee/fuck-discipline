@@ -15,7 +15,7 @@ export const EventModal: React.FC = () => {
   const [location, setLocation] = useState('Local');
   const [startTime, setStartTime] = useState('10:00');
   const [endTime, setEndTime] = useState('11:00');
-  const [date, setDate] = useState('2026-09-25');
+  const [date, setDate] = useState('2026-09-26');
 
   useEffect(() => {
     if (open && editingEventId) {
@@ -34,7 +34,7 @@ export const EventModal: React.FC = () => {
       setLocation('Local');
       setStartTime('10:00');
       setEndTime('11:00');
-      setDate('2026-09-25');
+      setDate('2026-09-26');
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open, editingEventId]);

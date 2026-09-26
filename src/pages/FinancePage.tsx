@@ -49,6 +49,7 @@ export const FinancePage: React.FC = () => {
   const updateAccount = useLifeOSStore((s) => s.updateAccount);
   const deleteAccount = useLifeOSStore((s) => s.deleteAccount);
   const transferAccount = useLifeOSStore((s) => s.transferAccount);
+  const requestConfirm = useLifeOSStore((s) => s.requestConfirm);
   const targets = finance.targets || [];
   const addTarget = useLifeOSStore((s) => s.addTarget);
   const updateTarget = useLifeOSStore((s) => s.updateTarget);
@@ -407,7 +408,7 @@ export const FinancePage: React.FC = () => {
                 <span className="whitespace-nowrap">01 Sep</span>
                 <span className="whitespace-nowrap hidden sm:inline">Min Rp {arc.min.toLocaleString('id-ID')}</span>
                 <span className="whitespace-nowrap hidden sm:inline">Max Rp {arc.max.toLocaleString('id-ID')}</span>
-                <span className="whitespace-nowrap">Today (25 Sep)</span>
+                <span className="whitespace-nowrap">Today (26 Sep)</span>
               </div>
               </div>
             </div>
@@ -544,7 +545,14 @@ export const FinancePage: React.FC = () => {
             </div>
             <TxList
               items={[...finance.transactions].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 5)}
-              onDelete={(id) => { if (window.confirm('Hapus transaksi ini dan kembalikan saldo?')) deleteTransaction(id); }}
+              onDelete={(id) => {
+                const t = finance.transactions.find((x) => x.id === id);
+                requestConfirm({
+                  title: 'Hapus transaksi?',
+                  message: `"${t?.title || ''}" akan dihapus dan saldo dikembalikan.`,
+                  onConfirm: () => deleteTransaction(id),
+                });
+              }}
               onEdit={openEditTx}
             />
           </div>
@@ -599,7 +607,14 @@ export const FinancePage: React.FC = () => {
           ) : (
             <TxList
               items={filteredTx}
-              onDelete={(id) => { if (window.confirm('Hapus transaksi ini dan kembalikan saldo?')) deleteTransaction(id); }}
+              onDelete={(id) => {
+                const t = finance.transactions.find((x) => x.id === id);
+                requestConfirm({
+                  title: 'Hapus transaksi?',
+                  message: `"${t?.title || ''}" akan dihapus dan saldo dikembalikan.`,
+                  onConfirm: () => deleteTransaction(id),
+                });
+              }}
               onEdit={openEditTx}
             />
           )}
@@ -660,7 +675,7 @@ export const FinancePage: React.FC = () => {
                         <button onClick={() => openBudgetModal(b.id)} aria-label={`Edit ${b.name}`} className="w-9 h-9 rounded-lg flex items-center justify-center text-outline hover:text-primary hover:bg-surface-container-high">
                           <span className="material-symbols-outlined text-[17px]">edit</span>
                         </button>
-                        <button onClick={() => { if (window.confirm(`Hapus budget "${b.name}"?`)) deleteBudget(b.id); }} aria-label={`Delete ${b.name}`} className="w-9 h-9 rounded-lg flex items-center justify-center text-outline hover:text-error hover:bg-error/10">
+                        <button onClick={() => requestConfirm({ title: 'Hapus budget?', message: `Budget "${b.name}" akan dihapus. Transaksi terkait tetap tersimpan.`, onConfirm: () => deleteBudget(b.id) })} aria-label={`Delete ${b.name}`} className="w-9 h-9 rounded-lg flex items-center justify-center text-outline hover:text-error hover:bg-error/10">
                           <span className="material-symbols-outlined text-[17px]">delete</span>
                         </button>
                       </div>
@@ -711,7 +726,7 @@ export const FinancePage: React.FC = () => {
                     <button onClick={() => openAccountModal(a.id)} aria-label={`Edit ${a.name}`} className="w-9 h-9 rounded-lg flex items-center justify-center text-outline hover:text-primary hover:bg-surface-container-high">
                       <span className="material-symbols-outlined text-[17px]">edit</span>
                     </button>
-                    <button onClick={() => { if (window.confirm(`Hapus account "${a.name}"?`)) deleteAccount(a.id); }} aria-label={`Delete ${a.name}`} className="w-9 h-9 rounded-lg flex items-center justify-center text-outline hover:text-error hover:bg-error/10">
+                    <button onClick={() => requestConfirm({ title: 'Hapus account?', message: `"${a.name}" (${fmt(a.balance)}) akan dihapus permanen.`, onConfirm: () => deleteAccount(a.id) })} aria-label={`Delete ${a.name}`} className="w-9 h-9 rounded-lg flex items-center justify-center text-outline hover:text-error hover:bg-error/10">
                       <span className="material-symbols-outlined text-[17px]">delete</span>
                     </button>
                   </div>
@@ -783,7 +798,7 @@ export const FinancePage: React.FC = () => {
                         <button onClick={() => openTargetModal(t.id)} aria-label={`Edit ${t.name}`} className="w-9 h-9 rounded-lg flex items-center justify-center text-outline hover:text-primary hover:bg-surface-container-high">
                           <span className="material-symbols-outlined text-[17px]">edit</span>
                         </button>
-                        <button onClick={() => { if (window.confirm(`Hapus target "${t.name}"?`)) deleteTarget(t.id); }} aria-label={`Delete ${t.name}`} className="w-9 h-9 rounded-lg flex items-center justify-center text-outline hover:text-error hover:bg-error/10">
+                        <button onClick={() => requestConfirm({ title: 'Hapus target?', message: `Target "${t.name}" (${fmt(t.targetPrice)}) akan dihapus. Saldo yang sudah dialokasikan tidak dikembalikan otomatis.`, onConfirm: () => deleteTarget(t.id) })} aria-label={`Delete ${t.name}`} className="w-9 h-9 rounded-lg flex items-center justify-center text-outline hover:text-error hover:bg-error/10">
                           <span className="material-symbols-outlined text-[17px]">delete</span>
                         </button>
                       </div>

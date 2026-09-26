@@ -6,7 +6,7 @@
     "location": "Online / Zoom",
     "startTime": "09:00",
     "endTime": "10:30",
-    "date": "2026-09-25",
+    "date": "2026-09-26",
     "done": true,
     "color": "slate"
   },
@@ -17,7 +17,7 @@
     "location": "Local Workstation",
     "startTime": "11:00",
     "endTime": "13:00",
-    "date": "2026-09-25",
+    "date": "2026-09-26",
     "done": true,
     "color": "emerald"
   },
@@ -28,7 +28,7 @@
     "location": "Dining",
     "startTime": "13:00",
     "endTime": "14:00",
-    "date": "2026-09-25",
+    "date": "2026-09-26",
     "done": true,
     "color": "slate"
   },
@@ -39,7 +39,7 @@
     "location": "Gym / Park",
     "startTime": "16:00",
     "endTime": "17:00",
-    "date": "2026-09-25",
+    "date": "2026-09-26",
     "done": false,
     "color": "emerald"
   },
@@ -50,7 +50,7 @@
     "location": "Desk",
     "startTime": "19:00",
     "endTime": "20:30",
-    "date": "2026-09-25",
+    "date": "2026-09-26",
     "done": false,
     "color": "sky"
   },
@@ -61,7 +61,7 @@
     "location": "Obsidian Terminal",
     "startTime": "21:00",
     "endTime": "22:00",
-    "date": "2026-09-25",
+    "date": "2026-09-26",
     "done": false,
     "color": "violet"
   }

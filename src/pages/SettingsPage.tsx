@@ -12,6 +12,7 @@ export const SettingsPage: React.FC = () => {
   const exportSingleJson = useLifeOSStore((s) => s.exportSingleJson);
   const importJson = useLifeOSStore((state) => state.importJson);
   const resetToDefault = useLifeOSStore((state) => state.resetToDefault);
+  const requestConfirm = useLifeOSStore((s) => s.requestConfirm);
   const showToast = useLifeOSStore((s) => s.showToast);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -167,7 +168,7 @@ export const SettingsPage: React.FC = () => {
                 <span>Import JSON</span>
               </button>
               <input ref={fileInputRef} type="file" accept=".json,application/json" onChange={handleFileUpload} className="hidden" />
-              <button onClick={() => { if (window.confirm('Reset semua data ke default dari file JSON?')) resetToDefault(); }} className="h-10 px-space-md bg-error/20 text-error hover:bg-error/30 font-medium rounded-lg text-body-sm transition-colors flex items-center gap-1.5 cursor-pointer">
+              <button onClick={() => requestConfirm({ title: 'Reset semua data?', message: 'Seluruh data akan dikembalikan ke bawaan file JSON seed. Export backup dulu bila perlu.', confirmLabel: 'Reset', onConfirm: () => resetToDefault() })} className="h-10 px-space-md bg-error/20 text-error hover:bg-error/30 font-medium rounded-lg text-body-sm transition-colors flex items-center gap-1.5 cursor-pointer">
                 <span className="material-symbols-outlined text-[16px]">restart_alt</span>
                 <span>Reset</span>
               </button>

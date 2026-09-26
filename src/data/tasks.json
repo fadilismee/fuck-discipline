@@ -6,16 +6,31 @@
     "priority": "high",
     "est": "2h est",
     "due": "Today 23:59",
-    "date": "2026-09-25",
+    "date": "2026-09-26",
     "status": "today",
     "completed": false,
     "timeSpent": "1h 24m",
-    "tags": ["#Design", "#FE"],
+    "tags": [
+      "#Design",
+      "#FE"
+    ],
     "notes": "Implement high-contrast zen interface and remove side navbar in favor of slick top bar.",
     "subtasks": [
-      { "id": "st-1", "title": "Design slick top navigation bar", "done": true },
-      { "id": "st-2", "title": "Wire reactive JSON store with localStorage persistence", "done": true },
-      { "id": "st-3", "title": "Interactive task drawer and kanban toggle", "done": false }
+      {
+        "id": "st-1",
+        "title": "Design slick top navigation bar",
+        "done": true
+      },
+      {
+        "id": "st-2",
+        "title": "Wire reactive JSON store with localStorage persistence",
+        "done": true
+      },
+      {
+        "id": "st-3",
+        "title": "Interactive task drawer and kanban toggle",
+        "done": false
+      }
     ]
   },
   {
@@ -25,15 +40,26 @@
     "priority": "med",
     "est": "1h est",
     "due": "Today 21:00",
-    "date": "2026-09-25",
+    "date": "2026-09-26",
     "status": "today",
     "completed": false,
     "timeSpent": "0m",
-    "tags": ["#Database", "#Backend"],
+    "tags": [
+      "#Database",
+      "#Backend"
+    ],
     "notes": "B-Tree indexing, query execution plans, and composite indexing best practices.",
     "subtasks": [
-      { "id": "st-4", "title": "Read chapters on B-Tree vs LSM trees", "done": true },
-      { "id": "st-5", "title": "Benchmark EXPLAIN ANALYZE on Postgres", "done": false }
+      {
+        "id": "st-4",
+        "title": "Read chapters on B-Tree vs LSM trees",
+        "done": true
+      },
+      {
+        "id": "st-5",
+        "title": "Benchmark EXPLAIN ANALYZE on Postgres",
+        "done": false
+      }
     ]
   },
   {
@@ -42,13 +68,15 @@
     "project": "Portfolio",
     "priority": "low",
     "est": "30m",
-    "due": "24 Sep 14:20",
-    "date": "2026-09-24",
-    "completedAt": "2026-09-24",
+    "due": "25 Sep 14:20",
+    "date": "2026-09-25",
+    "completedAt": "2026-09-25",
     "status": "completed",
     "completed": true,
     "timeSpent": "25m",
-    "tags": ["#Portfolio"],
+    "tags": [
+      "#Portfolio"
+    ],
     "notes": "Uploaded latest UI mockups and demo previews to CDN.",
     "subtasks": []
   },
@@ -59,11 +87,14 @@
     "priority": "med",
     "est": "45m",
     "due": "Today 16:00",
-    "date": "2026-09-25",
+    "date": "2026-09-26",
     "status": "today",
     "completed": false,
     "timeSpent": "0m",
-    "tags": ["#Fitness", "#Health"],
+    "tags": [
+      "#Fitness",
+      "#Health"
+    ],
     "notes": "Upper body push workout + 15 min thoracic mobility stretching.",
     "subtasks": []
   },
@@ -74,11 +105,13 @@
     "priority": "low",
     "est": "15m",
     "due": "Today 20:00",
-    "date": "2026-09-25",
+    "date": "2026-09-26",
     "status": "today",
     "completed": false,
     "timeSpent": "0m",
-    "tags": ["#Finance"],
+    "tags": [
+      "#Finance"
+    ],
     "notes": "Weekly reconcile of personal expenses and cash flow analysis.",
     "subtasks": []
   },
@@ -89,11 +122,14 @@
     "priority": "high",
     "est": "3h est",
     "due": "Tomorrow 12:00",
-    "date": "2026-09-26",
+    "date": "2026-09-27",
     "status": "upcoming",
     "completed": false,
     "timeSpent": "0m",
-    "tags": ["#Backend", "#Gateway"],
+    "tags": [
+      "#Backend",
+      "#Gateway"
+    ],
     "notes": "Implement token bucket rate limiting and zero-latency caching layer.",
     "subtasks": []
   },
@@ -103,12 +139,15 @@
     "project": "Finance",
     "priority": "high",
     "est": "2h est",
-    "due": "24 Sep (overdue)",
-    "date": "2026-09-24",
+    "due": "25 Sep (overdue)",
+    "date": "2026-09-25",
     "status": "overdue",
     "completed": false,
     "timeSpent": "30m",
-    "tags": ["#Finance", "#Tax"],
+    "tags": [
+      "#Finance",
+      "#Tax"
+    ],
     "notes": "Compile invoices, digital receipts, and business expense deductions.",
     "subtasks": []
   },
@@ -118,12 +157,14 @@
     "project": "Learning",
     "priority": "low",
     "est": "1h est",
-    "due": "Sun 22:00",
-    "date": "2026-09-27",
+    "due": "Mon 22:00",
+    "date": "2026-09-28",
     "status": "upcoming",
     "completed": false,
     "timeSpent": "0m",
-    "tags": ["#Books"],
+    "tags": [
+      "#Books"
+    ],
     "notes": "Read Designing Data-Intensive Applications chapters 7 & 8.",
     "subtasks": []
   },
@@ -133,13 +174,15 @@
     "project": "Health",
     "priority": "med",
     "est": "40m",
-    "due": "23 Sep",
-    "date": "2026-09-23",
-    "completedAt": "2026-09-23",
+    "due": "24 Sep",
+    "date": "2026-09-24",
+    "completedAt": "2026-09-24",
     "status": "completed",
     "completed": true,
     "timeSpent": "38m",
-    "tags": ["#Fitness"],
+    "tags": [
+      "#Fitness"
+    ],
     "notes": "Easy zone-2 loop around the complex.",
     "subtasks": []
   },
@@ -149,13 +192,15 @@
     "project": "Productiv",
     "priority": "low",
     "est": "20m",
-    "due": "23 Sep",
-    "date": "2026-09-23",
-    "completedAt": "2026-09-23",
+    "due": "24 Sep",
+    "date": "2026-09-24",
+    "completedAt": "2026-09-24",
     "status": "completed",
     "completed": true,
     "timeSpent": "20m",
-    "tags": ["#Review"],
+    "tags": [
+      "#Review"
+    ],
     "notes": "What went well / friction / next experiments.",
     "subtasks": []
   },
@@ -165,13 +210,15 @@
     "project": "Productiv",
     "priority": "high",
     "est": "1h",
-    "due": "22 Sep",
-    "date": "2026-09-22",
-    "completedAt": "2026-09-22",
+    "due": "23 Sep",
+    "date": "2026-09-23",
+    "completedAt": "2026-09-23",
     "status": "completed",
     "completed": true,
     "timeSpent": "55m",
-    "tags": ["#Backend"],
+    "tags": [
+      "#Backend"
+    ],
     "notes": "Race between refresh and parallel requests.",
     "subtasks": []
   },
@@ -181,13 +228,15 @@
     "project": "Health",
     "priority": "low",
     "est": "1h",
-    "due": "21 Sep",
-    "date": "2026-09-21",
-    "completedAt": "2026-09-21",
+    "due": "22 Sep",
+    "date": "2026-09-22",
+    "completedAt": "2026-09-22",
     "status": "completed",
     "completed": true,
     "timeSpent": "1h 05m",
-    "tags": ["#Life"],
+    "tags": [
+      "#Life"
+    ],
     "notes": "Protein + veggies for 3 days.",
     "subtasks": []
   },
@@ -197,13 +246,15 @@
     "project": "Learning",
     "priority": "med",
     "est": "1h",
-    "due": "20 Sep",
-    "date": "2026-09-20",
-    "completedAt": "2026-09-20",
+    "due": "21 Sep",
+    "date": "2026-09-21",
+    "completedAt": "2026-09-21",
     "status": "completed",
     "completed": true,
     "timeSpent": "50m",
-    "tags": ["#Database"],
+    "tags": [
+      "#Database"
+    ],
     "notes": "Snapshots, xmin/xmax, vacuum basics.",
     "subtasks": []
   },
@@ -213,13 +264,15 @@
     "project": "Finance",
     "priority": "med",
     "est": "10m",
-    "due": "19 Sep",
-    "date": "2026-09-19",
-    "completedAt": "2026-09-19",
+    "due": "20 Sep",
+    "date": "2026-09-20",
+    "completedAt": "2026-09-20",
     "status": "completed",
     "completed": true,
     "timeSpent": "10m",
-    "tags": ["#Bills"],
+    "tags": [
+      "#Bills"
+    ],
     "notes": "Via m-banking, save receipt PDF.",
     "subtasks": []
   }

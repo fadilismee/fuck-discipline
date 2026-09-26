@@ -3,7 +3,7 @@ import { useLifeOSStore } from '../store/useLifeOSStore';
 
 const DAY_NAMES = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
 const BASE_MONDAY = new Date(2026, 8, 21); // 21 Sep 2026 (Monday)
-const TODAY_ISO = '2026-09-25';
+const TODAY_ISO = '2026-09-26';
 const GRID_START = 8 * 60; // 08:00
 const GRID_END = 20 * 60; // 20:00
 const GRID_PX_PER_MIN = 0.9; // 12h * 60 * 0.9 = 648px height
@@ -40,6 +40,7 @@ export const CalendarPage: React.FC = () => {
   const openEventModal = useLifeOSStore((s) => s.openEventModal);
   const toggleCalendarEvent = useLifeOSStore((s) => s.toggleCalendarEvent);
   const deleteCalendarEvent = useLifeOSStore((s) => s.deleteCalendarEvent);
+  const requestConfirm = useLifeOSStore((s) => s.requestConfirm);
   const openEventModalForEdit = useLifeOSStore((s) => s.openEventModalForEdit);
   const weekOffset = useLifeOSStore((s) => s.weekOffset);
   const shiftWeek = useLifeOSStore((s) => s.shiftWeek);
@@ -425,7 +426,7 @@ export const CalendarPage: React.FC = () => {
                 <button onClick={() => openEventModalForEdit(ev.id)} aria-label={`Edit ${ev.title}`} className="w-9 h-9 shrink-0 rounded-lg flex items-center justify-center text-outline hover:text-primary hover:bg-surface-container-high">
                   <span className="material-symbols-outlined text-[17px]">edit</span>
                 </button>
-                <button onClick={() => { if (window.confirm(`Hapus "${ev.title}"?`)) deleteCalendarEvent(ev.id); }} aria-label="Delete event" className="w-9 h-9 shrink-0 rounded-lg flex items-center justify-center text-outline hover:text-error hover:bg-error/10">
+                <button onClick={() => requestConfirm({ title: 'Hapus event?', message: `"${ev.title}" (${ev.date} • ${ev.startTime}–${ev.endTime}) akan dihapus.`, onConfirm: () => deleteCalendarEvent(ev.id) })} aria-label="Delete event" className="w-9 h-9 shrink-0 rounded-lg flex items-center justify-center text-outline hover:text-error hover:bg-error/10">
                   <span className="material-symbols-outlined text-[18px]">delete</span>
                 </button>
               </div>

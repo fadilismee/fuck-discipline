@@ -122,7 +122,7 @@ export interface Routine {
   doneToday: boolean;
   tag: string;
   desc: string;
-  /** Riwayat centang per tanggal ISO: { '2026-09-25': true } */
+  /** Riwayat centang per tanggal ISO: { '2026-09-26': true } */
   history: Record<string, boolean>;
 }
 

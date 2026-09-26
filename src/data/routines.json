@@ -9,13 +9,13 @@
     "tag": "Prime Discipline",
     "desc": "Alarm sync · Circadian start",
     "history": {
-      "2026-09-19": true,
       "2026-09-20": true,
       "2026-09-21": true,
       "2026-09-22": true,
       "2026-09-23": true,
       "2026-09-24": true,
-      "2026-09-25": true
+      "2026-09-25": true,
+      "2026-09-26": true
     }
   },
   {
@@ -28,13 +28,13 @@
     "tag": "Spiritual",
     "desc": "Fajr, Dhuhr, Asr on time",
     "history": {
-      "2026-09-19": true,
       "2026-09-20": true,
       "2026-09-21": true,
       "2026-09-22": true,
       "2026-09-23": true,
       "2026-09-24": true,
-      "2026-09-25": true
+      "2026-09-25": true,
+      "2026-09-26": true
     }
   },
   {
@@ -47,13 +47,13 @@
     "tag": "Daily Reading",
     "desc": "Consistent morning reflection",
     "history": {
-      "2026-09-19": true,
       "2026-09-20": true,
-      "2026-09-21": false,
-      "2026-09-22": true,
+      "2026-09-21": true,
+      "2026-09-22": false,
       "2026-09-23": true,
       "2026-09-24": true,
-      "2026-09-25": true
+      "2026-09-25": true,
+      "2026-09-26": true
     }
   },
   {
@@ -66,13 +66,13 @@
     "tag": "Physical",
     "desc": "Upper Body Push & Thoracic Mobility",
     "history": {
-      "2026-09-19": true,
-      "2026-09-20": false,
-      "2026-09-21": true,
+      "2026-09-20": true,
+      "2026-09-21": false,
       "2026-09-22": true,
-      "2026-09-23": false,
-      "2026-09-24": true,
-      "2026-09-25": false
+      "2026-09-23": true,
+      "2026-09-24": false,
+      "2026-09-25": true,
+      "2026-09-26": false
     }
   },
   {
@@ -85,13 +85,13 @@
     "tag": "Skill Flow",
     "desc": "20m active conversational flow",
     "history": {
-      "2026-09-19": true,
       "2026-09-20": true,
       "2026-09-21": true,
-      "2026-09-22": false,
-      "2026-09-23": true,
-      "2026-09-24": false,
-      "2026-09-25": false
+      "2026-09-22": true,
+      "2026-09-23": false,
+      "2026-09-24": true,
+      "2026-09-25": false,
+      "2026-09-26": false
     }
   },
   {
@@ -104,13 +104,13 @@
     "tag": "Winddown",
     "desc": "Bedtime physical book reading",
     "history": {
-      "2026-09-19": true,
       "2026-09-20": true,
       "2026-09-21": true,
       "2026-09-22": true,
       "2026-09-23": true,
-      "2026-09-24": false,
-      "2026-09-25": false
+      "2026-09-24": true,
+      "2026-09-25": false,
+      "2026-09-26": false
     }
   }
 ]

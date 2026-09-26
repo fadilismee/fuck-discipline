@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useLifeOSStore } from '../store/useLifeOSStore';
+import { audioEngine } from '../audio/engine';
 
 function fmt(totalSecs: number) {
   const m = Math.floor(totalSecs / 60);
@@ -178,9 +179,7 @@ export function useDocumentPip(): PipApi {
         const s = useLifeOSStore.getState();
         const next = !s.data.focus.ambientPlaying;
         // via engine global agar langsung bunyi walau beda window
-        import('../audio/engine').then(({ audioEngine }) => {
-          audioEngine.setBinaural(next, s.data.focus.volume ?? 50);
-        });
+        audioEngine.setBinaural(next, s.data.focus.volume ?? 50);
         s.setAmbientPlaying(next);
       });
 
