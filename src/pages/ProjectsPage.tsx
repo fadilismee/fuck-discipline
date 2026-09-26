@@ -109,8 +109,32 @@ export const ProjectsPage: React.FC = () => {
           </button>
         </div>
 
+        {/* Mobile: horizontal chip selector */}
+        <div className="lg:hidden -mx-3 px-3">
+          <div className="flex gap-2 overflow-x-auto pb-1">
+            {activeProjects.map((p) => {
+              const isSelected = p.id === selectedProjectId;
+              return (
+                <button
+                  key={p.id}
+                  onClick={() => setSelectedProjectId(p.id)}
+                  className={`shrink-0 flex items-center gap-1.5 h-9 pl-2.5 pr-3 rounded-full border text-[13px] font-medium transition-all ${
+                    isSelected
+                      ? 'bg-tertiary-fixed/15 border-tertiary-fixed/50 text-tertiary-fixed'
+                      : 'bg-surface-container-low border-outline-variant/30 text-on-surface-variant'
+                  }`}
+                >
+                  <span className={`w-1.5 h-1.5 rounded-full ${isSelected ? 'bg-tertiary-fixed' : 'bg-outline'}`}></span>
+                  <span className="max-w-[140px] truncate">{p.name}</span>
+                  <span className="font-mono text-[10px] opacity-70">{p.progress}%</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
         {/* Active Projects */}
-        <div className="flex flex-col gap-space-xs">
+        <div className="hidden lg:flex flex-col gap-space-xs">
           <div className="flex items-center justify-between px-space-xs py-space-2xs text-outline font-label-sm uppercase tracking-wider font-mono">
             <span>Active ({activeProjects.length})</span>
             <span className="material-symbols-outlined text-[14px]">unfold_more</span>
@@ -178,7 +202,7 @@ export const ProjectsPage: React.FC = () => {
         </div>
 
         {/* Archived Section */}
-        <div className="flex flex-col gap-space-xs mt-space-sm font-mono">
+        <div className="hidden lg:flex flex-col gap-space-xs mt-space-sm font-mono">
           <div className="flex items-center justify-between px-space-xs py-space-2xs text-outline font-label-sm uppercase tracking-wider">
             <span>Archived (4)</span>
             <span className="material-symbols-outlined text-[14px]">folder_open</span>

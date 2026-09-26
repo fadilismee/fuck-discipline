@@ -41,7 +41,13 @@ export const Header: React.FC = () => {
         </button>
         <span className="font-label-default text-label-default text-outline uppercase font-mono hidden sm:inline">WORKSPACE /</span>
         <span className="font-body-default text-body-default text-on-surface font-medium truncate text-[13px] sm:text-[14px]">
-          {dateStr ? dateStr.split('—')[0].trim() : 'Saturday, 26 Sep'}
+          {(() => {
+            const full = dateStr ? dateStr.split('—')[0].trim() : 'Saturday, 26 September 2026';
+            const parts = full.replace(',', '').split(' ');
+            // Mobile: "Sat, 26 Sep" — Desktop: full string
+            const short = parts.length >= 4 ? `${parts[0].slice(0, 3)}, ${parts[1]} ${parts[2].slice(0, 3)}` : full;
+            return <><span className="sm:hidden">{short}</span><span className="hidden sm:inline">{full}</span></>;
+          })()}
         </span>
       </div>
 
@@ -106,7 +112,7 @@ export const Header: React.FC = () => {
 
         <button
           onClick={lock}
-          className="flex items-center justify-center w-9 h-9 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-error transition-colors cursor-pointer"
+          className="hidden sm:flex items-center justify-center w-9 h-9 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-error transition-colors cursor-pointer"
           type="button" title="Lock Terminal" aria-label="Lock terminal"
         >
           <span className="material-symbols-outlined text-[20px]">lock</span>

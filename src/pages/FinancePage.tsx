@@ -820,7 +820,7 @@ export const FinancePage: React.FC = () => {
                           allocateToTarget(t.id, Number(v));
                           setAllocDrafts((d) => ({ ...d, [t.id]: '' }));
                         }}
-                        className="flex items-center gap-2"
+                        className="flex flex-col sm:flex-row sm:items-center gap-2"
                       >
                         <input
                           type="number"
@@ -831,16 +831,18 @@ export const FinancePage: React.FC = () => {
                           className="flex-1 h-10 px-3 bg-surface-container-lowest rounded-lg text-primary font-mono text-[13px] outline-none focus:ring-1 focus:ring-tertiary-fixed min-w-0"
                           aria-label={`Alokasi ke ${t.name}`}
                         />
-                        <button type="submit" className="h-10 px-3 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary text-[12px] font-medium shrink-0">
-                          Alokasi
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => toggleTargetBought(t.id)}
-                          className="h-10 px-3 rounded-lg bg-tertiary-fixed/15 text-tertiary-fixed hover:bg-tertiary-fixed hover:text-on-tertiary-fixed text-[12px] font-semibold shrink-0 transition-colors"
-                        >
-                          Bought ✓
-                        </button>
+                        <div className="flex gap-2">
+                          <button type="submit" className="flex-1 sm:flex-none h-10 px-3 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary text-[12px] font-medium">
+                            Alokasi
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => toggleTargetBought(t.id)}
+                            className="flex-1 sm:flex-none h-10 px-3 rounded-lg bg-tertiary-fixed/15 text-tertiary-fixed hover:bg-tertiary-fixed hover:text-on-tertiary-fixed text-[12px] font-semibold transition-colors"
+                          >
+                            Bought ✓
+                          </button>
+                        </div>
                       </form>
                     )}
                     {done && !t.bought && (

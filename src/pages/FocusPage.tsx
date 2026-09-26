@@ -161,7 +161,7 @@ export const FocusPage: React.FC = () => {
           </div>
 
           {/* High-Contrast Zen Ring Display */}
-          <div className="relative w-72 h-72 sm:w-80 sm:h-80 flex flex-col items-center justify-center my-space-lg select-none">
+          <div className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-80 lg:h-80 flex flex-col items-center justify-center my-space-md sm:my-space-lg select-none">
             <svg className="w-full h-full transform -rotate-90" viewBox="0 0 240 240">
               <circle
                 className="text-surface-container-highest"
@@ -191,7 +191,7 @@ export const FocusPage: React.FC = () => {
                 {isStopwatch ? 'STOPWATCH' : 'FLOW INTERVAL'}
               </span>
               <div
-                className="font-display text-[64px] sm:text-[76px] leading-none text-primary font-semibold tracking-tighter my-2 drop-shadow-md"
+                className="font-display text-[48px] sm:text-[64px] lg:text-[76px] leading-none text-primary font-semibold tracking-tighter my-2 drop-shadow-md"
                 id="timerDisplay"
               >
                 {String(m).padStart(2, '0')}:{String(s).padStart(2, '0')}

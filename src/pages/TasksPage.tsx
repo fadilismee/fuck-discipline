@@ -22,6 +22,7 @@ export const TasksPage: React.FC = () => {
   const [selectedPriority, setSelectedPriority] = useState<string>('all');
   const [dragOverCol, setDragOverCol] = useState<KanbanCol | null>(null);
   const [draggingId, setDraggingId] = useState<string | null>(null);
+  const [mobileKanbanCol, setMobileKanbanCol] = useState<KanbanCol>('today');
 
   const projectOptions = useMemo(
     () => Array.from(new Set(tasks.map((t) => t.project))).sort(),
@@ -403,6 +404,24 @@ export const TasksPage: React.FC = () => {
           <p className="font-label-sm text-label-sm text-outline font-mono mb-2 hidden md:block">
             Tip: drag kartu antar kolom untuk pindah status (tersimpan otomatis ke JSON).
           </p>
+          {/* Mobile: tampil 1 kolom + switcher */}
+          <div className="md:hidden mb-2 sticky top-14 z-20 -mx-3 px-3 py-2 bg-surface/90 backdrop-blur-xl">
+            <div className="flex items-center gap-1 p-1 rounded-xl bg-surface-container-low border border-outline-variant/30">
+              {kanbanCols.map((col) => (
+                <button
+                  key={col.key}
+                  onClick={() => setMobileKanbanCol(col.key)}
+                  className={`flex-1 h-9 rounded-lg font-body-sm font-medium transition-all text-[13px] ${
+                    mobileKanbanCol === col.key
+                      ? 'bg-surface-container-high text-primary shadow-sm'
+                      : 'text-on-surface-variant'
+                  }`}
+                >
+                  {col.label} ({col.items.length})
+                </button>
+              ))}
+            </div>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-space-md">
             {kanbanCols.map((col) => (
               <div
@@ -414,7 +433,7 @@ export const TasksPage: React.FC = () => {
                 }}
                 onDragLeave={() => setDragOverCol((c) => (c === col.key ? null : c))}
                 onDrop={(e) => onDropTo(e, col.key)}
-                className={`flex flex-col gap-space-sm bg-surface-container-low p-space-sm rounded-xl border min-h-[400px] transition-colors ${
+                className={`${mobileKanbanCol === col.key ? 'flex' : 'hidden'} md:flex flex-col gap-space-sm bg-surface-container-low p-space-sm rounded-xl border min-h-[400px] transition-colors ${
                   dragOverCol === col.key
                     ? 'border-tertiary-fixed/70 bg-surface-container'
                     : 'border-outline-variant/20'

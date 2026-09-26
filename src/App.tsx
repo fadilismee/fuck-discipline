@@ -122,7 +122,7 @@ export const App: React.FC = () => {
     <div className="min-h-screen bg-surface font-body-default text-body-default text-on-surface antialiased flex flex-col selection:bg-tertiary-fixed selection:text-on-tertiary-fixed overflow-x-hidden">
       <AutoSidebar />
       <Header />
-      <main key={activeView} className="pt-[72px] px-3 sm:px-space-md lg:px-space-xl pb-16 sm:pb-space-2xl max-w-7xl mx-auto w-full flex-1 min-w-0 animate-fade-in">
+      <main key={activeView} className="pt-[72px] px-3 sm:px-space-md lg:px-space-xl pb-28 sm:pb-space-2xl max-w-7xl mx-auto w-full flex-1 min-w-0 animate-fade-in">
         {renderCurrentPage()}
       </main>
       <TaskDrawer />

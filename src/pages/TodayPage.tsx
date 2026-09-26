@@ -52,6 +52,7 @@ export const TodayPage: React.FC = () => {
 
   const { playSuccessChime, playBeep } = useWebAudio();
   const [quickTitle, setQuickTitle] = useState('');
+  const [mobileTab, setMobileTab] = useState<'tasks' | 'focus' | 'rutin'>('tasks');
 
   const dayLabel =
     dayOffset === 0
@@ -219,10 +220,34 @@ export const TodayPage: React.FC = () => {
         </div>
       </header>
 
+      {/* Mobile Segmented Switcher (desktop tetap 3 kolom) */}
+      <div className="lg:hidden sticky top-14 z-20 -mx-3 px-3 py-2 bg-surface/90 backdrop-blur-xl">
+        <div className="flex items-center gap-1 p-1 rounded-xl bg-surface-container-low border border-outline-variant/30">
+          {([
+            { key: 'tasks', icon: 'check_circle', label: 'Tasks' },
+            { key: 'focus', icon: 'timer', label: 'Focus' },
+            { key: 'rutin', icon: 'repeat', label: 'Rutin' },
+          ] as const).map((t) => (
+            <button
+              key={t.key}
+              onClick={() => setMobileTab(t.key)}
+              className={`flex-1 flex items-center justify-center gap-1.5 h-9 rounded-lg font-body-sm font-medium transition-all ${
+                mobileTab === t.key
+                  ? 'bg-surface-container-high text-primary shadow-sm'
+                  : 'text-on-surface-variant'
+              }`}
+            >
+              <span className="material-symbols-outlined text-[17px]">{t.icon}</span>
+              <span className="text-[13px]">{t.label}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+
       {/* 3-Column Cockpit Grid Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start">
         {/* COLUMN 1: Task Execution Engine (5 Cols) */}
-        <div className="lg:col-span-5 flex flex-col gap-space-md">
+        <div className={`lg:col-span-5 flex-col gap-space-md ${mobileTab === 'tasks' ? 'flex' : 'hidden lg:flex'}`}>
           <section className="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col gap-space-md relative overflow-hidden border border-outline-variant/20">
             <div className="absolute -top-12 -right-12 w-32 h-32 bg-primary/5 rounded-full blur-2xl pointer-events-none"></div>
             <div className="flex items-center justify-between">
@@ -373,7 +398,7 @@ export const TodayPage: React.FC = () => {
         </div>
 
         {/* COLUMN 2: Focus Workstation & Timeline Agenda (4 Cols) */}
-        <div className="lg:col-span-4 flex flex-col gap-space-md">
+        <div className={`lg:col-span-4 flex-col gap-space-md ${mobileTab === 'focus' ? 'flex' : 'hidden lg:flex'}`}>
           {/* FOCUS QUICK WIDGET */}
           <section className="bg-surface-container-low rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col gap-space-sm border border-outline-variant/20">
             <div className="flex items-center justify-between">
@@ -507,7 +532,7 @@ export const TodayPage: React.FC = () => {
         </div>
 
         {/* COLUMN 3: Habits/Routines & Ledger Snapshot (3 Cols) */}
-        <div className="lg:col-span-3 flex flex-col gap-space-md">
+        <div className={`lg:col-span-3 flex-col gap-space-md ${mobileTab === 'rutin' ? 'flex' : 'hidden lg:flex'}`}>
           {/* ROUTINES CARD */}
           <section className="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm border border-outline-variant/20">
             <div className="flex items-center justify-between">
