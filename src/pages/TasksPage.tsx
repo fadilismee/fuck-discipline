@@ -200,7 +200,7 @@ export const TasksPage: React.FC = () => {
           </div>
 
           {/* Filter Dropdowns (dinamis dari data) */}
-          <div className="xl:col-span-3 flex items-center justify-end gap-1.5 font-sans">
+          <div className="xl:col-span-3 flex items-center justify-start xl:justify-end gap-1.5 font-sans overflow-x-auto">
             <select
               value={selectedProject}
               onChange={(e) => setSelectedProject(e.target.value)}
@@ -263,10 +263,56 @@ export const TasksPage: React.FC = () => {
 
             <div className="flex flex-col bg-surface-container-low rounded-xl overflow-hidden shadow-sm border border-outline-variant/20">
               {todayGroup.map((t) => (
+                <React.Fragment key={t.id}>
+                {/* Mobile: 2-row stacked card */}
                 <div
-                  key={t.id}
                   onClick={() => openDrawer(t.id)}
-                  className={`group flex items-center justify-between px-space-md h-12 hover:bg-surface-container border-b border-surface-container-highest last:border-0 transition-colors cursor-pointer relative ${
+                  className={`md:hidden px-space-md py-2.5 hover:bg-surface-container border-b border-surface-container-highest last:border-0 transition-colors cursor-pointer relative ${
+                    t.completed ? 'opacity-50' : ''
+                  }`}
+                >
+                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-tertiary-fixed"></div>
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      checked={t.completed}
+                      onChange={(e) => toggleWithSound(t, e as unknown as React.MouseEvent)}
+                      onClick={(e) => e.stopPropagation()}
+                      className="w-4 h-4 shrink-0 rounded bg-surface-container-lowest accent-tertiary-fixed cursor-pointer"
+                    />
+                    <span
+                      className={`font-headline-sm text-headline-sm truncate font-medium flex-1 min-w-0 ${
+                        t.completed ? 'line-through text-outline' : 'text-primary'
+                      }`}
+                    >
+                      {t.title}
+                    </span>
+                    <span
+                      className={`font-label-sm text-[10px] px-1.5 py-0.5 rounded font-medium font-mono shrink-0 ${
+                        t.priority === 'high'
+                          ? 'bg-error/15 text-error'
+                          : t.priority === 'med'
+                          ? 'bg-secondary-container/40 text-secondary-fixed'
+                          : 'bg-surface-container text-outline'
+                      }`}
+                    >
+                      {t.priority.toUpperCase()}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-1.5 mt-1.5 ml-6 font-mono text-[11px] text-outline min-w-0">
+                    <span className="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant truncate max-w-[130px]">
+                      {t.project}
+                    </span>
+                    <span className="shrink-0">•</span>
+                    <span className="truncate">{t.due}</span>
+                    <span className="shrink-0">•</span>
+                    <span className="shrink-0">{t.est}</span>
+                  </div>
+                </div>
+                {/* Desktop: single row */}
+                <div
+                  onClick={() => openDrawer(t.id)}
+                  className={`group hidden md:flex items-center justify-between px-space-md h-12 hover:bg-surface-container border-b border-surface-container-highest last:border-0 transition-colors cursor-pointer relative ${
                     t.completed ? 'opacity-50' : ''
                   }`}
                 >
@@ -319,6 +365,7 @@ export const TasksPage: React.FC = () => {
                     ))}
                   </div>
                 </div>
+                </React.Fragment>
               ))}
               {todayGroup.length === 0 && (
                 <p className="text-[12px] text-outline py-4 text-center">Kosong untuk filter ini.</p>
@@ -348,10 +395,49 @@ export const TasksPage: React.FC = () => {
 
               <div className="flex flex-col bg-surface-container-low rounded-xl overflow-hidden shadow-sm border border-outline-variant/20">
                 {upcomingGroup.map((t) => (
+                  <React.Fragment key={t.id}>
+                  {/* Mobile: 2-row stacked card */}
                   <div
-                    key={t.id}
                     onClick={() => openDrawer(t.id)}
-                    className="group flex items-center justify-between px-space-md h-11 hover:bg-surface-container border-b border-surface-container-highest last:border-0 transition-colors cursor-pointer"
+                    className="md:hidden px-space-md py-2.5 hover:bg-surface-container border-b border-surface-container-highest last:border-0 transition-colors cursor-pointer"
+                  >
+                    <div className="flex items-center gap-2">
+                      <input
+                        type="checkbox"
+                        checked={t.completed}
+                        onChange={(e) => toggleWithSound(t, e as unknown as React.MouseEvent)}
+                        onClick={(e) => e.stopPropagation()}
+                        className="w-4 h-4 shrink-0 rounded bg-surface-container-lowest accent-tertiary-fixed cursor-pointer"
+                      />
+                      <span className="font-body-default text-body-default text-on-surface truncate font-medium flex-1 min-w-0">
+                        {t.title}
+                      </span>
+                      <span
+                        className={`font-label-sm text-[10px] px-1.5 py-0.5 rounded font-medium font-mono shrink-0 ${
+                          t.priority === 'high'
+                            ? 'bg-error/15 text-error'
+                            : t.priority === 'med'
+                            ? 'bg-secondary-container/40 text-secondary-fixed'
+                            : 'bg-surface-container text-outline'
+                        }`}
+                      >
+                        {t.priority.toUpperCase()}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-1.5 mt-1.5 ml-6 font-mono text-[11px] text-outline min-w-0">
+                      <span className="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant truncate max-w-[130px]">
+                        {t.project}
+                      </span>
+                      <span className="shrink-0">•</span>
+                      <span className="truncate">{t.due}</span>
+                      <span className="shrink-0">•</span>
+                      <span className="shrink-0">{t.est}</span>
+                    </div>
+                  </div>
+                  {/* Desktop: single row */}
+                  <div
+                    onClick={() => openDrawer(t.id)}
+                    className="group hidden md:flex items-center justify-between px-space-md h-11 hover:bg-surface-container border-b border-surface-container-highest last:border-0 transition-colors cursor-pointer"
                   >
                     <div className="flex items-center gap-space-sm min-w-0">
                       <input
@@ -387,6 +473,7 @@ export const TasksPage: React.FC = () => {
                       ))}
                     </div>
                   </div>
+                  </React.Fragment>
                 ))}
               </div>
             </div>

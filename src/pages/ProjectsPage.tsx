@@ -25,6 +25,7 @@ export const ProjectsPage: React.FC = () => {
   const [notesSavedTick, setNotesSavedTick] = useState(0);
   const [previewImg, setPreviewImg] = useState<{ dataUrl: string; name: string } | null>(null);
   const [compressing, setCompressing] = useState(false);
+  const [mobileProjTab, setMobileProjTab] = useState<'roadmap' | 'notes' | 'galeri' | 'tasks'>('roadmap');
   const fileRef = useRef<HTMLInputElement>(null);
 
   const selectedProj: Project =
@@ -109,24 +110,41 @@ export const ProjectsPage: React.FC = () => {
           </button>
         </div>
 
-        {/* Mobile: horizontal chip selector */}
+        {/* Mobile: deck feed — kartu proyek geser horizontal (snap) */}
         <div className="lg:hidden -mx-3 px-3">
-          <div className="flex gap-2 overflow-x-auto pb-1">
+          <div className="flex gap-2.5 overflow-x-auto pb-2 snap-x snap-mandatory">
             {activeProjects.map((p) => {
               const isSelected = p.id === selectedProjectId;
+              const doneMs = (p.milestones || []).filter((m) => m.done).length;
               return (
                 <button
                   key={p.id}
                   onClick={() => setSelectedProjectId(p.id)}
-                  className={`shrink-0 flex items-center gap-1.5 h-9 pl-2.5 pr-3 rounded-full border text-[13px] font-medium transition-all ${
+                  className={`snap-start shrink-0 w-[228px] text-left p-3 rounded-xl border transition-all ${
                     isSelected
-                      ? 'bg-tertiary-fixed/15 border-tertiary-fixed/50 text-tertiary-fixed'
-                      : 'bg-surface-container-low border-outline-variant/30 text-on-surface-variant'
+                      ? 'bg-surface-container border-tertiary-fixed/50 shadow-md'
+                      : 'bg-surface-container-low border-outline-variant/30'
                   }`}
                 >
-                  <span className={`w-1.5 h-1.5 rounded-full ${isSelected ? 'bg-tertiary-fixed' : 'bg-outline'}`}></span>
-                  <span className="max-w-[140px] truncate">{p.name}</span>
-                  <span className="font-mono text-[10px] opacity-70">{p.progress}%</span>
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className={`w-2 h-2 rounded-full shrink-0 ${isSelected ? 'bg-tertiary-fixed' : 'bg-outline'}`}></span>
+                    <span className="font-headline-sm text-primary font-semibold truncate text-[14px]">
+                      {p.name}
+                    </span>
+                  </div>
+                  <span className="block font-mono text-[11px] text-on-surface-variant truncate mt-0.5">
+                    {p.tagline}
+                  </span>
+                  <div className="h-1.5 w-full rounded-full bg-surface-container-highest overflow-hidden mt-2">
+                    <div
+                      className="h-full bg-tertiary-fixed rounded-full transition-all duration-500"
+                      style={{ width: `${p.progress}%` }}
+                    ></div>
+                  </div>
+                  <div className="flex justify-between items-center mt-1.5 font-mono text-[10px] text-outline">
+                    <span>{p.progress}%</span>
+                    <span>{doneMs}/{(p.milestones || []).length} milestones</span>
+                  </div>
                 </button>
               );
             })}
@@ -298,8 +316,33 @@ export const ProjectsPage: React.FC = () => {
           </div>
         </div>
 
+        {/* Mobile: sub-tab detail (Roadmap/Notes/Galeri/Tasks) */}
+        <div className="lg:hidden sticky top-14 z-20 -mx-3 px-3 py-2 bg-surface/90 backdrop-blur-xl">
+          <div className="flex items-center gap-1 p-1 rounded-xl bg-surface-container-low border border-outline-variant/30">
+            {([
+              { key: 'roadmap', icon: 'route', label: 'Roadmap' },
+              { key: 'notes', icon: 'edit_note', label: 'Notes' },
+              { key: 'galeri', icon: 'photo_library', label: `Galeri (${(selectedProj.images || []).length})` },
+              { key: 'tasks', icon: 'link', label: `Tasks (${linkedTasks.length})` },
+            ] as const).map((t) => (
+              <button
+                key={t.key}
+                onClick={() => setMobileProjTab(t.key)}
+                className={`flex-1 flex items-center justify-center gap-1 h-9 rounded-lg font-body-sm font-medium transition-all text-[12px] px-1 ${
+                  mobileProjTab === t.key
+                    ? 'bg-surface-container-high text-primary shadow-sm'
+                    : 'text-on-surface-variant'
+                }`}
+              >
+                <span className="material-symbols-outlined text-[15px]">{t.icon}</span>
+                <span className="truncate">{t.label}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+
         {/* Milestones Roadmap List */}
-        <div className="bg-surface-container-low p-space-lg rounded-xl border border-outline-variant/20 shadow-sm flex flex-col gap-space-md">
+        <div className={`${mobileProjTab === 'roadmap' ? 'flex' : 'hidden'} lg:flex bg-surface-container-low p-space-lg rounded-xl border border-outline-variant/20 shadow-sm flex-col gap-space-md`}>
           <div className="flex items-center justify-between font-mono">
             <span className="font-label-default text-label-default uppercase text-on-surface font-semibold font-sans">
               Strategic Milestones &amp; Deliverables
@@ -344,7 +387,7 @@ export const ProjectsPage: React.FC = () => {
         </div>
 
         {/* Project Notes */}
-        <div className="bg-surface-container-low p-space-lg rounded-xl border border-outline-variant/20 shadow-sm flex flex-col gap-space-sm">
+        <div className={`${mobileProjTab === 'notes' ? 'flex' : 'hidden'} lg:flex bg-surface-container-low p-space-lg rounded-xl border border-outline-variant/20 shadow-sm flex-col gap-space-sm`}>
           <div className="flex items-center justify-between gap-2">
             <span className="font-label-default text-label-default uppercase text-on-surface font-semibold font-sans flex items-center gap-2">
               <span className="material-symbols-outlined text-[16px] text-outline">edit_note</span>
@@ -374,7 +417,7 @@ export const ProjectsPage: React.FC = () => {
         </div>
 
         {/* Image Gallery (auto-kompres ≤89KB) */}
-        <div className="bg-surface-container-low p-space-lg rounded-xl border border-outline-variant/20 shadow-sm flex flex-col gap-space-sm">
+        <div className={`${mobileProjTab === 'galeri' ? 'flex' : 'hidden'} lg:flex bg-surface-container-low p-space-lg rounded-xl border border-outline-variant/20 shadow-sm flex-col gap-space-sm`}>
           <div className="flex items-center justify-between gap-2">
             <span className="font-label-default text-label-default uppercase text-on-surface font-semibold font-sans flex items-center gap-2">
               <span className="material-symbols-outlined text-[16px] text-outline">photo_library</span>
@@ -419,7 +462,7 @@ export const ProjectsPage: React.FC = () => {
         </div>
 
         {/* Linked Tasks */}
-        <div className="bg-surface-container-low p-space-lg rounded-xl border border-outline-variant/20 shadow-sm flex flex-col gap-space-sm">
+        <div className={`${mobileProjTab === 'tasks' ? 'flex' : 'hidden'} lg:flex bg-surface-container-low p-space-lg rounded-xl border border-outline-variant/20 shadow-sm flex-col gap-space-sm`}>
           <span className="font-label-default text-label-default uppercase text-on-surface font-semibold font-sans flex items-center gap-2">
             <span className="material-symbols-outlined text-[16px] text-outline">link</span>
             Linked Tasks ({linkedTasks.length})
