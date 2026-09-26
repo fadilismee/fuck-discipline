@@ -15,6 +15,7 @@ import { ConfirmModal } from './components/common/ConfirmModal';
 import { PinLock } from './components/common/PinLock';
 import { PwaInstallBar } from './components/common/PwaInstallBar';
 import { FloatingTimer } from './components/common/FloatingTimer';
+import { useAppNotifications } from './hooks/useAppNotifications';
 
 import { TodayPage } from './pages/TodayPage';
 import { TasksPage } from './pages/TasksPage';
@@ -33,6 +34,9 @@ const VALID_VIEWS: ViewKey[] = ['today','tasks','calendar','projects','focus','r
 export const App: React.FC = () => {
   const activeView = useLifeOSStore((state) => state.activeView);
   const isTimerRunning = useLifeOSStore((state) => state.timerState.isRunning);
+
+  // Engine notifikasi lokal: jadwal, timer ongoing, sesi selesai
+  useAppNotifications();
 
   useEffect(() => {
     let interval: ReturnType<typeof setInterval> | null = null;

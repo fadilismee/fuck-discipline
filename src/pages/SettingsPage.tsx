@@ -1,6 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useLifeOSStore } from '../store/useLifeOSStore';
 import { canInstall, onInstallAvailabilityChange, requestInstall } from '../pwa/install';
+import {
+  getNotifPermission,
+  requestNotifPermission,
+  showLocalNotification,
+} from '../utils/notifications';
 
 export const SettingsPage: React.FC = () => {
   const settings = useLifeOSStore((state) => state.data.settings);
@@ -17,8 +22,30 @@ export const SettingsPage: React.FC = () => {
   const showToast = useLifeOSStore((s) => s.showToast);
   const lock = useLifeOSStore((s) => s.lock);
   const [, bump] = useState(0);
+  const [notifPerm, setNotifPerm] = useState(getNotifPermission());
 
   useEffect(() => onInstallAvailabilityChange(() => bump((n) => n + 1)), []);
+
+  useEffect(() => {
+    setNotifPerm(getNotifPermission());
+  }, [settings.notificationsEnabled]);
+
+  const handleEnableNotif = async () => {
+    const perm = await requestNotifPermission();
+    setNotifPerm(perm);
+    if (perm === 'granted') {
+      showToast('Notifikasi HP aktif. Jadwal & timer akan muncul di bar notifikasi.', 'success');
+      void showLocalNotification('🔔 Notifikasi PRODUCTIV aktif', {
+        body: 'Jadwal routines, agenda kalender, dan timer akan muncul di sini.',
+        tag: 'productiv-test',
+        url: './index.html#today',
+      });
+    } else if (perm === 'denied') {
+      showToast('Izin diblokir. Buka Settings HP/browser → izinkan notifikasi.', 'info');
+    } else {
+      showToast('Browser ini tidak mendukung notifikasi sistem.', 'info');
+    }
+  };
 
   const handleInstall = async () => {
     const outcome = await requestInstall();
@@ -157,6 +184,38 @@ export const SettingsPage: React.FC = () => {
               <span className="text-body-default text-primary text-[14px]">Notifications</span>
               <button onClick={() => updateSettings({ notificationsEnabled: !settings.notificationsEnabled })} role="switch" aria-checked={settings.notificationsEnabled} className={`w-12 h-7 shrink-0 rounded-full p-1 transition-colors ${settings.notificationsEnabled ? 'bg-tertiary-fixed' : 'bg-surface-container-highest'}`}>
                 <span className={`block w-5 h-5 rounded-full bg-white shadow transition-transform ${settings.notificationsEnabled ? 'translate-x-5' : 'translate-x-0'}`} />
+              </button>
+            </div>
+            <div className="flex items-center justify-between pt-3 border-t border-surface-container-highest font-sans gap-3">
+              <div className="flex flex-col min-w-0">
+                <span className="text-body-default text-primary text-[14px]">Notifikasi HP (PWA)</span>
+                <span className="font-mono text-[11px] text-outline">
+                  Status izin:{' '}
+                  <span
+                    className={
+                      notifPerm === 'granted'
+                        ? 'text-tertiary-fixed font-bold'
+                        : notifPerm === 'denied'
+                        ? 'text-error font-bold'
+                        : 'text-on-surface-variant'
+                    }
+                  >
+                    {notifPerm === 'granted'
+                      ? 'AKTIF ✓'
+                      : notifPerm === 'denied'
+                      ? 'DIBLOKIR'
+                      : notifPerm === 'unsupported'
+                      ? 'TIDAK DIDUKUNG'
+                      : 'BELUM DIMINTA'}
+                  </span>
+                </span>
+              </div>
+              <button
+                onClick={handleEnableNotif}
+                className="h-9 px-3 shrink-0 rounded-lg bg-tertiary-fixed/15 text-tertiary-fixed hover:bg-tertiary-fixed hover:text-on-tertiary-fixed font-body-sm font-medium transition-colors flex items-center gap-1.5"
+              >
+                <span className="material-symbols-outlined text-[16px]">notifications_active</span>
+                Aktifkan
               </button>
             </div>
             <div className="flex items-center justify-between pt-3 border-t border-surface-container-highest font-sans gap-3">

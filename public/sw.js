@@ -22,6 +22,41 @@ self.addEventListener('activate', (event) => {
   );
 });
 
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+  const targetUrl = (event.notification.data && event.notification.data.url) || './index.html';
+  event.waitUntil(
+    self.clients
+      .matchAll({ type: 'window', includeUncontrolled: true })
+      .then((clients) => {
+        for (const client of clients) {
+          try {
+            const clientUrl = new URL(client.url);
+            if (clientUrl.pathname.replace(/\/index\.html$/, '/') === new URL(targetUrl, client.url).pathname.replace(/\/index\.html$/, '/') || client.url.includes('productiv')) {
+              return client.focus();
+            }
+          } catch {
+            /* abaikan */
+          }
+        }
+        if (clients.length > 0) {
+          const first = clients[0];
+          try {
+            first.navigate(targetUrl);
+          } catch {
+            /* abaikan */
+          }
+          return first.focus();
+        }
+        return self.clients.openWindow(targetUrl);
+      })
+  );
+});
+
+self.addEventListener('notificationclose', () => {
+  /* sengaja kosong — sekadar memastikan event terdaftar */
+});
+
 self.addEventListener('fetch', (event) => {
   const req = event.request;
   if (req.method !== 'GET') return;

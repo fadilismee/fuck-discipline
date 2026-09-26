@@ -120,6 +120,8 @@ interface LifeOSStoreState {
     initialSeconds: number;
     mode: 'timer' | 'stopwatch';
     stopwatchSeconds: number;
+    /** timestamp selesainya sesi terakhir (untuk trigger notifikasi). null = belum ada. */
+    lastCompletedAt: number | null;
   };
 
   setActiveView: (view: ViewKey) => void;
@@ -277,6 +279,7 @@ export const useLifeOSStore = create<LifeOSStoreState>((set, get) => ({
     initialSeconds: 25 * 60,
     mode: 'timer',
     stopwatchSeconds: 0,
+    lastCompletedAt: null,
   },
 
   setActiveView: (view) => {
@@ -1100,7 +1103,7 @@ export const useLifeOSStore = create<LifeOSStoreState>((set, get) => ({
     };
     const updated = { ...get().data, focus };
     saveStoredData(updated);
-    set((state) => ({ data: updated, timerState: { ...state.timerState, isRunning: false, secondsRemaining: state.timerState.initialSeconds, stopwatchSeconds: 0 } }));
+    set((state) => ({ data: updated, timerState: { ...state.timerState, isRunning: false, secondsRemaining: state.timerState.initialSeconds, stopwatchSeconds: 0, lastCompletedAt: Date.now() } }));
     get().showToast('Focus session completed! Great job.', 'success');
   },
   tickTimer: () => {
